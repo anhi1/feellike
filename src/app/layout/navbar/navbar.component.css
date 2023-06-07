@@ -1,0 +1,13 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.navbar {
+    background-color: #FAFAFA;
+    padding: 40px;
+}
+

@@ -1,1 +1,29 @@
-<p>navbar works!</p>
+<nav>
+    <mat-toolbar class="navbar">
+      
+      <a routerLink="/" title="Inicio">
+        <img src="/assets/icon/logo.svg" class="logo" alt="logo">
+      </a>
+
+      <span class="example-spacer"></span> <!--indica el espacio-->
+
+      
+      <div class="example-button-row">
+        <button  mat-raised-button >Iniciar sesión</button>
+      </div>
+  
+    <button mat-button [matMenuTriggerFor]="menu">Categorias</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Camping</button>
+        <button mat-menu-item>Diseño</button>
+        <button mat-menu-item>Domo</button>
+        <button mat-menu-item>Playa</button>
+    </mat-menu>
+    
+  
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      
+    </mat-toolbar>
+  </nav>
