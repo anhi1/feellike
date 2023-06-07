@@ -17,6 +17,7 @@ import {MatButtonModule} from '@angular/material/button';
 
 
 import { MatGridListModule } from '@angular/material/grid-list';
+import { UsersModule } from './users/users.module';
 
 
 
@@ -38,6 +39,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatButtonModule,
     MatMenuModule,
     MatGridListModule,
+    UsersModule,
     
     
   ],
