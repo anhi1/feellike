@@ -23,8 +23,9 @@
     </button>
   </div>
  <h3>{{casa?.id}}</h3>
- <h3>{{casa?.description}}</h3>
- <h3>{{casa?.country}}</h3>
+ <h3>{{casa.country}}-{{casa.city}}</h3>
+ <p>{{casa?.description}}</p>
+
  <div *ngIf="casa?.available; else elseCond">
   <p>this home is reserved</p>
  </div>
@@ -35,7 +36,7 @@
  <h3>
   Price:{{casa?.price}}
  </h3>
- <button (click)="reserve()">
+ <button (click)="reserve()" class="btn btn-outline-primary">
   Reserve
  </button>
 
