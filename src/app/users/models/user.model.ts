@@ -8,4 +8,5 @@ export interface IUser {
     city: string,
     street: string,
     photo: string;
+    //idCasa:
 }
