@@ -5,6 +5,9 @@
         <img src="/assets/icon/logo.svg" class="logo" alt="logo">
       </a>
 
+      
+    
+
       <span class="example-spacer"></span> <!--indica el espacio-->
 
       
@@ -12,12 +15,14 @@
         <button  mat-raised-button >Iniciar sesión</button>
       </div>
   
-    <button mat-button [matMenuTriggerFor]="menu">Categorias</button>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item>Camping</button>
         <button mat-menu-item>Diseño</button>
         <button mat-menu-item>Domo</button>
         <button mat-menu-item>Playa</button>
+        <button mat-menu-item routerLink="casa-list">Listado</button>
+        <button mat-menu-item routerLink="casa-gallery">Galleria</button>
     </mat-menu>
     
   
