@@ -1,1 +1,13 @@
-<p>casa-gallery works!</p>
+<div class="container" *ngFor="let casa of casas">
+  <div class="card" style="width: 18rem;">
+    <img [src]="casa.photo" class="card-img-top" alt="...">
+   <img src="" alt="">
+   <img src="" alt="">
+
+    <div class="card-body">
+      <h5 class="card-title">{{casa.categories}}</h5>
+      <p class="card-text">{{casa.description}}</p>
+      <a href="#" class="btn btn-primary">Ver Detalles</a>
+    </div>
+  </div>
+</div>
