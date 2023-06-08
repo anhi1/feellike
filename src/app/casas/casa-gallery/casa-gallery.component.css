@@ -5,6 +5,16 @@
   margin: 5px;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0 auto;
+  padding: 20px auto;
 
 }
+
+.container {
+  max-width: 18rem;
+}
+.card {
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+
