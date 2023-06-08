@@ -18,6 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { UsersModule } from './users/users.module';
+import { CategoriesModule } from './categories/categories.module';
 
 
 
@@ -40,6 +41,7 @@ import { UsersModule } from './users/users.module';
     MatMenuModule,
     MatGridListModule,
     UsersModule,
+    CategoriesModule,
     
     
   ],
