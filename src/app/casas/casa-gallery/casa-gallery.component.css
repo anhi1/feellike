@@ -1,0 +1,10 @@
+.content {
+  display: flex;;
+  justify-content: space-around;
+  align-items: baseline;
+  margin: 5px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 auto;
+
+}
