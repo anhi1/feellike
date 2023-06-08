@@ -1,5 +1,7 @@
 <main class="content">
 <div class="container" *ngFor="let casa of casas">
+  <a [routerLink]="['/', casa.id]">
+
   <div class="card" style="width: 18rem;">
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
@@ -29,5 +31,6 @@
       <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
     </div>
   </div>
+  </a>
 </div>
 </main>
