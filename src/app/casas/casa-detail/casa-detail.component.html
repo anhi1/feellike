@@ -22,9 +22,9 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
- <h3>{{casa?.id}}</h3>
+ <h3>{{casa.id}}</h3>
  <h3>{{casa.country}}-{{casa.city}}</h3>
- <p>{{casa?.description}}</p>
+ <p>{{casa.description}}</p>
 
  <div *ngIf="casa?.available; else elseCond">
   <p>this home is reserved</p>
@@ -34,7 +34,7 @@
  </ng-template>
 
  <h3>
-  Price:{{casa?.price}}
+  Price:{{casa.price}}
  </h3>
  <button (click)="reserve()" class="btn btn-outline-primary">
   Reserve
