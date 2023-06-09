@@ -42,8 +42,9 @@ import { CategoriesModule } from './categories/categories.module';
     MatGridListModule,
     UsersModule,
     CategoriesModule,
-    
-    
+    CasasModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
