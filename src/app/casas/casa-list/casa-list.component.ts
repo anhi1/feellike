@@ -13,12 +13,13 @@ import { UserService } from 'src/app/users/services/user.service';
 })
 export class CasaListComponent implements OnInit{
   displayedColumns: string[] = [
-    'photo',
+  
     'title',
     'description',
-    'Habitación',
-    'Baño',
-    'precio',
+    'country',
+    'bedrooms',
+    'bathrooms',
+    'price',
     'actions',
   ];
 
