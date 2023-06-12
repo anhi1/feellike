@@ -1,4 +1,3 @@
-import { ChildrenModule } from './children/children.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
+<<<<<<< HEAD
     declarations: [
         CasaListComponent,
         CasaGalleryComponent,
@@ -29,5 +29,21 @@ import { MatButtonModule } from '@angular/material/button';
         MatTableModule,
         MatButtonModule
     ]
+=======
+  declarations: [
+    CasaListComponent,
+    CasaGalleryComponent,
+    CasaDetailComponent,
+    CasaFormComponent,
+
+  ],
+  imports: [
+    CommonModule,
+    CasasRoutingModule,
+    HttpClientModule,
+
+
+  ]
+>>>>>>> mani1
 })
 export class CasasModule { }

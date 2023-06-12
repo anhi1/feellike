@@ -36,8 +36,9 @@
  <h3>
   Price:{{casa?.price}}
  </h3>
- <button (click)="reserve()" class="btn btn-outline-primary">
+ <button (click)="reserve(casa)" class="btn btn-outline-primary" [disabled]="disabled">
   Reserve
  </button>
+ <button (click)="cancelar(casa.id)" class="btn btn-outline-primary">Cancelar reservacion</button>
 
 </div>
