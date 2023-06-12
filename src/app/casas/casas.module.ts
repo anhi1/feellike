@@ -9,6 +9,7 @@ import { CasaDetailComponent } from './casa-detail/casa-detail.component';
 import { CasaFormComponent } from './casa-form/casa-form.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from "../shared/shared.module";
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SharedModule } from "../shared/shared.module";
         CasasRoutingModule,
         HttpClientModule,
         MatIconModule,
-        SharedModule
+        SharedModule,
+        MatTableModule
     ]
 })
 export class CasasModule { }
