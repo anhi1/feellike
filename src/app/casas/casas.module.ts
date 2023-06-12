@@ -7,20 +7,23 @@ import { CasaListComponent } from './casa-list/casa-list.component';
 import { CasaGalleryComponent } from './casa-gallery/casa-gallery.component';
 import { CasaDetailComponent } from './casa-detail/casa-detail.component';
 import { CasaFormComponent } from './casa-form/casa-form.component';
+import { MatIconModule } from '@angular/material/icon';
+import { SharedModule } from "../shared/shared.module";
 
 
 @NgModule({
-  declarations: [
-    CasaListComponent,
-    CasaGalleryComponent,
-    CasaDetailComponent,
-    CasaFormComponent,
-
-  ],
-  imports: [
-    CommonModule,
-    CasasRoutingModule,
-    HttpClientModule
-  ]
+    declarations: [
+        CasaListComponent,
+        CasaGalleryComponent,
+        CasaDetailComponent,
+        CasaFormComponent,
+    ],
+    imports: [
+        CommonModule,
+        CasasRoutingModule,
+        HttpClientModule,
+        MatIconModule,
+        SharedModule
+    ]
 })
 export class CasasModule { }
