@@ -14,6 +14,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 
+//Importar shred module
+import { SharedModule } from '../shared/shared.module';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -35,9 +39,15 @@ import {MatCardModule} from '@angular/material/card';
     MatTableModule,
     MatButtonModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    SharedModule,
+    HttpClientModule
+
     
     
-  ]
+  ],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'es-ES' }
+  ],
 })
 export class CasasModule { }

@@ -4,6 +4,7 @@ import { ICasa } from '../models/casa.model';
 import { ActivatedRoute } from '@angular/router';
 import { IUser } from 'src/app/users/models/user.model';
 import { UserService } from 'src/app/users/services/user.service';
+import { LimitLongTextPipe } from 'src/app/shared/limit-long-text.pipe';
 
 @Component({
   selector: 'app-casa-list',
@@ -11,7 +12,15 @@ import { UserService } from 'src/app/users/services/user.service';
   styleUrls: ['./casa-list.component.css']
 })
 export class CasaListComponent implements OnInit{
-
+  displayedColumns: string[] = [
+    'photo',
+    'title',
+    'description',
+    'Habitación',
+    'Baño',
+    'precio',
+    'actions',
+  ];
 
   casas: ICasa[] = [];
   users: IUser[] = [];
