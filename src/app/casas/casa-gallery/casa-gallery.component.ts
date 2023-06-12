@@ -1,6 +1,7 @@
 import { ICasa } from '../models/casa.model';
 import { CasaService } from './../services/casa.service';
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../../shared.service';
 
 @Component({
   selector: 'app-casa-gallery',
@@ -11,7 +12,8 @@ export class CasaGalleryComponent implements OnInit{
 
   casas: ICasa[] = [];
 
-constructor(private casaService: CasaService){}
+
+constructor(private casaService: CasaService ,private sharedService : SharedService){}
 
 ngOnInit(): void {
 
@@ -20,4 +22,5 @@ ngOnInit(): void {
     this.casas = data
   } )
 }
+
 }
