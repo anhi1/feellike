@@ -1,4 +1,3 @@
-import { ChildrenModule } from './children/children.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +19,6 @@ import { CasaFormComponent } from './casa-form/casa-form.component';
     CommonModule,
     CasasRoutingModule,
     HttpClientModule,
-    ChildrenModule
 
 
   ]
