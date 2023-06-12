@@ -4,7 +4,7 @@ import { ICasa } from '../models/casa.model';
 import { ActivatedRoute } from '@angular/router';
 import { IUser } from 'src/app/users/models/user.model';
 import { UserService } from 'src/app/users/services/user.service';
-import { LimitLongTextPipe } from 'src/app/shared/limit-long-text.pipe';
+
 
 @Component({
   selector: 'app-casa-list',
