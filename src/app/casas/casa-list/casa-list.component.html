@@ -9,9 +9,8 @@ Agregar casa
 
 <table mat-table [dataSource]="casas" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="Photo">
+    <ng-container matColumnDef="photo">
         <th mat-header-cell *matHeaderCellDef>
-            <img src="" alt="imagen">
         </th>
         <td mat-cell *matCellDef="let casa">{{casa.title | lowercase}}</td>
       </ng-container>
@@ -28,17 +27,17 @@ Agregar casa
     </ng-container>
   
 
-  <ng-container matColumnDef="Habitación">
+  <ng-container matColumnDef="bedrooms">
     <th mat-header-cell *matHeaderCellDef>Bedrooms</th>
     <td mat-cell *matCellDef="let casa">{{ casa.bedrooms}}</td>
   </ng-container>
 
-  <ng-container matColumnDef="Baño">
+  <ng-container matColumnDef="bathrooms">
     <th mat-header-cell *matHeaderCellDef>Bathrooms</th>
     <td mat-cell *matCellDef="let casa">{{ casa.bathrooms}}</td>
   </ng-container>
 
-  <ng-container matColumnDef="Precio">
+  <ng-container matColumnDef="price">
     <th mat-header-cell *matHeaderCellDef>Precio</th>
     <td mat-cell *matCellDef="let casa" style="width: 80px;">{{ casa.price | number:'1.2-2'}} €</td>
   </ng-container>
@@ -64,8 +63,8 @@ Agregar casa
         <mat-icon>delete</mat-icon>
         Borrar
       </button>
-
     </td>
+
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

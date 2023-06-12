@@ -10,6 +10,7 @@ import { CasaFormComponent } from './casa-form/casa-form.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from "../shared/shared.module";
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatTableModule } from '@angular/material/table';
         HttpClientModule,
         MatIconModule,
         SharedModule,
-        MatTableModule
+        MatTableModule,
+        MatButtonModule
     ]
 })
 export class CasasModule { }

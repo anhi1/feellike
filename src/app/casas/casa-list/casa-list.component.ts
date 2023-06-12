@@ -16,9 +16,9 @@ export class CasaListComponent implements OnInit{
     'photo',
     'title',
     'description',
-    'Habitación',
-    'Baño',
-    'precio',
+    'bedrooms',
+    'bathrooms',
+    'price',
     'actions',
   ];
 
