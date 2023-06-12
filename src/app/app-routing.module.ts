@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CasaGalleryComponent } from './casas/casa-gallery/casa-gallery.component';
 import { CasaFormComponent } from './casas/casa-form/casa-form.component';
 import { CasaListComponent } from './casas/casa-list/casa-list.component';
 
@@ -10,7 +9,7 @@ const routes: Routes = [
   {path: 'casa-form', component: CasaFormComponent},
 
 
-  
+
 
 ];
 

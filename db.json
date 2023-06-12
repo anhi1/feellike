@@ -3,7 +3,9 @@
     {
       "id": 1,
       "title": "Apartamento",
-      "categories": [2],
+      "categories": [
+        2
+      ],
       "bedrooms": 3,
       "bathrooms": 3,
       "squarefeet": 6162,
@@ -63,7 +65,7 @@
       "cp": "49775",
       "price": 693,
       "comodidad": "gym",
-      "photo":[
+      "photo": [
         "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
         "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
         "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
@@ -164,13 +166,13 @@
       "price": 664,
       "comodidad": "clubhouse",
       "photo": [
-          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/77e16e37-267d-4c98-8d63-06d559be16cc.jpeg",
-          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/80ba5688-7d16-449f-a19f-43e563a758eb.jpeg",
-          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/88599434-922e-4397-9cc7-7e75240e17d9.jpeg",
-          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/7271945e-8709-4eac-9779-25377d77c49e.jpeg",
-          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/ad0a7d6a-0f19-4220-b8a4-a0367177be66.jpeg",
-          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/d13294db-687d-4519-97d1-915a9b40dadc.jpeg"
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/77e16e37-267d-4c98-8d63-06d559be16cc.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/80ba5688-7d16-449f-a19f-43e563a758eb.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/88599434-922e-4397-9cc7-7e75240e17d9.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/7271945e-8709-4eac-9779-25377d77c49e.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/ad0a7d6a-0f19-4220-b8a4-a0367177be66.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/d13294db-687d-4519-97d1-915a9b40dadc.jpeg"
       ]
     },
     {

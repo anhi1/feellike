@@ -13,23 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
-<<<<<<< HEAD
-    declarations: [
-        CasaListComponent,
-        CasaGalleryComponent,
-        CasaDetailComponent,
-        CasaFormComponent,
-    ],
-    imports: [
-        CommonModule,
-        CasasRoutingModule,
-        HttpClientModule,
-        MatIconModule,
-        SharedModule,
-        MatTableModule,
-        MatButtonModule
-    ]
-=======
+
   declarations: [
     CasaListComponent,
     CasaGalleryComponent,
@@ -41,9 +25,13 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     CasasRoutingModule,
     HttpClientModule,
+    MatButtonModule,
+    MatTableModule,
+    SharedModule,
+    MatIconModule
 
 
   ]
->>>>>>> mani1
+
 })
 export class CasasModule { }
