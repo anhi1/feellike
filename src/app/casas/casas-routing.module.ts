@@ -11,8 +11,8 @@ const routes: Routes = [
   {path:'', component: CasaGalleryComponent},
   {path: ':id', component: CasaDetailComponent},
   {path:':id/casa-reserve' , component:CasaReserveComponent},
-  {path: '**', redirectTo: '', pathMatch: 'full'},
   {path: 'casa-list', component: CasaListComponent},
+  {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 
 @NgModule({
