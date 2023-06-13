@@ -6,7 +6,7 @@ import { CasaListComponent } from './casa-list/casa-list.component';
 import { CasaGalleryComponent } from './casa-gallery/casa-gallery.component';
 import { CasaDetailComponent } from './casa-detail/casa-detail.component';
 import { CasaFormComponent } from './casa-form/casa-form.component';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { CasaFormComponent } from './casa-form/casa-form.component';
   imports: [
     CommonModule,
     CasasRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ]
 })
 export class CasasModule { }

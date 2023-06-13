@@ -1,1 +1,57 @@
-<p>casa-detail works!</p>
+
+<div class="container">
+<div *ngIf="casa">
+
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img [src]="casa.photo" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img [src]="" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img [src]="" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+<div>
+   <h3>{{casa.id}}</h3>
+   <h3>{{casa.country}}-{{casa.city}}</h3>
+   <p>{{casa.description}}</p>
+   <h3>{{casa.country}}-{{casa.city}}</h3>
+   <h3>{{casa.bedrooms}}</h3>
+   <h3>{{casa.bathrooms}}</h3>
+
+   <h3>
+    Price:{{casa.price}}
+   </h3>
+  
+  
+  <h3>{{casa.id}}</h3>
+</div>
+
+
+<div>
+   <div *ngIf="casa?.available; else elseCond">
+    <p>Esta casa está reservada</p>
+   </div> 
+
+   <ng-template #elseCond>
+    Esta casa está disponible
+   </ng-template>
+
+
+  </div>
+
+
+</div>
