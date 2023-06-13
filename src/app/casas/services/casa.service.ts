@@ -17,6 +17,9 @@ export class CasaService {
   findAll(): Observable<ICasa[]> {
     return this.httpClient.get<ICasa[]>(this.url);
   }
+  findAllReserved():  Observable<IReserve[]>{
+    return this.httpClient.get<IReserve[]>(this.baseUrl)
+  }
 
   // http://localhost:3000/casas?userId=1
   findAllByAuthorId(userId: number): Observable<ICasa[]> {
