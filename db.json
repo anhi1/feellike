@@ -3,9 +3,7 @@
     {
       "id": 1,
       "title": "Apartamento",
-      "categories": [
-        2
-      ],
+      "categories":"Playa",
       "bedrooms": 3,
       "bathrooms": 3,
       "squarefeet": 6162,
@@ -27,9 +25,7 @@
     {
       "id": 2,
       "title": "Estúdio",
-      "categories": [
-        3
-      ],
+      "categories": "Domo",
       "bedrooms": 5,
       "bathrooms": 4,
       "squarefeet": 3101,
@@ -51,9 +47,7 @@
     {
       "id": 3,
       "title": "Apartamento",
-      "categories": [
-        1
-      ],
+      "categories": "Camping",
       "bedrooms": 4,
       "bathrooms": 1,
       "squarefeet": 9585,
@@ -76,9 +70,7 @@
     {
       "id": 4,
       "title": "Casa",
-      "categories": [
-        1
-      ],
+      "categories": "Camping",
       "bedrooms": 1,
       "bathrooms": 4,
       "squarefeet": 9091,
@@ -101,9 +93,7 @@
     {
       "id": 5,
       "title": "Cabana",
-      "categories": [
-        2
-      ],
+      "categories": "Camping",
       "bedrooms": 4,
       "bathrooms": 3,
       "squarefeet": 5157,
@@ -126,9 +116,7 @@
     {
       "id": 6,
       "title": "Cabana",
-      "categories": [
-        1
-      ],
+      "categories": "Camping",
       "bedrooms": 1,
       "bathrooms": 1,
       "squarefeet": 7819,
@@ -151,9 +139,7 @@
     {
       "id": 7,
       "title": "Cabana",
-      "categories": [
-        1
-      ],
+      "categories": "Diseño",
       "bedrooms": 2,
       "bathrooms": 3,
       "squarefeet": 9608,
@@ -178,9 +164,7 @@
     {
       "id": 8,
       "title": "Loft",
-      "categories": [
-        3
-      ],
+      "categories": "Domo",
       "bedrooms": 2,
       "bathrooms": 3,
       "squarefeet": 5321,
@@ -202,9 +186,7 @@
     {
       "id": 9,
       "title": "Casa",
-      "categories": [
-        2
-      ],
+      "categories": "Playa",
       "bedrooms": 3,
       "bathrooms": 2,
       "squarefeet": 9894,
@@ -226,9 +208,7 @@
     {
       "id": 10,
       "title": "Casa",
-      "categories": [
-        4
-      ],
+      "categories": "Diseño",
       "bedrooms": 2,
       "bathrooms": 4,
       "squarefeet": 6389,
