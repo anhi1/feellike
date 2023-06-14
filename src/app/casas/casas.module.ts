@@ -35,8 +35,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     SharedModule,
     MatIconModule,
     MatGridListModule,
-    MatListModule
-
+    MatListModule,
     MatSnackBarModule
 
 
