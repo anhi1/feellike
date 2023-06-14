@@ -10,6 +10,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from "../shared/shared.module";
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+
 
 
 @NgModule({
@@ -28,9 +31,13 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatTableModule,
     SharedModule,
-    MatIconModule
+    MatIconModule,
+    MatSnackBarModule
 
 
+  ],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'es-Es'}
   ]
 
 })

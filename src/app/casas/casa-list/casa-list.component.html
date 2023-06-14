@@ -1,10 +1,30 @@
 
 <h2>Listado de casas</h2>
 
-<button mat-raised-button color="primary" routerLink="/casas/casa">
+<button mat-raised-button color="primary" routerLink="/casas/new">
   <mat-icon>add</mat-icon>
-Agregar casa
+  Agregar casa
 </button>
+
+<!--  user -->
+
+<div *ngIf="user">
+  <img class="list-header-img" [src]="user.photo" [alt]="user.fullName">
+  <h2>Autor {{user.fullName}}</h2>
+</div>
+
+
+<!--  category -->
+
+<div *ngIf="category" class="list-header">
+  <img class="list-header-img" [src]="category.icono" [alt]="category.name">
+  <h2>Categoría {{category.name}}</h2>
+</div>
+
+<!--  conteo de las casas -->
+<div class="table-count" *ngIf="casas.length > 0">
+  Hay {{casas.length}} Casas en total.
+</div>
 
 
 <table mat-table [dataSource]="casas" class="mat-elevation-z8">
