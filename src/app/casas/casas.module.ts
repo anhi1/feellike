@@ -12,6 +12,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+
 
 
 @NgModule({
@@ -34,8 +37,12 @@ import {MatListModule} from '@angular/material/list';
     MatGridListModule,
     MatListModule
 
+    MatSnackBarModule
 
 
+  ],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'es-Es'}
   ]
 
 })
