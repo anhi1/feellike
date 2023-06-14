@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from "../shared/shared.module";
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -28,7 +30,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatTableModule,
     SharedModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule,
+    MatListModule
+
 
 
   ]
