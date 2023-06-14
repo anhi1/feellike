@@ -4,17 +4,42 @@ import { CasaGalleryComponent } from './casa-gallery/casa-gallery.component';
 import { CasaDetailComponent } from './casa-detail/casa-detail.component';
 
 import { CasaListComponent } from './casa-list/casa-list.component';
+import { CasaFormComponent } from './casa-form/casa-form.component';
 
 
 
 const routes: Routes = [
-
-  {path:'', component: CasaGalleryComponent},
-  {path: ':id', component: CasaDetailComponent},
-
-  {path: 'casa-list', component: CasaListComponent},
-
-  {path: '**', redirectTo: '', pathMatch: 'full'},
+  {
+    path: '',
+    component: CasaListComponent,
+  },
+  {
+    path: 'gallery',
+    component: CasaGalleryComponent,
+  },
+  {
+    path: 'new',
+    component: CasaFormComponent,
+  },
+  {
+    path: ':id',
+    component: CasaDetailComponent
+  },
+  {
+    path: ':id/edit',
+    component: CasaFormComponent
+  },
+  {
+    path: 'author/:authorId',
+    component: CasaListComponent
+  },
+  {
+    path: 'category/:categoryId',
+    component: CasaListComponent
+  },
+  {
+    path: '**', redirectTo: '', pathMatch: 'full'
+  }
 ];
 
 @NgModule({
