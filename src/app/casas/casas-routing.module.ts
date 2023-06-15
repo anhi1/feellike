@@ -14,13 +14,13 @@ const routes: Routes = [
     component: CasaListComponent,
   },
   {
-    path: 'gallery',
-    component: CasaGalleryComponent,
-  },
-  {
     path: 'new',
     component: CasaFormComponent,
   },
+  /* {
+    path: 'gallery',
+    component: CasaGalleryComponent,
+  }, */
   {
     path: ':id',
     component: CasaDetailComponent
