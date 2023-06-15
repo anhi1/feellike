@@ -9,14 +9,14 @@ const routes: Routes = [
     loadChildren: () => import('./users/users.module').then(m => m.UsersModule) // lazy loading
   },
   {
-    path: 'books',
+    path: 'casas',
     loadChildren: () => import('./casas/casas.module').then(m => m.CasasModule) // lazy loading
   },
   {
-    path: '', redirectTo: 'books', pathMatch: 'full'
+    path: '', redirectTo: 'casas', pathMatch: 'full'
   },
   {
-    path: '**', redirectTo: 'books', pathMatch: 'full'
+    path: '**', redirectTo: 'casas', pathMatch: 'full'
   }
 ];
 
