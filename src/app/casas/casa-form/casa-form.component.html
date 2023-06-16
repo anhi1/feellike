@@ -1,1 +1,60 @@
-<p>casa-form works!</p>
+
+<h2 *ngIf="casaForm.get('id')?.value === 0">Formulario de Casas</h2>
+<h2 *ngIf="!(casaForm.get('id')?.value === 0)">Agregando/Modificando una casa {{casaForm.get('id')?.value}}</h2>
+
+<form [formGroup]="casaForm" (ngSubmit)="save()">
+
+  <input type="hidden" formControlName="id">
+
+  <mat-form-field>
+    <mat-label>Título</mat-label>
+    <input matInput type="text" formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descripcion</mat-label>
+    <textarea matInput #message maxlength="1000" rows="5"
+        placeholder="Ex. I need help with..." formControlName="description">
+    </textarea>
+    <mat-hint align="start"><strong>Escribe una breve descripcion</strong> </mat-hint>
+    <mat-hint align="end">{{message.value.length}} / 1000</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Pais</mat-label>
+    <input matInput type="text" formControlName="country">
+  </mat-form-field>
+
+  <mat-form-field floatLabel="always">
+    <mat-label>Número de habitaciones</mat-label>
+    <input matInput type="number" placeholder="0" formControlName="bedrooms" min="1">
+    <mat-error *ngIf="casaForm.get('bedrooms')?.invalid && casaForm.get('bedrooms')?.touched">
+        El número de habitaciones minimo una.
+  </mat-error>
+  </mat-form-field>
+
+  <mat-form-field floatLabel="always">
+    <mat-label>Número de baños</mat-label>
+    <input matInput type="number" placeholder="0" formControlName="bathrooms" min="1" step="0">
+    <mat-error *ngIf="casaForm.get('bathrooms')?.invalid && casaForm.get('bathrooms')?.touched">
+        El número de baños minimo una.
+  </mat-error>
+  </mat-form-field>
+
+  <mat-form-field floatLabel="always">
+    <mat-label>Precio</mat-label>
+    <input matInput type="number" class="example-right-align" placeholder="0" step="0.01" min="5" max="3000" formControlName="price">
+    <span matTextPrefix>&euro;&nbsp;</span>
+    <mat-error *ngIf="casaForm.get('price')?.invalid && casaForm.get('price')?.touched">
+        El precio debe estar comprendido en un rango de 1000 y 5000 €.
+  </mat-error>
+  </mat-form-field>
+
+  <button mat-fab extended type="submit"
+        [disabled]="casaForm.invalid">
+    <mat-icon>send</mat-icon>
+      Enviar
+  </button>
+</form>
+
+
