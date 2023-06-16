@@ -30,7 +30,7 @@ const routes: Routes = [
     component: CasaFormComponent
   },
   {
-    path: 'author/:authorId',
+    path: 'user/:userId',
     component: CasaListComponent
   },
   {
