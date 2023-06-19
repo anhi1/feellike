@@ -2,12 +2,18 @@
     flex: 1 1 auto;
 }
 
-.logo {
-    max-width: 100px;
+.navbar {
+    display:flex;
+    justify-content: center;
+    background: #F3F3F3;
+    
 }
 
-.navbar {
-    background-color: #FAFAFA;
-    padding: 40px;
+.logo {
+    max-width: 110px;
+    
+    
 }
+
+
 
