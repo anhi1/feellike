@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  NgOptimizedImage} from '@angular/common';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -42,7 +43,8 @@ import { CategoriesModule } from './categories/categories.module';
     MatGridListModule,
     UsersModule,
     CategoriesModule,
-    CasasModule
+    CasasModule,
+    NgOptimizedImage
 
 
   ],

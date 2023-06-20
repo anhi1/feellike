@@ -16,7 +16,7 @@
       "price": 993,
       "comodidad": "dog park",
       "photo": "https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg",
-      "image":[
+      "images":[
         "https://img.freepik.com/foto-gratis/hermosa-playa-tropical-mar_74190-6732.jpg",
 "https://img.freepik.com/foto-gratis/sombrilla-tumbona-alrededor-piscina_1203-2409.jpg",
 "https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg",
@@ -39,7 +39,7 @@
       "price": 840,
       "comodidad": "playground",
       "photo": "https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440" ,
-      "image":[
+      "images":[
         "https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440",
 "https://a0.muscache.com/im/pictures/9b5e2eff-ca68-4f22-adb0-029a33e466aa.jpg?im_w=1200",
 "https://a0.muscache.com/im/pictures/a41678d9-cb0c-44dc-b79d-dfbd3aaa435a.jpg?im_w=1440",
@@ -63,7 +63,7 @@
       "price": 693,
       "comodidad": "gym",
       "photo": "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
-      "image":[
+      "images":[
         "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
 "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
 "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
@@ -87,7 +87,7 @@
       "price": 626,
       "comodidad": "clubhouse",
       "photo": "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
-      "image":[
+      "images":[
         "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
 "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
 "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
@@ -111,7 +111,7 @@
       "price": 763,
       "comodidad": "clubhouse",
       "photo":"https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-      "image":[
+      "images":[
         "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
 "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
 "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
@@ -135,7 +135,7 @@
       "price": 775,
       "comodidad": "gym",
       "photo": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-      "image":[
+      "images":[
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/77e16e37-267d-4c98-8d63-06d559be16cc.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/80ba5688-7d16-449f-a19f-43e563a758eb.jpeg",
@@ -161,7 +161,7 @@
       "price": 664,
       "comodidad": "clubhouse",
       "photo": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-      "image":[
+      "images":[
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/77e16e37-267d-4c98-8d63-06d559be16cc.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/80ba5688-7d16-449f-a19f-43e563a758eb.jpeg",
@@ -187,7 +187,7 @@
       "price": 674,
       "comodidad": "car wash",
       "photo":"https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440",
-      "image":[
+      "images":[
         "https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440",
 "https://a0.muscache.com/im/pictures/9b5e2eff-ca68-4f22-adb0-029a33e466aa.jpg?im_w=1200",
 "https://a0.muscache.com/im/pictures/a41678d9-cb0c-44dc-b79d-dfbd3aaa435a.jpg?im_w=1440",
@@ -211,7 +211,7 @@
       "price": 749,
       "comodidad": "pool",
       "photo":"https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg",
-      "image":[
+      "images":[
         "https://img.freepik.com/foto-gratis/hermosa-playa-tropical-mar_74190-6732.jpg",
 "https://img.freepik.com/foto-gratis/sombrilla-tumbona-alrededor-piscina_1203-2409.jpg",
 "https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg",
@@ -234,7 +234,7 @@
       "price": 975,
       "comodidad": "clubhouse",
       "photo":"https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-      "image":[
+      "images":[
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/77e16e37-267d-4c98-8d63-06d559be16cc.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/80ba5688-7d16-449f-a19f-43e563a758eb.jpeg",

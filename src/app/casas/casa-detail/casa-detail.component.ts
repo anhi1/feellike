@@ -14,6 +14,9 @@ import { UserService } from 'src/app/users/services/user.service';
 export class CasaDetailComponent {
   casa: ICasa | undefined;
   user: IUser | undefined;
+  casas: ICasa[]=[];
+  images: string[]=[];
+  
 
   constructor(private activatedRoute: ActivatedRoute,
               private casaService: CasaService,
@@ -25,6 +28,10 @@ export class CasaDetailComponent {
 
       this.casaService.findById(id).subscribe(data => {
         this.casa = data;
+        //prueba
+        for (const currentCasa of this.casas) {
+          this.images = currentCasa.images
+        }
         if (!(this.casa.userId > 0)) return;
         this.userService.findById(this.casa.userId).subscribe(data => this.user = data)
       });

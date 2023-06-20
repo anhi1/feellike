@@ -101,7 +101,8 @@ export class CasaFormComponent {
       comodidad: '',
       photo: '',
       categories: [],
-      userId: 0
+      userId: 0,
+      images: []
     }
 
     if (id === 0) // crear nuevo libro
