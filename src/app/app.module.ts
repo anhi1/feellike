@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { CasasModule } from './casas/casas.module';
+// import { commentsModule } from './comments/comments.module';
+
 
 //navbar
 import { MatIconModule } from '@angular/material/icon';
@@ -28,6 +30,7 @@ import { UsersModule } from './users/users.module';
     AppComponent,
     NavbarComponent,
     FooterComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,8 @@ import { UsersModule } from './users/users.module';
     MatMenuModule,
     MatGridListModule,
     UsersModule,
+    // commentsModule,
+    
     
     
   ],
