@@ -1,6 +1,7 @@
-/* mat-grid-tile .container {
-    margin:0; */
 
+
+
+/*  
     .image-grid {
         
         --gap: 16px;
@@ -31,10 +32,26 @@
         grid-row: span 2;
     }
     
-    /* Anything udner 1024px */
+     Anything udner 1024px 
     @media screen and (max-width: 1024px) {
         .image-grid {
             --num-cols: 2;
             --row-height: 200px;
         }
     }
+
+    .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) ;
+            gap: 1em;
+            grid-template-rows: minmax(100px, auto);
+    }
+    .grid div {
+        background-color: antiquewhite;
+        padding: 1em;
+    }
+    .grid div:hover {
+        border: 1px solid #f1c40f;
+    }
+
+    */

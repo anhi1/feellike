@@ -1,12 +1,3 @@
-
-<div class="image-grid">
-  <img class="image-grid-col-2 image-grid-row-2" src="../../../assets/img/1img.webp" alt="Diseño">
-  <img src="../../../assets/img/1img.webp" alt="Diseño">
-  <img src="../../../assets/img/2img.webp" alt="diseño">
-  <img src="../../../assets/img/3img.webp" alt="diseño">
-  <img src="../../../assets/img/4img.webp" alt="diseño">
-</div>
-
 <!-- <mat-grid-list class="container" cols="2" rowHeight="2:1">
   <div *ngIf="casa">
   <mat-grid-tile *ngFor="let img of casa.images">
@@ -15,55 +6,22 @@
   </mat-grid-tile>
 </div>
 </mat-grid-list> -->
-<mat-list *ngIf="user">
-  <mat-list-item>
-    <img matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
-    <div matListItemTitle>
-      <a [routerLink]="['/authors', user.id]">
-        {{user.fullName}}
-      </a>
-    </div>
-  </mat-list-item>
-</mat-list>
 
-
-<!-- <mat-grid-tile rowspan="2">
-<div>
-<h2>Habitaciones {{ casa.bedrooms }}</h2>
-<p>Número de habitaciones: {{ casa.bedrooms }}</p>
-
-<h2>Categoría</h2>
-<p>{{ casa.category }}</p>
+<div *ngIf="casa">
+  <div *ngFor="let img of casa.images">
+    <img [src]="img" [alt]="casa.title">
+  </div>
 </div>
-</mat-grid-tile>
-
-< rowspan="2">
-<>
-<h2>Alquiler: {{ casa.price }} €</h2>
-<p></p>
-
-<button mat-fab extended color="primary">
-  <mat-icon>shopping_cart</mat-icon>
-  Comprar
-</button> 
-<button mat-raised-button color="primary" style="width: 100%;">
-  <mat-icon>shopping_cart</mat-icon>
-Alquilar
-</button>
 
 
-<mat-grid-tile colspan="3" rowspan="1">
-<div>
-<p>
-  Todas nuestras casas son confortables
-</p>
-</div>
-</mat-grid-tile>-->
-
-
-
-
-
-
+<!-- 
+  <div class="image-grid">
+  <img class="image-grid-col-2 image-grid-row-2" src="../../../assets/img/1img.webp" alt="Diseño">
+  <img src="../../../assets/img/1img.webp" alt="Diseño">
+  <img src="../../../assets/img/2img.webp" alt="diseño">
+  <img src="../../../assets/img/3img.webp" alt="diseño">
+  <img src="../../../assets/img/4img.webp" alt="diseño">
+</div> 
+-->
 
 
