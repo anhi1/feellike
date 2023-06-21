@@ -30,10 +30,6 @@ const routes: Routes = [
     component: CasaFormComponent
   },
   {
-    path: 'user/:userId',
-    component: CasaListComponent
-  },
-  {
     path: 'category/:categoryId',
     component: CasaListComponent
   },

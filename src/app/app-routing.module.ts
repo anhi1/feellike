@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CasaFormComponent } from './casas/casa-form/casa-form.component';
-import { CasaListComponent } from './casas/casa-list/casa-list.component';
+import { CasaDetailComponent } from './casas/casa-detail/casa-detail.component';
+
 
 const routes: Routes = [
   {
@@ -11,6 +11,9 @@ const routes: Routes = [
   {
     path: 'casas',
     loadChildren: () => import('./casas/casas.module').then(m => m.CasasModule) // lazy loading
+  },
+  {
+    path: 'casa-detail', component:CasaDetailComponent
   },
   {
     path: '', redirectTo: 'casas', pathMatch: 'full'

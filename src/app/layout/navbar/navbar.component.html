@@ -1,34 +1,27 @@
 <nav>
-    <mat-toolbar class="navbar">
-      
-      <a routerLink="/" title="Inicio">
-        <img src="/assets/icon/logo.svg" class="logo" alt="logo">
-      </a>
 
-      
-    
+  <mat-toolbar class="navbar">
 
-      <span class="example-spacer"></span> <!--indica el espacio-->
+    <a routerLink="/" title="Inicio">
+      <img src="/assets/icon/logo.svg" class="logo" alt="logo">
+    </a>
 
-      
-      <div class="example-button-row">
-        <button  mat-raised-button >Iniciar sesión</button>
-      </div>
-  
+    <span class="example-spacer"></span> <!--indica el espacio-->
+
+
+    <div class="example-button-row">
+      <button mat-raised-button>Iniciar sesión</button>
+    </div>
+
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>Camping</button>
-        <button mat-menu-item>Diseño</button>
-        <button mat-menu-item>Domo</button>
-        <button mat-menu-item>Playa</button>
-        <button mat-menu-item><a routerLink="/casa-list">Listado</a></button>
-        <button mat-menu-item routerLink="casa-gallery">Galleria</button>
+      <button mat-menu-item><a routerLink="/casa-list">Listado</a></button>
     </mat-menu>
-    
-  
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      
-    </mat-toolbar>
-  </nav>
+
+
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+
+  </mat-toolbar>
+</nav>
