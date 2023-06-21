@@ -1,53 +1,20 @@
-<mat-grid-list cols="3" rowHeight="200px" *ngIf="casa">
-    <mat-grid-tile rowspan="2">
-      <div>
-        <h2>Casa</h2>
-        <img src="{{ casa.photo }}" style="max-width: 150px;" />
-  
-        <mat-list *ngIf="user">
-          <mat-list-item>
-            <img matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
-            <div matListItemTitle>
-              <a [routerLink]="['/users', user.id]">
-                {{user.fullName}}
-              </a>
-            </div>
-          </mat-list-item>
-        </mat-list>
-  
-      </div>
-    </mat-grid-tile>
-  
-    <mat-grid-tile rowspan="2">
-      <div>
-        <h2>{{ casa.title }}</h2>
-        <p>Habitaciones: {{ casa.bedrooms }}</p>
 
-      </div>
-    </mat-grid-tile>
-  
-    <mat-grid-tile rowspan="2">
-      <div>
-        <h2>Precio: {{ casa.price }} €</h2>
-       
-  
-        <!--<button mat-fab extended color="primary">
-          <mat-icon>shopping_cart</mat-icon>
-          Comprar
-        </button> -->
-        <button mat-raised-button color="primary" style="width: 100%;">
-          <mat-icon>shopping_cart</mat-icon>
-        Reservar
-        </button>
-      </div>
-    </mat-grid-tile>
-  
-    <mat-grid-tile colspan="3" rowspan="1">
-      <div>
-        <p>
-          Todas nuestras casas son confortables
-        </p>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-  
+
+<div *ngIf="casa" class="collage">
+  <div  class="image" *ngFor="let img of casa.images">
+    <img  [src]="img" [alt]="casa.title">
+  </div>
+</div>
+
+
+<!-- 
+  <div class="image-grid">
+  <img class="image-grid-col-2 image-grid-row-2" src="../../../assets/img/1img.webp" alt="Diseño">
+  <img src="../../../assets/img/1img.webp" alt="Diseño">
+  <img src="../../../assets/img/2img.webp" alt="diseño">
+  <img src="../../../assets/img/3img.webp" alt="diseño">
+  <img src="../../../assets/img/4img.webp" alt="diseño">
+</div> 
+-->
+
+
