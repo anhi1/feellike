@@ -1,5 +1,27 @@
 
+*{
 
+box-sizing: border-box;
+font-family: poppins;
+
+}
+
+.collage{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr) ;
+    gap: 1em;
+    grid-template-rows: minmax(100px, auto);
+
+
+}
+
+.image{
+    width: 50%;
+    height:50%;
+    object-fit: cover;
+    
+}
 
 /*  
     .image-grid {

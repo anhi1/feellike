@@ -1,15 +1,8 @@
-<!-- <mat-grid-list class="container" cols="2" rowHeight="2:1">
-  <div *ngIf="casa">
-  <mat-grid-tile *ngFor="let img of casa.images">
-    
-    <img class="array"[src]="img" [alt]="casa.title">
-  </mat-grid-tile>
-</div>
-</mat-grid-list> -->
 
-<div *ngIf="casa">
-  <div *ngFor="let img of casa.images">
-    <img [src]="img" [alt]="casa.title">
+
+<div *ngIf="casa" class="collage">
+  <div  class="image" *ngFor="let img of casa.images">
+    <img  [src]="img" [alt]="casa.title">
   </div>
 </div>
 
