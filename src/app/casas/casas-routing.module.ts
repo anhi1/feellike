@@ -3,10 +3,39 @@ import { RouterModule, Routes } from '@angular/router';
 import { CasaGalleryComponent } from './casa-gallery/casa-gallery.component';
 import { CasaDetailComponent } from './casa-detail/casa-detail.component';
 
+import { CasaListComponent } from './casa-list/casa-list.component';
+import { CasaFormComponent } from './casa-form/casa-form.component';
+
+
+
 const routes: Routes = [
-  {path: '', component: CasaGalleryComponent},
-  {path: ':id', component: CasaDetailComponent},
-  {path: '**', redirectTo: '', pathMatch: 'full'},
+  {
+    path: '',
+    component: CasaListComponent,
+  },
+  {
+    path: 'new',
+    component: CasaFormComponent,
+  },
+  /* {
+    path: 'gallery',
+    component: CasaGalleryComponent,
+  }, */
+  {
+    path: ':id',
+    component: CasaDetailComponent
+  },
+  {
+    path: ':id/edit',
+    component: CasaFormComponent
+  },
+  {
+    path: 'category/:categoryId',
+    component: CasaListComponent
+  },
+  {
+    path: '**', redirectTo: '', pathMatch: 'full'
+  }
 ];
 
 @NgModule({

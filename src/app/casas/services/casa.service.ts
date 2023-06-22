@@ -3,12 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ICasa } from '../models/casa.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CasaService {
 
   url: string = "http://localhost:3000/casas";
+  //baseUrl : string = "http://localhost:3000/reservedList"
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,8 +19,13 @@ export class CasaService {
   }
 
   // http://localhost:3000/casas?userId=1
-  findAllByAuthorId(userId: number): Observable<ICasa[]> {
-    return this.httpClient.get<ICasa[]>(`${this.url}?authorId=${userId}`);
+  findAllByUserId(userId: number): Observable<ICasa[]> {
+    return this.httpClient.get<ICasa[]>(`${this.url}?userId=${userId}`);
+  }
+
+  //http://localhost:3000/casas?categories_like=3
+  findAllByCategoryId(categoryId: number): Observable<ICasa[]>{
+    return this.httpClient.get<ICasa[]>(`${this.url}?categories_like=${categoryId}`);
   }
 
   findById(id: number): Observable<ICasa> {
@@ -45,4 +52,20 @@ export class CasaService {
   deleteById(id: number): Observable<HttpResponse<{}>> {
     return this.httpClient.delete<HttpResponse<{}>>(`${this.url}/${id}`, this.httpOptions);
   }
+
+
+
+  /*
+  createNewReserve(reserve : IReserve): Observable<IReserve>{
+   return this.httpClient.post<IReserve>(this.baseUrl, reserve)
+  }
+
+  deleteReservation(id: number): Observable<any> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.httpClient.delete(url);
+  }
+*/
+
 }
+
+

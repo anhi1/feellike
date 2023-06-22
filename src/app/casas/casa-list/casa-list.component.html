@@ -1,1 +1,61 @@
-<p>casa-list works!</p>
+
+<h2>Listado de casas</h2>
+
+<button mat-raised-button color="primary" routerLink="/casas/new">
+  Agregar casa
+</button>
+
+<!--  user -->
+
+<div *ngIf="user">
+  <img class="list-header-img" [src]="user.photo" [alt]="user.fullName">
+  <h2>Autor {{user.fullName}}</h2>
+</div>
+
+
+<!--  category -->
+<div class="category">
+  <div class="nube">
+  <a *ngFor="let category of categories" [routerLink]= "['/casas/category', category.id]">
+  <img [src]="category.icono" [alt]="category.name" style="max-width: 50px;"/>
+  <p>{{category.name}}</p>
+  </a>
+  </div>
+</div>
+
+
+<!-----------  conteo de las casas ------------>
+<div *ngIf="casas.length > 0">
+  Hay {{casas.length}} Casas en total.
+</div>
+
+
+<!------- card  ------>
+<div class="container" >
+  <div class="card" *ngFor=" let casa of casas">
+    <img  class="card__imagen" [src]="casa.photo">
+    <p>{{casa.city}}</p>
+    <p>Precio {{casa.price}}€</p>
+
+    <div>
+     <button  [routerLink]="['/casas', casa.id]">
+      <img class="icono" src="assets/icon/ver.png" alt="" style="max-width: 15px;">
+      ver
+     </button>
+
+     <button  [routerLink]="['/casas', casa.id, 'edit']">
+      <img class="icono" src="assets/icon/editar.png" alt="" style="max-width: 15px;">
+      Editar
+      </button>
+
+      <button (click)="deleteCasa(casa)">
+        <img class="icono" src="assets/icon/borrar.png" alt="" style="max-width: 15px;">
+        Eliminar
+      </button>
+    </div>
+    
+  </div>
+</div>
+
+
+  

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  NgOptimizedImage} from '@angular/common';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +21,7 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { UsersModule } from './users/users.module';
+import { CategoriesModule } from './categories/categories.module';
 
 
 
@@ -43,10 +45,11 @@ import { UsersModule } from './users/users.module';
     MatMenuModule,
     MatGridListModule,
     UsersModule,
-    // commentsModule,
-    
-    
-    
+    CategoriesModule,
+    CasasModule,
+    NgOptimizedImage
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

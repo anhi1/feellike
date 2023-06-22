@@ -1,0 +1,65 @@
+
+*{
+  font-family: poppins;
+  box-sizing: border-box;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nube {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #D1F7FF;
+  border-radius: 596px;
+  width: 1000px;
+  padding: 10px;
+  
+
+}
+
+
+/* -----  Card   ----*/
+
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  padding: 4em 2em;
+
+}
+  
+  .card{
+    border-radius: 10px silver;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .card__imagen{
+    overflow: hidden;
+    border-radius: 5px;
+    display: block;
+    max-width: 100%;
+    object-fit:cover;
+    object-position: center top;
+  }
+  
+
+  /*------botones de ver editar y eliminar----------*/
+  button{
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #6B79FF;
+  }
+
+  .icono{
+    filter: invert(55%) sepia(95%) saturate(4633%) hue-rotate(220deg) brightness(108%) contrast(101%);
+  }

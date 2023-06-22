@@ -1,0 +1,36 @@
+<mat-grid-list cols="3" rowHeight="200px" *ngIf="user">
+    <mat-grid-tile rowspan="2">
+      <div>
+        <h2>Anfitrion {{ user.id }}</h2>
+        <img src="{{ user.photo }}" style="max-width: 150px;" />
+      </div>
+    </mat-grid-tile>
+  
+    <mat-grid-tile rowspan="2">
+      <div>
+        <h2>{{ user.fullName }}</h2>
+        <p>Origen: {{ user.city }}</p>
+      </div>
+    </mat-grid-tile>
+  
+    <mat-grid-tile rowspan="2">
+      <div>
+        <h2>Biografía</h2>
+        <p>{{ user.bio }}</p>
+      </div>
+    </mat-grid-tile>
+  
+    <mat-grid-tile colspan="3" rowspan="1" *ngIf="casas.length > 0">
+      <mat-list>
+        <mat-list-item *ngFor="let casa of casas">
+          <img matListItemAvatar src="{{casa.photo}}" alt="{{casa.title}}">
+          <div matListItemTitle>
+            <a [routerLink]="['/casas', casa.id]">
+              {{casa.title}}
+            </a>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </mat-grid-tile>
+
+  </mat-grid-list>
