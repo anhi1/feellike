@@ -17,8 +17,8 @@ export class CommentDetailComponent {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      const id = parseInt(params['id'], 10);
-      this.commentService.findById(id).subscribe(data => this.comment = data);
+      const userid = parseInt(params['userid'], 10);
+      this.commentService.findById(userid).subscribe(data => this.comment = data);
     });
   }
 }

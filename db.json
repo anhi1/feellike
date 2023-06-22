@@ -1,19 +1,349 @@
 {
-  "posts": [
+  "casas": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "Apartamento",
+      "categories":[2],
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "squarefeet": 6162,
+      "description": "justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit",
+      "userId": 1,
+      "available": false,
+      "country": "España",
+      "city": "Murcia",
+      "cp": "10474",
+      "price": 993,
+      "comodidad": "dog park",
+      "photo": "https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Estudio",
+      "categories": [3],
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "squarefeet": 3101,
+      "description": "nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti",
+      "userId": 2,
+      "available": false,
+      "country": "España",
+      "city": "Valladolid",
+      "cp": "58028",
+      "price": 840,
+      "comodidad": "playground",
+      "photo": "https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440"  
+    },
+    {
+      "id": 3,
+      "title": "Casa camping",
+      "categories": [1],
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "squarefeet": 9585,
+      "description": "tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet",
+      "userId": 3,
+      "available": true,
+      "country": "España",
+      "city": "Madrid",
+      "cp": "49775",
+      "price": 693,
+      "comodidad": "gym",
+      "photo": "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200"
+    },
+    {
+      "id": 4,
+      "title": "Casa camping",
+      "categories": [1],
+      "bedrooms": 1,
+      "bathrooms": 4,
+      "squarefeet": 9091,
+      "description": "risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis",
+      "userId": 4,
+      "available": true,
+      "country": "España",
+      "city": "Granada",
+      "cp": "78511",
+      "price": 626,
+      "comodidad": "clubhouse",
+      "photo": "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200"
+    },
+    {
+      "id": 5,
+      "title": "Apartamento",
+      "categories": [4],
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "squarefeet": 5157,
+      "description": "metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
+      "userId": 5,
+      "available": true,
+      "country": "España",
+      "city": "Gijón",
+      "cp": "03977",
+      "price": 763,
+      "comodidad": "clubhouse",
+      "photo":"https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "Apartamento",
+      "categories": [4],
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "squarefeet": 7819,
+      "description": "interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in",
+      "userId": 6,
+      "available": false,
+      "country": "España",
+      "city": "Barcelona",
+      "cp": "77094",
+      "price": 775,
+      "comodidad": "gym",
+      "photo": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg"
+    },
+    {
+      "id": 7,
+      "title": "Apartamento",
+      "categories": [4],
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "squarefeet": 9608,
+      "description": "a pede posuere nonummy integer non velit donec diam neque vestibulum",
+      "userId": 7,
+      "available": true,
+      "country": "España",
+      "city": "Palma de Mallorca",
+      "cp": "06766",
+      "price": 664,
+      "comodidad": "clubhouse",
+      "photo": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg"
+    },
+    {
+      "id": 8,
+      "title": "Loft",
+      "categories": [3],
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "squarefeet": 5321,
+      "description": "lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam",
+      "userId": 8,
+      "available": false,
+      "country": "España",
+      "city": "Granada",
+      "cp": "25008",
+      "price": 674,
+      "comodidad": "car wash",
+      "photo":"https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440"   
+    },
+    {
+      "id": 9,
+      "title": "Casa",
+      "categories": [2],
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squarefeet": 9894,
+      "description": "diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi",
+      "userId": 9,
+      "available": false,
+      "country": "España",
+      "city": "Valencia",
+      "cp": "80241",
+      "price": 749,
+      "comodidad": "pool",
+      "photo":"https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg" 
+    },
+    {
+      "id": 10,
+      "title": "Apartamento",
+      "categories": [4],
+      "bedrooms": 2,
+      "bathrooms": 4,
+      "squarefeet": 6389,
+      "description": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "userId": 10,
+      "available": true,
+      "country": "España",
+      "city": "Murcia",
+      "cp": "90814",
+      "price": 975,
+      "comodidad": "clubhouse",
+      "photo":"https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Del Surgey",
+      "email": "dsurgey0@prlog.org",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "836-502-6262",
+      "idioma": "frances",
+      "code": "19765",
+      "city": "Granada",
+      "street": "4 Crest Line Lane",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 2,
+      "fullName": "Cristabel Portwain",
+      "email": "cportwain1@deviantart.com",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "562-893-1415",
+      "idioma": "español",
+      "code": "42133",
+      "city": "Valladolid",
+      "street": "0 Village Green Pass",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 3,
+      "fullName": "Minne Harm",
+      "email": "mharm2@state.gov",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "446-975-5260",
+      "idioma": "ingles",
+      "code": "77206",
+      "city": "Vigo",
+      "street": "6 Clarendon Court",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 4,
+      "fullName": "Matilda Ladbrook",
+      "email": "mladbrook3@ucoz.com",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "176-533-3612",
+      "idioma": "ingles",
+      "code": "87940",
+      "city": "Alicante",
+      "street": "74470 Sunfield Pass",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 5,
+      "fullName": "Dinah Zambon",
+      "email": "dzambon4@canalblog.com",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "179-583-2064",
+      "idioma": "frances",
+      "code": "16266",
+      "city": "Bilbao",
+      "street": "37 Mockingbird Place",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 6,
+      "fullName": "Shannon Foldes",
+      "email": "sfoldes5@ebay.co.uk",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "635-318-7329",
+      "idioma": "frances",
+      "code": "47789",
+      "city": "Valencia",
+      "street": "56 Heffernan Center",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 7,
+      "fullName": "Arin Willoughway",
+      "email": "awilloughway6@salon.com",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "904-399-1106",
+      "idioma": "ingles",
+      "code": "14216",
+      "city": "Alicante",
+      "street": "4 Canary Circle",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 8,
+      "fullName": "Joseito Altoft",
+      "email": "jaltoft7@boston.com",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "703-328-9760",
+      "idioma": "aleman",
+      "code": "21881",
+      "city": "Vigo",
+      "street": "483 Bayside Hill",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 9,
+      "fullName": "Nestor Clynter",
+      "email": "nclynter8@google.ca",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "716-109-7518",
+      "idioma": "ingles",
+      "code": "97515",
+      "city": "Alicante",
+      "street": "9285 Oneill Lane",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 10,
+      "fullName": "Nealon Whatley",
+      "email": "nwhatley9@zimbio.com",
+      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "phone": "200-568-3175",
+      "idioma": "aleman",
+      "code": "75584",
+      "city": "Vigo",
+      "street": "816 Mayfield Crossing",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=male"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Camping",
+      "description": "Lugar a cielo abierto a fin de habitarla por un cierto periodo de tiempo. Es posible realizar acampadas de una noche, unas semanas o incluso de varios meses.",
+      "icono": "/assets/icon/camping.svg"
+    },
+    {
+      "id": 2,
+      "name": "Playa",
+      "description": "dfgdfgh",
+      "icono": "/assets/icon/playa.svg"
+    },
+    {
+      "id": 3,
+      "name": "Domo",
+      "description": "dfgdfgh",
+      "icono": "/assets/icon/domo.svg"
+    },
+    {
+      "id": 4,
+      "name": "Diseño",
+      "description": "dfgdfgh",
+      "icono": "/assets/icon/diseño.svg"
     }
   ],
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "description": "Playa campo1",
+      "casaid": 1
+      
+    },
+    {
+      "id": 2,
+      "description": "Playa campo2",
+      "casaId": 2,
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "description": "Playa campo3",
+      "casaId": 3,
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "description": "Playa campo4",
+      "casaId": 4,
+      "userId": 4
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
+  
 }

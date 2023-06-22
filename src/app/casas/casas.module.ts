@@ -8,12 +8,14 @@ import { CasaDetailComponent } from './casa-detail/casa-detail.component';
 import { CasaFormComponent } from './casa-form/casa-form.component';
 
 
+
 @NgModule({
   declarations: [
     CasaListComponent,
     CasaGalleryComponent,
     CasaDetailComponent,
-    CasaFormComponent
+    CasaFormComponent,
+    
   ],
   imports: [
     CommonModule,
