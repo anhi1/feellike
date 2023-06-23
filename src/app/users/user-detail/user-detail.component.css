@@ -1,0 +1,43 @@
+* {
+    font-family: poppins;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:40px;
+}
+ 
+/* ----foto card ----*/ 
+
+.card {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(255, 249, 239);
+    border-radius: 15px;
+    border:none;
+    box-shadow: 0px 5px 10px silver;
+    width: 200px;
+    height: 250px; 
+    text-align: center;
+   
+}
+
+.circle {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.tarjeta{
+    width: 200px;
+
+}
+
+
+
+

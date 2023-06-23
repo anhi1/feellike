@@ -1,32 +1,38 @@
 
-<h2>Listado de casas</h2>
 
+<div class="btn_add">
 <button mat-raised-button color="primary" routerLink="/casas/new">
   Agregar casa
 </button>
-
-<!--  user -->
+</div>
+<!--  user 
 
 <div *ngIf="user">
   <img class="list-header-img" [src]="user.photo" [alt]="user.fullName">
   <h2>Autor {{user.fullName}}</h2>
 </div>
 
+-->
 
 <!--  category -->
 <div class="category">
   <div class="nube">
-  <a *ngFor="let category of categories" [routerLink]= "['/casas/category', category.id]">
-  <img [src]="category.icono" [alt]="category.name" style="max-width: 50px;"/>
-  <p>{{category.name}}</p>
-  </a>
+      <a class="contenedor" *ngFor="let category of categories" [routerLink]="['/casas/category', category.id]">
+        <img class="icono_cat" [src]="category.icono" [alt]="category.name" />
+        <p class="name">{{category.name}}</p>
+      </a>
   </div>
 </div>
 
 
 <!-----------  conteo de las casas ------------>
-<div *ngIf="casas.length > 0">
-  Hay {{casas.length}} Casas en total.
+
+<div class="conteo" *ngIf="casas.length > 0">
+ <p> Hay {{casas.length}} casas en total.</p>
+</div>
+
+<div *ngIf="category">
+<p >{{category.description}}</p>
 </div>
 
 

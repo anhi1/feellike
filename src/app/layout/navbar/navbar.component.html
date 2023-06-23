@@ -1,27 +1,21 @@
-<nav>
 
-  <mat-toolbar class="navbar">
-
-    <a routerLink="/" title="Inicio">
-      <img src="/assets/icon/logo.svg" class="logo" alt="logo">
-    </a>
-
-    <span class="example-spacer"></span> <!--indica el espacio-->
-
-
-    <div class="example-button-row">
-      <button mat-raised-button>Iniciar sesión</button>
-    </div>
-
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
+<mat-toolbar class="navbar">
+  <a routerLink="/" title="Inicio" class="enlace">
+    <img src="/assets/icon/logo.svg" class="logo" alt="logo">
+  </a>
+  <span class="example-spacer"></span>
+  <div>
+    <button class="btn2">Iniciar sesión</button>
+    <button class="btn2">Registrarse</button>
+    
+  </div>
+</mat-toolbar>
+ 
+   <!--Enlace al listado
       <button mat-menu-item><a routerLink="/casa-list">Listado</a></button>
-    </mat-menu>
+    -->
 
 
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
+    
 
-  </mat-toolbar>
-</nav>
+ 

@@ -1,8 +1,40 @@
+<div *ngIf="user" class="container">
+
+  <div class="card">
+    <img class="circle" src="{{ user.photo }}"/>
+    <h2>Anfitrión </h2>
+    <p>{{ user.fullName }}</p>
+  </div>
+
+  <div class="tarjeta">
+    <p> Sobre mí: {{ user.bio }}</p>
+  </div>
+
+  <div class="tarjeta">
+    <p>Cuidad: {{ user.city }}</p>
+    <p>Calle: {{user.street}}</p>
+    <p>Código postal: {{user.code}}</p>
+  </div>
+
+  <div class="tarjeta">
+    <p>Email: {{ user.email }}</p>
+    <p>Phone: {{user.phone}}</p>
+    <p>Idioma: {{user.idioma}}</p>
+  </div>
+
+</div>
+
+
+
+<!--
 <mat-grid-list cols="3" rowHeight="200px" *ngIf="user">
+
+  
     <mat-grid-tile rowspan="2">
-      <div>
-        <h2>Anfitrion {{ user.id }}</h2>
-        <img src="{{ user.photo }}" style="max-width: 150px;" />
+      <div class="tarjeta">
+        <h2>Anfitrión </h2>
+        <img  class="circle" src="{{ user.photo }}" style="max-width: 150px;" />
+        <p>{{ user.fullName }}</p>
       </div>
     </mat-grid-tile>
   
@@ -34,3 +66,4 @@
     </mat-grid-tile>
 
   </mat-grid-list>
+  -->

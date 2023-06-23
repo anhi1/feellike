@@ -3,8 +3,24 @@
  <div class="gallery-container" *ngIf="casa" >
   <div  class="gallery__item" *ngFor="let img of casa.images">
     <img class="gallery__img" [src]="img" [alt]="casa.title">
+
+<div *ngIf="casa" class="collage">
+  <div  class="image" *ngFor="let img of casa.images">
+    <img  [src]="img" [alt]="casa.title">
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
