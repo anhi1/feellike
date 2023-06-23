@@ -20,6 +20,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { UsersModule } from './users/users.module';
 import { CategoriesModule } from './categories/categories.module';
+import { CommentsModule } from './comments/comments.module';
 
 
 
@@ -44,7 +45,8 @@ import { CategoriesModule } from './categories/categories.module';
     UsersModule,
     CategoriesModule,
     CasasModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    CommentsModule
 
 
   ],

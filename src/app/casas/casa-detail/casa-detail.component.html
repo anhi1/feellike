@@ -7,14 +7,14 @@
 </div>
 
 
-<!-- 
-  <div class="image-grid">
-  <img class="image-grid-col-2 image-grid-row-2" src="../../../assets/img/1img.webp" alt="Diseño">
-  <img src="../../../assets/img/1img.webp" alt="Diseño">
-  <img src="../../../assets/img/2img.webp" alt="diseño">
-  <img src="../../../assets/img/3img.webp" alt="diseño">
-  <img src="../../../assets/img/4img.webp" alt="diseño">
-</div> 
--->
 
 
+<h2>Opiniones</h2>
+<div *ngIf="comments.length===0">No hay comentarios</div>
+<div *ngIf="comments.length>0">
+  <div *ngFor="let comment of comments">
+  <p>{{comment.email}}</p>
+  <p>{{comment.description}}</p>
+  <p><img src="{{comment.photo}}"></p>
+</div>
+</div>

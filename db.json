@@ -392,6 +392,32 @@
       "description": "dfgdfgh",
       "icono": "/assets/icon/diseño.svg"
     }
+  ],
+
+  "comments": [
+    {
+      "id": 1,
+      "email": "casa@gmail.com",
+      "description": "Lugar a cielo abierto a fin de habitarla por un cierto periodo de tiempo. Es posible realizar acampadas de una noche, unas semanas o incluso de varios meses.",
+      "photo":"https://xsgames.co/randomusers/avatar.php?g=male",
+      "casaId": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "email": "casa2@gmail.com",
+      "description": "Lugar a cielo abierto a fin de habitarla por un cierto periodo de tiempo. Es posible realizar acampadas de una noche, unas semanas o incluso de varios meses.",
+      "photo":"https://xsgames.co/randomusers/avatar.php?g=female",
+      "casaId": 1,
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "email": "casa3@gmail.com",
+      "description": "Lugar a cielo abierto a fin de habitarla por un cierto periodo de tiempo. Es posible realizar acampadas de una noche, unas semanas o incluso de varios meses.",
+      "photo":"https://xsgames.co/randomusers/avatar.php?g=male",
+      "casaId": 1,
+      "userId": 3
+    }
   ]
-  
 }
