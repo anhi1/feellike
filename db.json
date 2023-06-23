@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Apartamento",
-      "categories":[2],
+      "categories": [2],
       "bedrooms": 3,
       "bathrooms": 3,
       "squarefeet": 6162,
@@ -16,11 +16,17 @@
       "price": 993,
       "comodidad": "dog park",
       "photo": "https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg",
-      "images":[
+      "images": [
         "https://img.freepik.com/foto-gratis/hermosa-playa-tropical-mar_74190-6732.jpg",
-"https://img.freepik.com/foto-gratis/sombrilla-tumbona-alrededor-piscina_1203-2409.jpg",
-"https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg",
-"https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg"
+        "https://img.freepik.com/foto-gratis/sombrilla-tumbona-alrededor-piscina_1203-2409.jpg",
+        "https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg",
+        "https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg",
+        "https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg"
+        
+        
+        
+        
+        
       ]
     },
     {
@@ -38,14 +44,14 @@
       "cp": "58028",
       "price": 840,
       "comodidad": "playground",
-      "photo": "https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440" ,
-      "images":[
+      "photo": "https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440",
+      "images": [
         "https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440",
-"https://a0.muscache.com/im/pictures/9b5e2eff-ca68-4f22-adb0-029a33e466aa.jpg?im_w=1200",
-"https://a0.muscache.com/im/pictures/a41678d9-cb0c-44dc-b79d-dfbd3aaa435a.jpg?im_w=1440",
-"https://a0.muscache.com/im/pictures/fdceadd1-ac47-4278-8ca9-a11ecf85dc6f.jpg?im_w=1440"
-
-      ] 
+        "https://a0.muscache.com/im/pictures/9b5e2eff-ca68-4f22-adb0-029a33e466aa.jpg?im_w=1200",
+        "https://a0.muscache.com/im/pictures/a41678d9-cb0c-44dc-b79d-dfbd3aaa435a.jpg?im_w=1440",
+        "https://a0.muscache.com/im/pictures/fdceadd1-ac47-4278-8ca9-a11ecf85dc6f.jpg?im_w=1440",
+        "https://a0.muscache.com/im/pictures/fdceadd1-ac47-4278-8ca9-a11ecf85dc6f.jpg?im_w=1440"
+      ]
     },
     {
       "id": 3,
@@ -63,12 +69,12 @@
       "price": 693,
       "comodidad": "gym",
       "photo": "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
-      "images":[
+      "images": [
         "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/90818109-959a-4e42-b59a-7a14a0c717b1.jpeg",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872172907512159892/original/e513bd84-89c4-4fd0-8af8-36809e35996c.jpeg"
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/90818109-959a-4e42-b59a-7a14a0c717b1.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872172907512159892/original/e513bd84-89c4-4fd0-8af8-36809e35996c.jpeg"
       ]
     },
     {
@@ -87,12 +93,12 @@
       "price": 626,
       "comodidad": "clubhouse",
       "photo": "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
-      "images":[
+      "images": [
         "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/90818109-959a-4e42-b59a-7a14a0c717b1.jpeg",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872172907512159892/original/e513bd84-89c4-4fd0-8af8-36809e35996c.jpeg"
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/90818109-959a-4e42-b59a-7a14a0c717b1.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872172907512159892/original/e513bd84-89c4-4fd0-8af8-36809e35996c.jpeg"
       ]
     },
     {
@@ -110,13 +116,13 @@
       "cp": "03977",
       "price": 763,
       "comodidad": "clubhouse",
-      "photo":"https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-      "images":[
+      "photo": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
+      "images": [
         "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/2d5f7155-7458-4eb9-a7d3-753863d9eb45.jpeg?im_w=1200",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/90818109-959a-4e42-b59a-7a14a0c717b1.jpeg",
-"https://a0.muscache.com/im/pictures/miso/Hosting-872172907512159892/original/e513bd84-89c4-4fd0-8af8-36809e35996c.jpeg"
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/824dd21c-ae68-4232-94be-26cf579a0cd9.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/5286ea80-9435-428f-92eb-3798b6c2f13d.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872254228905543887/original/90818109-959a-4e42-b59a-7a14a0c717b1.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-872172907512159892/original/e513bd84-89c4-4fd0-8af8-36809e35996c.jpeg"
       ]
     },
     {
@@ -135,10 +141,8 @@
       "price": 775,
       "comodidad": "gym",
       "photo": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-      "images":[
+      "images": [
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/77e16e37-267d-4c98-8d63-06d559be16cc.jpeg",
-        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/80ba5688-7d16-449f-a19f-43e563a758eb.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/88599434-922e-4397-9cc7-7e75240e17d9.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/7271945e-8709-4eac-9779-25377d77c49e.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/ad0a7d6a-0f19-4220-b8a4-a0367177be66.jpeg",
@@ -161,10 +165,8 @@
       "price": 664,
       "comodidad": "clubhouse",
       "photo": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-      "images":[
+      "images": [
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/77e16e37-267d-4c98-8d63-06d559be16cc.jpeg",
-        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/80ba5688-7d16-449f-a19f-43e563a758eb.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/88599434-922e-4397-9cc7-7e75240e17d9.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/7271945e-8709-4eac-9779-25377d77c49e.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/ad0a7d6a-0f19-4220-b8a4-a0367177be66.jpeg",
@@ -186,14 +188,14 @@
       "cp": "25008",
       "price": 674,
       "comodidad": "car wash",
-      "photo":"https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440",
-      "images":[
+      "photo": "https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440",
+      "images": [
         "https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440",
-"https://a0.muscache.com/im/pictures/9b5e2eff-ca68-4f22-adb0-029a33e466aa.jpg?im_w=1200",
-"https://a0.muscache.com/im/pictures/a41678d9-cb0c-44dc-b79d-dfbd3aaa435a.jpg?im_w=1440",
-"https://a0.muscache.com/im/pictures/fdceadd1-ac47-4278-8ca9-a11ecf85dc6f.jpg?im_w=1440"
-
-      ]   
+        "https://a0.muscache.com/im/pictures/9b5e2eff-ca68-4f22-adb0-029a33e466aa.jpg?im_w=1200",
+        "https://a0.muscache.com/im/pictures/a41678d9-cb0c-44dc-b79d-dfbd3aaa435a.jpg?im_w=1440",
+        "https://a0.muscache.com/im/pictures/fdceadd1-ac47-4278-8ca9-a11ecf85dc6f.jpg?im_w=1440",
+        "https://a0.muscache.com/im/pictures/9b5e2eff-ca68-4f22-adb0-029a33e466aa.jpg?im_w=1200"
+      ]
     },
     {
       "id": 9,
@@ -210,13 +212,14 @@
       "cp": "80241",
       "price": 749,
       "comodidad": "pool",
-      "photo":"https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg",
-      "images":[
+      "photo": "https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg",
+      "images": [
         "https://img.freepik.com/foto-gratis/hermosa-playa-tropical-mar_74190-6732.jpg",
-"https://img.freepik.com/foto-gratis/sombrilla-tumbona-alrededor-piscina_1203-2409.jpg",
-"https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg",
-"https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg"
-      ] 
+        "https://img.freepik.com/foto-gratis/sombrilla-tumbona-alrededor-piscina_1203-2409.jpg",
+        "https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg",
+        "https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg",
+        "https://img.freepik.com/foto-gratis/sombrilla-tumbona-alrededor-piscina_1203-2409.jpg"
+      ]
     },
     {
       "id": 10,
@@ -233,11 +236,9 @@
       "cp": "90814",
       "price": 975,
       "comodidad": "clubhouse",
-      "photo":"https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-      "images":[
+      "photo": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
+      "images": [
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg",
-        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/77e16e37-267d-4c98-8d63-06d559be16cc.jpeg",
-        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/80ba5688-7d16-449f-a19f-43e563a758eb.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/88599434-922e-4397-9cc7-7e75240e17d9.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/7271945e-8709-4eac-9779-25377d77c49e.jpeg",
         "https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/ad0a7d6a-0f19-4220-b8a4-a0367177be66.jpeg",
@@ -250,7 +251,7 @@
       "id": 1,
       "fullName": "Del Surgey",
       "email": "dsurgey0@prlog.org",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "836-502-6262",
       "idioma": "frances",
       "code": "19765",
@@ -262,7 +263,7 @@
       "id": 2,
       "fullName": "Cristabel Portwain",
       "email": "cportwain1@deviantart.com",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "562-893-1415",
       "idioma": "español",
       "code": "42133",
@@ -274,7 +275,7 @@
       "id": 3,
       "fullName": "Minne Harm",
       "email": "mharm2@state.gov",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "446-975-5260",
       "idioma": "ingles",
       "code": "77206",
@@ -286,7 +287,7 @@
       "id": 4,
       "fullName": "Matilda Ladbrook",
       "email": "mladbrook3@ucoz.com",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "176-533-3612",
       "idioma": "ingles",
       "code": "87940",
@@ -298,7 +299,7 @@
       "id": 5,
       "fullName": "Dinah Zambon",
       "email": "dzambon4@canalblog.com",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "179-583-2064",
       "idioma": "frances",
       "code": "16266",
@@ -310,7 +311,7 @@
       "id": 6,
       "fullName": "Shannon Foldes",
       "email": "sfoldes5@ebay.co.uk",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "635-318-7329",
       "idioma": "frances",
       "code": "47789",
@@ -322,7 +323,7 @@
       "id": 7,
       "fullName": "Arin Willoughway",
       "email": "awilloughway6@salon.com",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "904-399-1106",
       "idioma": "ingles",
       "code": "14216",
@@ -334,7 +335,7 @@
       "id": 8,
       "fullName": "Joseito Altoft",
       "email": "jaltoft7@boston.com",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "703-328-9760",
       "idioma": "aleman",
       "code": "21881",
@@ -346,7 +347,7 @@
       "id": 9,
       "fullName": "Nestor Clynter",
       "email": "nclynter8@google.ca",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "716-109-7518",
       "idioma": "ingles",
       "code": "97515",
@@ -358,7 +359,7 @@
       "id": 10,
       "fullName": "Nealon Whatley",
       "email": "nwhatley9@zimbio.com",
-      "bio":"semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
+      "bio": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
       "phone": "200-568-3175",
       "idioma": "aleman",
       "code": "75584",

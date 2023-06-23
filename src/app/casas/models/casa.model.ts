@@ -15,4 +15,5 @@ export interface ICasa {
     categories: number[];
     userId: number; 
     images: string [];
+    
 }
