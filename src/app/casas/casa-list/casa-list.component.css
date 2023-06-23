@@ -17,14 +17,40 @@
   align-items: center;
   background: #D1F7FF;
   border-radius: 596px;
-  width: 1000px;
-  padding: 10px;
-  
+  width: 700px;
+}
+.contenedor{
+  margin: 20px;
+  text-decoration: none;
+}
 
+.icono_cat{
+ max-width: 55px;
+}
+.name{
+  color: #6B79FF;
+}
+
+.icono_cat:hover{
+  filter: invert(200%) sepia(1%) saturate(847%) hue-rotate(321deg) brightness(140%) contrast(101%);
 }
 
 
-/* -----  Card   ----*/
+
+
+.conteo{
+  padding: 2em 2em 2em 2em;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.btn_add{
+  padding: 2em 2em 2em 2em;
+}
+
+
+/* -----  Card fotos  ----*/
 
 .container {
   display: grid;
@@ -52,6 +78,7 @@
   }
   
 
+
   /*------botones de ver editar y eliminar----------*/
   button{
     margin-right: 5px;
@@ -64,3 +91,5 @@
   .icono{
     filter: invert(55%) sepia(95%) saturate(4633%) hue-rotate(220deg) brightness(108%) contrast(101%);
   }
+
+  

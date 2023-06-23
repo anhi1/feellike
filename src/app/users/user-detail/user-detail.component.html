@@ -1,20 +1,25 @@
 <div *ngIf="user" class="container">
 
   <div class="card">
-    <img class="circle" src="{{ user.photo }}" />
+    <img class="circle" src="{{ user.photo }}"/>
     <h2>Anfitrión </h2>
     <p>{{ user.fullName }}</p>
   </div>
 
-  <div class="card1">
-    <h2>Sobre mí</h2>
-    <p>{{ user.bio }}</p>
-    <p>{{user.idioma}}</p>
+  <div class="tarjeta">
+    <p> Sobre mí: {{ user.bio }}</p>
   </div>
 
-  <div class="card2">
-    <p>{{ user.city }}</p>
-    <p>{{user.street}}</p>
+  <div class="tarjeta">
+    <p>Cuidad: {{ user.city }}</p>
+    <p>Calle: {{user.street}}</p>
+    <p>Código postal: {{user.code}}</p>
+  </div>
+
+  <div class="tarjeta">
+    <p>Email: {{ user.email }}</p>
+    <p>Phone: {{user.phone}}</p>
+    <p>Idioma: {{user.idioma}}</p>
   </div>
 
 </div>
