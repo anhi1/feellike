@@ -1,20 +1,45 @@
-
-
-<div *ngIf="casa" class="collage">
-  <div  class="image" *ngFor="let img of casa.images">
-    <img  [src]="img" [alt]="casa.title">
+ 
+<!--COLLAGE DE IMAGENES-->
+ <div class="gallery-container" *ngIf="casa" >
+  <div  class="gallery__item" *ngFor="let img of casa.images">
+    <img class="gallery__img" [src]="img" [alt]="casa.title">
   </div>
-</div>
-
-
-<!-- 
-  <div class="image-grid">
-  <img class="image-grid-col-2 image-grid-row-2" src="../../../assets/img/1img.webp" alt="Diseño">
-  <img src="../../../assets/img/1img.webp" alt="Diseño">
-  <img src="../../../assets/img/2img.webp" alt="diseño">
-  <img src="../../../assets/img/3img.webp" alt="diseño">
-  <img src="../../../assets/img/4img.webp" alt="diseño">
 </div> 
--->
 
+
+
+  <div class="grid">
+    <div *ngIf="casa" class="bed">
+      <h2>{{casa.title}}</h2>
+      <p>Habitaciones: {{casa.bedrooms }}</p>
+      <img src="../../../assets/icon/bed.png" width="40px" alt="">
+      <img src="../../../assets/icon/sofa.png" width="40px" alt="">
+      <p>Baños: {{casa.bathrooms }}</p>
+    </div>
+  
+  
+    <div *ngIf="casa">
+      <h2>Descripción: </h2>
+      <p>{{casa.description}}</p>
+      <p>Comodidad: {{casa.comodidad}}</p>
+      <p> {{casa.squarefeet}}</p>
+    </div>
+
+    <div *ngIf="casa">
+      <p>Pais: {{casa.country}}</p>
+      <p>Ciudad: {{casa.city}}</p>
+      <p>Código postal: {{casa.cp}}</p>
+      <p></p>
+    </div>
+
+
+
+ 
+  
+
+ 
+
+
+
+   
 
