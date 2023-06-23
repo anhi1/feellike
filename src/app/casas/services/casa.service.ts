@@ -10,7 +10,7 @@ import { ICasa } from '../models/casa.model';
 export class CasaService {
 
   url: string = "http://localhost:3000/casas";
-  //baseUrl : string = "http://localhost:3000/reservedList"
+  
 
   constructor(private httpClient: HttpClient) { }
 

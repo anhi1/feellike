@@ -17,10 +17,12 @@ const routes: Routes = [
     path: 'new',
     component: CasaFormComponent,
   },
-  /* {
-    path: 'gallery',
-    component: CasaGalleryComponent,
-  }, */
+
+  {
+    path: 'author/:authorId',
+    component: CasaListComponent,
+  },
+
   {
     path: ':id',
     component: CasaDetailComponent
