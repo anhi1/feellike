@@ -1,20 +1,23 @@
 
 
+
+<!------frase e imagen------->
+<div class="fondo">
+  <p class="frase">Crea tu propio <b>hogar</b> donde quiera que vayas</p>
+  <img class="casas" src="./assets/icon/fondo.png" [alt]="" />
+</div>
+
+
+<!--Boton de agregar casa-->
 <div class="btn_add">
-<button mat-raised-button color="primary" routerLink="/casas/new">
-  Agregar casa
-</button>
-</div>
-<!--  user 
+  <button mat-raised-button color="primary" routerLink="/casas/new">
+    Agregar casa
+  </button>
+  </div>
 
-<div *ngIf="user">
-  <img class="list-header-img" [src]="user.photo" [alt]="user.fullName">
-  <h2>Autor {{user.fullName}}</h2>
-</div>
 
--->
 
-<!--  category -->
+<!-----  category ----->
 <div class="category">
   <div class="nube">
       <a class="contenedor" *ngFor="let category of categories" [routerLink]="['/casas/category', category.id]">
@@ -25,13 +28,16 @@
 </div>
 
 
+
 <!-----------  conteo de las casas ------------>
 
 <div class="conteo" *ngIf="casas.length > 0">
  <p> Hay {{casas.length}} casas en total.</p>
 </div>
 
-<div *ngIf="category">
+
+<!-----------  description de categorias ------------>
+<div class="descategory" *ngIf="category">
 <p >{{category.description}}</p>
 </div>
 
