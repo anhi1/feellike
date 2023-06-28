@@ -68,6 +68,7 @@ padding:  0 13rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 20px;
   background-color: #ffffff;
   width: 100%;
@@ -127,4 +128,26 @@ line-height: 5.5rem;
     filter: invert(55%) sepia(95%) saturate(4633%) hue-rotate(220deg) brightness(108%) contrast(101%);
   }
 
+
+  @media (max-width: 576px) {
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 20px;
+      padding: 2em 1em;
+    }
   
+    .card__imagen {
+      height: 150px;
+    }
+  
+    .descategory {
+      padding: 0 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .frase {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
