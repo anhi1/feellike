@@ -26,11 +26,20 @@
   </div>
 
   <div *ngIf="casa">
-    <p>Pais: {{casa.country}}</p>
+    <p>País: {{casa.country}}</p>
     <p>Ciudad: {{casa.city}}</p>
     <p>Código postal: {{casa.cp}}</p>
   </div>
 </div>
+
+
+
+ <!---Boton de reserva
+<button type="submit"><a [routerLink]="['/reservas', reserva.id]">
+  Agregar
+</a></button>
+
+-->
 
 
 

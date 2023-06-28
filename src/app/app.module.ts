@@ -21,7 +21,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { UsersModule } from './users/users.module';
 import { CategoriesModule } from './categories/categories.module';
 import { CommentsModule } from './comments/comments.module';
+import { ReservasModule } from './reservas/reservas.module';
 
+//login
 
 
 
@@ -46,7 +48,9 @@ import { CommentsModule } from './comments/comments.module';
     CategoriesModule,
     CasasModule,
     NgOptimizedImage,
-    CommentsModule
+    CommentsModule,
+    ReservasModule,
+
 
 
   ],

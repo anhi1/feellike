@@ -415,5 +415,17 @@
       "casaId": 1,
       "userId": 3
     }
+  ],
+
+  "reservas": [
+    {
+      "id": 1,
+      "userId": 1,
+      "casaId":1,
+      "startDate":1,
+      "endDate": 1,
+      "precio": 1
+    }
+    
   ]
 }

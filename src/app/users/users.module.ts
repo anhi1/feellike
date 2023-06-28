@@ -8,12 +8,16 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistroComponent } from './registro/registro.component';
+import { LoginComponent } from './login/login.component';
 
 
 
 @NgModule({
   declarations: [
-    UserDetailComponent
+    UserDetailComponent,
+    RegistroComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    
 
   ]
 })
