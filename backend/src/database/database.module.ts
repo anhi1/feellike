@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Casa } from 'src/casas/casas.module';
+import { Casa } from 'src/casas/casas.model';
 import { Category } from 'src/categories/categories.model';
-import { Comment } from 'src/Comment/comment.model';
-import { Reserva } from 'src/reserva/reserva.model';
+import { Reserva } from 'src/reservas/reservas.model';
+import { User } from 'src/users/users.model';
+import { Comment } from 'src/comments/comments.model';
 
 
 @Module({
@@ -13,12 +14,12 @@ import { Reserva } from 'src/reserva/reserva.model';
             host: 'localhost',
             port: 3306,
             username: 'root',
-            password: 'admin', // sustituir por variable de entorno
-            // password: process.env.NEST_PASSWORD,
+            // password: 'admin', // sustituir por variable de entorno
+            password: process.env.NEST_PASSWORD,
             database: 'backend_nest',
             entities: [
                 // __dirname + 'src/**/*.model.ts'
-                Casa, Category, reserva, User, Comment
+                Casa, Category, Reserva, User, Comment
             ],
             synchronize: true, // generar tablas automáticamente en base a entidades
             logging: true
