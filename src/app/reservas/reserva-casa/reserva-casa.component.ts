@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ICategory } from 'src/app/categories/models/category.model';
+import { ReservaService } from '../services/reserva.service';
+import { ActivatedRoute } from '@angular/router';
+import { CasaService } from 'src/app/casas/services/casa.service';
+import { IReserva } from './reserva.model';
+import { IUser } from 'src/app/users/models/user.model';
 
 @Component({
   selector: 'app-reserva-casa',
@@ -7,43 +13,45 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reserva-casa.component.css']
 })
 export class ReservaCasaComponent {
-  form: FormGroup | undefined;
+  
+    userForm = new FormGroup({
+    fullName: new FormControl('', [Validators.required]),
+    starDate: new FormControl<Date>(new Date()),
+    endDate: new FormControl<Date>(new Date()),
+    people:new FormControl(0, [Validators.min(10)]),
 
-  constructor() {
-    this.buildForm();  //aqui cargamos el metodo
-  }
-
-  ngOnInit(): void {   // se carga cuando hacen peticion de datos, renderizar algo espera de terceros
-   
-  }
-
-  private buildForm(): void {
-    this.form = new FormGroup({
-      name: new FormControl('', [Validators.required]),
-      startate: new FormControl('', [Validators.required]),
-      ate: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.email]),
-      text: new FormControl('', [Validators.maxLength(80)]),
-      category: new FormControl('', [Validators.required]),
     });
+    users: IUser[] = [];
+    categories: ICategory[] = [];
    
-  }
+    constructor(
+    private reservaService: ReservaService,
+    private casaService: CasaService,
+    private activatedRoute: ActivatedRoute
+    ){}
 
-  save(event: Event) {
-    event.preventDefault();  //previene que haga recarga
-    if (this.form.valid) {
-      const value = this.form.value;  // carga los valores
-      console.log(value);
-    } else {
-      this.form.markAllAsTouched();
-    } 
-  }
+    ngOnInit(): void{
 
-  get emailField() {
-    return this.form.get('email')
-  }
+      this.activatedRoute.params.subscribe(params=>{
+        const idString = params ['id'];
+        if (!idString) return;
 
+        const id = parseInt(idString, 10);
+     
+    });
+
+    
+
+    }
+    
+  
+    
+
+
+
+    }
+ 
   
 
-}
+
 

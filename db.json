@@ -421,11 +421,26 @@
     {
       "id": 1,
       "userId": 1,
-      "casaId":1,
-      "startDate":1,
-      "endDate": 1,
-      "precio": 1
+      "casaId": 1,
+      "startDate": "17/01/2023",
+      "endDate": "25/06/2023",
+      "price": 729
+    }, 
+    {
+      "id": 2,
+      "userId": 2,
+      "casaId": 2,
+      "startDate": "17/06/2023",
+      "endDate": "20/06/2023",
+      "price": 853
+    }, 
+    {
+      "id": 3,
+      "userId": 3,
+      "casaId": 3,
+      "startDate": "09/04/2023",
+      "endDate": "10/04/2023",
+      "price": 701
     }
-    
   ]
 }
