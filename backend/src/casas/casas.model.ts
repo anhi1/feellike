@@ -58,17 +58,7 @@ export class Casa {
     @JoinColumn({ name: 'id_user'})
     user: User;
 
-    // @ManyToOne(() => Editorial)
-    // @JoinColumn({ name: 'id_editorial'})
-    // editorial: Editorial;
-
-    // @ManyToMany(() => Category, {cascade: true})
-    // @JoinTable({
-    //     name: 'casa_category', 
-    //     joinColumn: {name: 'id_casa'},
-    //     inverseJoinColumn: {name: 'id_category'}
-    // })
-    // categories: Category[];
+    
     @ManyToOne(() => Category)
     @JoinColumn({ name: 'id_category'})
     category: Category;

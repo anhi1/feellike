@@ -15,5 +15,15 @@ export class Reserva {
     @ManyToOne(() => Casa)
     @JoinColumn({ name: 'id_casa'})
     casa: Casa;
+
+    @Column({default: 5})
+    price: number;
+
+    @Column()
+    startDate: Date;
+
+    @Column()
+    endDate: Date;
+
 }
 

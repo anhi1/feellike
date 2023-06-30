@@ -5,5 +5,16 @@ export class Category {
 
     @PrimaryGeneratedColumn()
     id: number;
+
+    @Column({unique:true, length: 50})
+    name: string;
+
+    @Column({length: 300})
+    description: string;
+
+    // nullable true indica opcional
+    @Column({nullable: true})
+    icono?: string;
+
 }
 
