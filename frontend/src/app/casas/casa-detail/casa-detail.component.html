@@ -66,20 +66,19 @@
 </mat-grid-list>
 
 
-<!-----Boton de reserva
-<mat-grid-list *ngIf="casa">
-  <mat-list *ngIf="reservas">
-    <mat-list-item>
-      
-        <a [routerLink]="['/reservas', reserva.id]">
-         reservar
+
+
+<!--------Boton de reserva----->
+  
+        <a [routerLink]="['/reservas/casaId/:casaId']">
+          <button>Reservar</button>
         </a>
-    </mat-list-item>
-  </mat-list>
-</mat-grid-list>
 
 
------>
+
+
+
+
 
 
 

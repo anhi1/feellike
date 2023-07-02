@@ -1,7 +1,7 @@
-<!-- <form [formGroup]="userForm" (ngSubmit)="save()"> 
+<form [formGroup]="userForm" (ngSubmit)="save()"> 
 
-    <label for="fullName">Nombre: <span>*</span></label>
-    <input type="text" id="fullName" formControlName="fullName">
+
+      
 
     <label for="startDate">Fecha de inicio</label>
     <input type="date" id="startDate" formControlName="startDate">
@@ -16,4 +16,39 @@
 
     <button type="submit" [disabled]="userForm.invalid">Reservar</button>
 
-</form> -->
+</form>
+
+<!--
+
+     <input type="hidden" formControlName="id">
+
+    <mat-form-field>
+        <mat-label>Nombre:</mat-label>
+        <input matInput type="text" formControlName="fullName">
+    </mat-form-field>
+    <br>
+    <br>
+   
+      <mat-form-field>
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="startDate" formControlName="startDate">
+          <input matEndDate placeholder="endDate" formControlName="endDate">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+      
+      <br><br>
+
+  
+<mat-form-field floatLabel="always">
+    <mat-label>Precio</mat-label>
+    <input matInput type="number" class="example-right-align" placeholder="0" step="0.01" min="5" max="500" formControlName="precio">
+    <span matTextPrefix>&euro;&nbsp;</span>
+    <mat-error *ngIf="reservaForm.get('price')?.invalid && reservaForm.get('price')?.touched">
+        El precio debe estar comprendido en un rango de 5 y 500 €.
+  </mat-error>
+  </mat-form-field>
+-->

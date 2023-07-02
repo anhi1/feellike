@@ -3,10 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReservaCasaComponent } from './reserva-casa/reserva-casa.component';
 
 const routes: Routes = [
+  
   {
-    path: ':id',
+    path: 'casaId/:casaId',
     component: ReservaCasaComponent
+  },
+  {
+    path: '**', redirectTo: 'reservas', pathMatch: 'full'
+  },
+  {
+    path: '', redirectTo: 'reservas', pathMatch: 'full'
   }
+  
 ];
 
 @NgModule({

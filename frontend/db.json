@@ -3,7 +3,9 @@
     {
       "id": 1,
       "title": "Apartamento",
-      "categories": [2],
+      "categories": [
+        2
+      ],
       "bedrooms": 3,
       "bathrooms": 3,
       "squarefeet": 6162,
@@ -21,13 +23,15 @@
         "https://img.freepik.com/foto-gratis/sombrilla-tumbona-alrededor-piscina_1203-2409.jpg",
         "https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg",
         "https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg",
-        "https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg" 
+        "https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg"
       ]
     },
     {
       "id": 2,
       "title": "Estudio",
-      "categories": [3],
+      "categories": [
+        3
+      ],
       "bedrooms": 5,
       "bathrooms": 4,
       "squarefeet": 3101,
@@ -51,7 +55,9 @@
     {
       "id": 3,
       "title": "Casa camping",
-      "categories": [1],
+      "categories": [
+        1
+      ],
       "bedrooms": 4,
       "bathrooms": 1,
       "squarefeet": 9585,
@@ -75,7 +81,9 @@
     {
       "id": 4,
       "title": "Casa camping",
-      "categories": [1],
+      "categories": [
+        1
+      ],
       "bedrooms": 1,
       "bathrooms": 4,
       "squarefeet": 9091,
@@ -99,7 +107,9 @@
     {
       "id": 5,
       "title": "Apartamento",
-      "categories": [4],
+      "categories": [
+        4
+      ],
       "bedrooms": 4,
       "bathrooms": 3,
       "squarefeet": 5157,
@@ -123,7 +133,9 @@
     {
       "id": 6,
       "title": "Apartamento",
-      "categories": [4],
+      "categories": [
+        4
+      ],
       "bedrooms": 1,
       "bathrooms": 1,
       "squarefeet": 7819,
@@ -147,7 +159,9 @@
     {
       "id": 7,
       "title": "Apartamento",
-      "categories": [4],
+      "categories": [
+        4
+      ],
       "bedrooms": 2,
       "bathrooms": 3,
       "squarefeet": 9608,
@@ -171,7 +185,9 @@
     {
       "id": 8,
       "title": "Loft",
-      "categories": [3],
+      "categories": [
+        3
+      ],
       "bedrooms": 2,
       "bathrooms": 3,
       "squarefeet": 5321,
@@ -195,7 +211,9 @@
     {
       "id": 9,
       "title": "Casa",
-      "categories": [2],
+      "categories": [
+        2
+      ],
       "bedrooms": 3,
       "bathrooms": 2,
       "squarefeet": 9894,
@@ -219,7 +237,9 @@
     {
       "id": 10,
       "title": "Apartamento",
-      "categories": [4],
+      "categories": [
+        4
+      ],
       "bedrooms": 2,
       "bathrooms": 4,
       "squarefeet": 6389,
@@ -389,13 +409,12 @@
       "icono": "/assets/icon/diseño.svg"
     }
   ],
-
   "comments": [
     {
       "id": 1,
       "email": "casa@gmail.com",
       "description": "Lugar a cielo abierto a fin de habitarla por un cierto periodo de tiempo. Es posible realizar acampadas de una noche, unas semanas o incluso de varios meses.",
-      "photo":"https://xsgames.co/randomusers/avatar.php?g=male",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=male",
       "casaId": 1,
       "userId": 1
     },
@@ -403,7 +422,7 @@
       "id": 2,
       "email": "casa2@gmail.com",
       "description": "Lugar a cielo abierto a fin de habitarla por un cierto periodo de tiempo. Es posible realizar acampadas de una noche, unas semanas o incluso de varios meses.",
-      "photo":"https://xsgames.co/randomusers/avatar.php?g=female",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female",
       "casaId": 1,
       "userId": 2
     },
@@ -411,12 +430,11 @@
       "id": 3,
       "email": "casa3@gmail.com",
       "description": "Lugar a cielo abierto a fin de habitarla por un cierto periodo de tiempo. Es posible realizar acampadas de una noche, unas semanas o incluso de varios meses.",
-      "photo":"https://xsgames.co/randomusers/avatar.php?g=male",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=male",
       "casaId": 1,
       "userId": 3
     }
   ],
-
   "reservas": [
     {
       "id": 1,
@@ -425,7 +443,7 @@
       "startDate": "17/01/2023",
       "endDate": "25/06/2023",
       "price": 729
-    }, 
+    },
     {
       "id": 2,
       "userId": 2,
@@ -433,7 +451,7 @@
       "startDate": "17/06/2023",
       "endDate": "20/06/2023",
       "price": 853
-    }, 
+    },
     {
       "id": 3,
       "userId": 3,

@@ -17,12 +17,6 @@ const routes: Routes = [
     path: 'new',
     component: CasaFormComponent,
   },
-
-  {
-    path: 'author/:authorId',
-    component: CasaListComponent,
-  },
-
   {
     path: ':id',
     component: CasaDetailComponent
@@ -30,6 +24,10 @@ const routes: Routes = [
   {
     path: ':id/edit',
     component: CasaFormComponent
+  },
+  {
+  path: 'user/:userId',
+  component: CasaListComponent,
   },
   {
     path: 'category/:categoryId',

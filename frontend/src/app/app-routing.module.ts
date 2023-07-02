@@ -13,7 +13,8 @@ const routes: Routes = [
     loadChildren: () => import('./casas/casas.module').then(m => m.CasasModule) // lazy loading
   },
   {
-    path: 'casa-detail', component:CasaDetailComponent
+    path: 'reservas',
+    loadChildren: () => import('./reservas/reservas.module').then(m => m.ReservasModule) // lazy loading
   },
   {
     path: '', redirectTo: 'casas', pathMatch: 'full'

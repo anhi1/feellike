@@ -19,4 +19,8 @@ export class ReservaService {
   findById(id: number): Observable<IReserva> {
     return this.httpClient.get<IReserva>(`${this.url}/${id}`);
   }
+
+  getAllReservasByCasaId(casaId: number): Observable<IReserva[]> {
+    return this.httpClient.get<IReserva[]>(`${this.url}/${casaId}`);
+}
 }
