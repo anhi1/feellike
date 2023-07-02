@@ -1,4 +1,4 @@
-<form [formGroup]="userForm" (ngSubmit)="save()"> 
+<form [formGroup]="reservaForm" (ngSubmit)="save()"> 
 
 
       
@@ -11,10 +11,10 @@
     <input type="date" id="endDate" formControlName="endDate">
     <br>
 
-    <label for="people">Cantidad de personas:</label>
-    <input type="number" id="people" formControlName="people" >
+    <label for="price">Precio</label>
+    <input type="number" id="precio" formControlName="precio" >
 
-    <button type="submit" [disabled]="userForm.invalid">Reservar</button>
+    <button type="submit" [disabled]="reservaForm.invalid">Reservar</button>
 
 </form>
 
