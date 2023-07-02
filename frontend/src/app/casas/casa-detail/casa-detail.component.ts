@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/users/services/user.service';
 import { CommentService } from 'src/app/comments/services/comment.service';
 import { IComment } from 'src/app/comments/models/comment.model';
+import { ReservaService } from 'src/app/reservas/services/reserva.service';
+import { IReserva } from 'src/app/reservas/reserva-casa/reserva.model';
 
 @Component({
   selector: 'app-casa-detail',
@@ -20,12 +22,13 @@ export class CasaDetailComponent {
   images: string[]=[];
   comments: IComment[]=[];
   comment: IComment | undefined; // ngFor cada comentario es un objeto
-
+  reservas: IReserva[] | undefined;
   
 
   constructor(private activatedRoute: ActivatedRoute,
               private casaService: CasaService,
               private userService: UserService,
+              private reservaService: ReservaService,
               private commentService: CommentService) {}
 
   ngOnInit(): void {
@@ -45,7 +48,10 @@ export class CasaDetailComponent {
 
       this.commentService.getAllCommentsByCasaId(id).subscribe(data => this.comments = data);
 
+      
+    
+
     });
   }
-  
+ 
 }
