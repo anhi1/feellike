@@ -1,7 +1,7 @@
-import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, Injectable, Delete, NotFoundException } from '@nestjs/common';
 import { Casa } from './casas.model';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Between, ILike, Repository } from 'typeorm';
+import { Between, ILike, Repository, In, MoreThan, MoreThanOrEqual } from 'typeorm';
 import { CategoriesService } from 'src/categories/categories.service';
 
 @Injectable()
@@ -210,9 +210,5 @@ export class CasasService {
             }
         });
 
-
     }
-
-
-
 }

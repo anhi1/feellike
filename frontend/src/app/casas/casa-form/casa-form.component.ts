@@ -22,6 +22,8 @@ export class CasaFormComponent implements OnInit {
     bedrooms: new FormControl<number>(0, [Validators.min(1)]),
     bathrooms: new FormControl<number>(0, [Validators.min(1)]),
     squarefeet: new FormControl<number>(0, [Validators.min(1)]),
+    photo: new FormControl<string>('', []),
+
     description: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
     available: new FormControl<number>(0, [Validators.min(1)]),
     country: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
@@ -42,8 +44,8 @@ export class CasaFormComponent implements OnInit {
   users: IUser[] = [];
   categories: ICategory[] = [];
 
-  // user: IUser | undefined;
-  // category: ICategory | undefined;
+   user: IUser | undefined;
+   category: ICategory | undefined;
    casas: ICasa[];
    
 
@@ -109,7 +111,7 @@ export class CasaFormComponent implements OnInit {
     let cp = this.casaForm.get('cp')?.value ?? '';
     let price = this.casaForm.get('price')?.value ?? 5;
     let comodidad = this.casaForm.get('comodidad')?.value ?? 5;
-    let photo = "https://stock.adobe.com/es/search?k=casas&search_type=usertyped"
+    // let photo = "https://stock.adobe.com/es/search?k=casas&search_type=usertyped"
     let categories = this.casaForm.get('categories')?.value ?? [];
     let userId = this.casaForm.get('userId')?.value ?? 0;
     
