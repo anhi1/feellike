@@ -138,9 +138,9 @@ export class CasaFormComponent implements OnInit {
       images: []
     }
 
-    if (id === 0) // crear nuevo libro
+    if (id === 0) // crear nueva casa
       this.casaService.create(casa).subscribe(casa => this.router.navigate(['/casas', casa.id]));
-    else // editar libro existente
+    else // editando una casa
       this.casaService.update(casa).subscribe(casa => this.router.navigate(['/casas', casa.id]));
 }
 

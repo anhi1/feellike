@@ -54,12 +54,5 @@ export class User {
 
 
 
-
-
-
-
-
-
-
 }
 
