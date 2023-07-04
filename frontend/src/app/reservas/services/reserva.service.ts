@@ -19,4 +19,16 @@ export class ReservaService {
   findById(id: number): Observable<IReserva> {
     return this.httpClient.get<IReserva>(`${this.url}/${id}`);
   }
+
+  // create(reserva :IReserva): Observable<IReserva> {
+  //   return this.httpClient.post<IReserva>(this.url, reserva);
+  // }
+
+  // update(reserva: IReserva): Observable<IReserva> {
+  //   return this.httpClient.put<IReserva>(`${this.url}/${reserva.id}`, reserva);
+  // }
+
+  // deleteById(id: number): void {
+  //   this.httpClient.delete(`${this.url}/${id}`);
+  // }
 }
