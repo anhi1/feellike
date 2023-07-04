@@ -23,4 +23,15 @@ export class ReservaService {
   getAllReservasByCasaId(casaId: number): Observable<IReserva[]> {
     return this.httpClient.get<IReserva[]>(`${this.url}/${casaId}`);
 }
+  // create(reserva :IReserva): Observable<IReserva> {
+  //   return this.httpClient.post<IReserva>(this.url, reserva);
+  // }
+
+  // update(reserva: IReserva): Observable<IReserva> {
+  //   return this.httpClient.put<IReserva>(`${this.url}/${reserva.id}`, reserva);
+  // }
+
+  // deleteById(id: number): void {
+  //   this.httpClient.delete(`${this.url}/${id}`);
+  // }
 }

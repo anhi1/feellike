@@ -3,16 +3,20 @@
 
 <!------frase e imagen------->
 <div class="fondo">
-  <p class="frase">Crea tu propio <b>hogar</b> donde quiera que vayas</p>
-  <img class="casas" src="./assets/icon/fondo.png" [alt]="" />
+  <div>
+    <p class="frase">Crea tu propio <b>hogar</b> donde quiera que vayas</p>
+  </div>
+  <div>
+    <img class="casas" src="./assets/icon/fondo.png" [alt]="" />
+  </div>
 </div>
 
 
 <!--Boton de agregar casa-->
 <div class="btn_add">
-  <button mat-raised-button color="primary" routerLink="/casas/new">
+   <button mat-raised-button color="primary" routerLink="/casas/new">
     Agregar casa
-  </button>
+  </button> 
   </div>
 
 
@@ -45,7 +49,7 @@
 <!------- card  ------>
 <div class="container" >
   <div class="card" *ngFor=" let casa of casas">
-    <img  class="card__imagen" [src]="casa.photo">
+    <img [routerLink]="['/casas', casa.id]"  class="card__imagen" [src]="casa.photo">
     <p>{{casa.city}}</p>
     <p>Precio {{casa.price}}€</p>
 
