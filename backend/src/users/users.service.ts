@@ -5,6 +5,7 @@ import { User } from './users.model';
 
 @Injectable()
 export class UsersService {
+    findByEmail: any;
 
     constructor(
         @InjectRepository(User) 

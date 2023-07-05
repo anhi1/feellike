@@ -50,6 +50,7 @@ export class User {
         default: UserRole.USER
     })
     role: UserRole;
+    password: string;
 
 
 
