@@ -4,8 +4,10 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Between, ILike, Repository, In, MoreThan, MoreThanOrEqual } from 'typeorm';
 import { CategoriesService } from 'src/categories/categories.service';
 
+
 @Injectable()
 export class CasasService {
+    
 
     constructor(
         @InjectRepository(Casa) private casaRepo: Repository<Casa>,
@@ -14,7 +16,7 @@ export class CasasService {
 
 
     findAll(): Promise<Casa[]> {
-        // SELECT * FROM books;
+        // SELECT * FROM casas;
         return this.casaRepo.find();
     }
 
@@ -22,7 +24,7 @@ export class CasasService {
         return this.casaRepo.find({
             relations: {
                 user: true,
-                // categories: true
+                //categories: true
             }
 
         });
@@ -33,16 +35,9 @@ export class CasasService {
             select: {
                 id: true,
                 title: true,
-                bedrooms: true,
-                bathrooms: true,
-                squarefeet: true,
-                description: true,
-                available: true,
                 country: true,
                 city: true,
-                cp: true,
                 price: true,
-                comodidad: true,
                 user: {
                     id: true,
                     fullName: true
@@ -73,8 +68,8 @@ export class CasasService {
         return this.casaRepo.findOne({ 
             where: {
                 id: id
-            },
-         });
+            }
+         })
     }
 
 
@@ -145,7 +140,7 @@ export class CasasService {
          try {
             console.log(casa);
             casaFromDB.price = casa.price;
-            // casaFromDB.available = casa.available;
+            casaFromDB.title = casa.title;
             casaFromDB.city = casa.city;
             casaFromDB.title = casa.title;
             casaFromDB.user = casa.user;
@@ -158,7 +153,7 @@ export class CasasService {
 
              // Opción 2: cargar las categorías directamente
             // casaFromDB.categories = casa.categories;
-            // return await this.casaRepo.save(casaFromDB);
+            return await this.casaRepo.save(casaFromDB);
 
          } catch (error) {
             console.log(error);

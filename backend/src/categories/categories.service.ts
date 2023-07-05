@@ -12,6 +12,12 @@ export class CategoriesService {
     ){}
 
 
+
+    findAll(): Promise<Category[]> {
+        return this.categoryRepo.find();
+    }
+
+
     findAllByIds(ids: number[]): Promise<Category[]> {
         return this.categoryRepo.find({
             where: {

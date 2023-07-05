@@ -277,6 +277,42 @@
       "categories": [],
       "userId": 0,
       "images": []
+    },
+    {
+      "id": 12,
+      "title": "Casa cabaña",
+      "description": "fasdfasdf",
+      "country": "españa",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 560,
+      "squarefeet": 0,
+      "city": "",
+      "cp": "",
+      "comodidad": "",
+      "categories": [],
+      "userId": 0,
+      "images": [],
+      "available": false,
+      "photo": ""
+    },
+    {
+      "id": 13,
+      "title": "La cabaña",
+      "description": "excelente lugar para descansa",
+      "country": "España",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 450,
+      "squarefeet": 0,
+      "city": "",
+      "cp": "",
+      "comodidad": "",
+      "categories": [],
+      "userId": 0,
+      "images": [],
+      "available": false,
+      "photo": ""
     }
   ],
   "users": [

@@ -22,10 +22,10 @@ export class CasaFormComponent implements OnInit {
     bedrooms: new FormControl<number>(0, [Validators.min(1)]),
     bathrooms: new FormControl<number>(0, [Validators.min(1)]),
     squarefeet: new FormControl<number>(0, [Validators.min(1)]),
-    photo: new FormControl<string>('', []),
+    // photo: new FormControl<string>('', []),
 
     description: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
-    available: new FormControl<number>(0, [Validators.min(1)]),
+    // available: new FormControl<number>(0, [Validators.min(1)]),
     country: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
     city: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
     cp: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
@@ -105,7 +105,7 @@ export class CasaFormComponent implements OnInit {
     let bathrooms = this.casaForm.get('bathrooms')?.value ?? 1;
     let squarefeet = this.casaForm.get('squarefeet')?.value ?? '';
     let description = this.casaForm.get('description')?.value ?? '';
-    let available = this.casaForm.get('available')?.value ?? '';
+    // let available = this.casaForm.get('available')?.value ?? '';
     let country = this.casaForm.get('country')?.value ?? '';
     let city = this.casaForm.get('city')?.value ?? '';
     let cp = this.casaForm.get('cp')?.value ?? '';
@@ -128,14 +128,16 @@ export class CasaFormComponent implements OnInit {
       bathrooms: bathrooms,
       price: price,
       squarefeet: 0,
-      available: false,
+      // available: false,
       city: '',
       cp: '',
       comodidad: '',
-      photo: '',
+      // photo: '',
       categories: [],
       userId: 0,
-      images: []
+      images: [],
+      available: false,
+      photo: ''
     }
 
     if (id === 0) // crear nueva casa
