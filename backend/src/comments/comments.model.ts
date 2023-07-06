@@ -6,8 +6,14 @@ export class Comment {
     
     @PrimaryGeneratedColumn()
     id: number;
+    email: string;
+    description: string;
+    photo: string;
+    casaId: number;
     
     @ManyToOne(() => User)
     @JoinColumn({ name: 'id_user'})
     user: User;
+    userId: number;
 }
+
