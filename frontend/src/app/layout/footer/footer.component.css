@@ -2,3 +2,8 @@ footer {
     background-color:#6B79FF;
     color: white;
   }
+
+  nav.map {
+    background-image: url(../../../assets/icon/mapa.png);
+
+  }
