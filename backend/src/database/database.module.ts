@@ -15,7 +15,7 @@ import { Comment } from 'src/comments/comments.model';
             port: 3306,
             username: 'root',
             // password: 'admin', // sustituir por variable de entorno
-            password: 'admin',
+            password: process.env.NEST_PASSWORD,
             database: 'backend_nest_casas',
             entities: [
                 // __dirname + 'src/**/*.model.ts'
