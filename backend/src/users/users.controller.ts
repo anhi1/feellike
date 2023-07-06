@@ -1,11 +1,13 @@
-import { Body, Controller, Get, Param, ParseIntPipe, Post } from '@nestjs/common';
-import { UsersService } from './users.service';
+import { Controller, Get, Post, Param, ParseIntPipe, Body } from '@nestjs/common';
 import { User } from './users.model';
+import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
 
-    constructor(private userService: UsersService){}
+    constructor(private userService: UsersService) {}
+
+
     // http://localhost:3000/users/id/1
     @Get('id/:id')
     findById(
@@ -19,4 +21,9 @@ export class UsersController {
     async create(@Body() user: User): Promise<User> {
         return await this.userService.create(user);
     }
+    
 }
+
+
+
+

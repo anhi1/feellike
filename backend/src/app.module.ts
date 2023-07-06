@@ -7,7 +7,7 @@ import { ReservasModule } from './reservas/reservas.module';
 import { UsersModule } from './users/users.module';
 import { CommentsModule } from './comments/comments.module';
 import { DatabaseModule } from './database/database.module';
-import { ReservasModule } from './reservas/reservas.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [CasasModule, CategoriesModule, ReservasModule, UsersModule, CommentsModule, DatabaseModule],

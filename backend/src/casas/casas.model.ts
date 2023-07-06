@@ -42,9 +42,6 @@ export class Casa {
     @Column()
     comodidad: string;
 
-    @PrimaryGeneratedColumn()
-    userId: number;
-
     @CreateDateColumn({name: 'created_date'})
     createdDate: Date;
 

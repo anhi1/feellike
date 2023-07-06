@@ -1,10 +1,8 @@
 
 import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { UserRole } from "./user-role.enum";
 
-export enum UserRole {
-    USER = 'user',
-    ADMIN = 'admin'
-}
+
         
 @Entity()
 export class User {
@@ -50,13 +48,7 @@ export class User {
         default: UserRole.USER
     })
     role: UserRole;
-
-
-
-
-
-
-
+    password: string;
 
 
 
