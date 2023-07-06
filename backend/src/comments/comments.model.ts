@@ -9,23 +9,19 @@ export class Comment {
     id: number;
 
     @Column()
-    email: string;
-
-    @Column()
     description: string;
 
     @Column()
-    photo: string;
+    rating: number;
 
-    @Column()
-    casaId: number;
-
-  
- 
     @ManyToOne(() => User)
     @JoinColumn({ name: 'id_user'})
     user: User;
-    userId: number;  //
 
+    @ManyToOne(() => Casa)
+    @JoinColumn({ name: 'id_casa'})
+    casa: Casa;
+
+  
 }
 

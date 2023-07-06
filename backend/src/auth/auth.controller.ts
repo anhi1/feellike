@@ -7,7 +7,8 @@ import { User } from 'src/users/users.model';
 
 @Controller('auth')
 export class AuthController {
-    authService: any;
+    
+    constructor(private authService: AuthService){}
 
     @Post('login')
     async login(@Body() login: LoginDTO): Promise<TokenDTO> {

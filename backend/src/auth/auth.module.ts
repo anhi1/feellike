@@ -21,8 +21,3 @@ import { JwtStrategy } from './jwt.strategy';
   controllers: [AuthController]
 })
 export class AuthModule {}
-function register(arg0: { secret: string, 
-  signOptions: { expiresIn: string; }; }): import("@nestjs/common").Type<any> | import("@nestjs/common").DynamicModule | Promise<import("@nestjs/common").DynamicModule> | import("@nestjs/common").ForwardReference<any> {
-  throw new Error('Function not implemented.');
-}
-

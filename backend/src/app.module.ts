@@ -10,7 +10,7 @@ import { DatabaseModule } from './database/database.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [CasasModule, CategoriesModule, ReservasModule, UsersModule, CommentsModule, DatabaseModule],
+  imports: [CasasModule, CategoriesModule, ReservasModule, UsersModule, CommentsModule, DatabaseModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

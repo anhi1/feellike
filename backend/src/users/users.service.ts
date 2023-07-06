@@ -5,7 +5,6 @@ import { User } from './users.model';
 
 @Injectable()
 export class UsersService {
-    findByEmail: any;
 
     constructor(
         @InjectRepository(User) 
@@ -16,6 +15,14 @@ export class UsersService {
         return this.userRepo.findOne({ 
             where: {
                 id: id
+            },
+         });
+    }
+
+    findByEmail(email: string): Promise<User | null> {
+        return this.userRepo.findOne({ 
+            where: {
+                email: email
             },
          });
     }

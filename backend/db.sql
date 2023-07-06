@@ -6,3 +6,11 @@ INSERT INTO `backend_nest_casas`.`casa` (id, title, bedrooms, bathrooms, squaref
 INSERT INTO `backend_nest_casas`.`casa` (id, title, bedrooms, bathrooms, squarefeet, description, available, country, city, cp, price, comodidad, photo, categories, userId, images) values (5, 'Apartamento', 5, 4, 539, 'ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor', false, 'España', 'Murcia', '23680', 914, 'car wash', 'https://a0.muscache.com/im/pictures/prohost-api/Hosting-886115183611381927/original/864fbedf-f063-4406-b683-d98438d4db6e.jpeg', '[3]', 5, '[]');
 
 ​
+INSERT INTO `backend_nest_casas`.`casa` (`title`, `bedrooms`, `bathrooms`, `squarefeet`, `description`, `available`, `country`, `city`, `cp`, `price`, `comodidad`, `photo`, `images`) VALUES ('casa1', '23', '23', '23', 'sdfvsd', '1', 'fdsfd', 'sdfsdf', '344', '1231', 'sdfsdf', 'sdsdf', 'sdfsdf');
+INSERT INTO `backend_nest_casas`.`casa` (`title`, `bedrooms`, `bathrooms`, `squarefeet`, `description`, `available`, `country`, `city`, `cp`, `price`, `comodidad`, `photo`, `images`) VALUES ('casa2', '23', '23', '23', 'sdfvsd', '1', 'fdsfd', 'sdfsdf', '344', '1231', 'sdfsdf', 'sdsdf', 'sdfsdf');
+INSERT INTO `backend_nest_casas`.`casa` (`title`, `bedrooms`, `bathrooms`, `squarefeet`, `description`, `available`, `country`, `city`, `cp`, `price`, `comodidad`, `photo`, `images`) VALUES ('casa3', '23', '23', '23', 'sdfvsd', '1', 'fdsfd', 'sdfsdf', '344', '1231', 'sdfsdf', 'sdsdf', 'sdfsdf');
+INSERT INTO `backend_nest_casas`.`casa` (`title`, `bedrooms`, `bathrooms`, `squarefeet`, `description`, `available`, `country`, `city`, `cp`, `price`, `comodidad`, `photo`, `images`) VALUES ('casa4', '23', '23', '23', 'sdfvsd', '1', 'fdsfd', 'sdfsdf', '344', '1231', 'sdfsdf', 'sdsdf', 'sdfsdf');
+
+
+INSERT INTO `backend_nest_casas`.`user` (`email`, `bio`, `phone`, `idioma`, `code`, `city`, `street`, `photo`, `role`, `fullName`) VALUES ('user1@gmail.com', 'sdfsdf', '2342343', 'spanish', 'dssdcsdc', 'cascsd', 'dscsdc', 'sdcscsd', 'user', 'sdcfsad');
+INSERT INTO `backend_nest_casas`.`user` (`email`, `bio`, `phone`, `idioma`, `code`, `city`, `street`, `photo`, `role`, `fullName`) VALUES ('user1@gmail.com', 'sdfsdf', '2342343', 'spanish', 'dssdcsdc', 'cascsd', 'dscsdc', 'sdcscsd', 'user', 'sdcfsad');

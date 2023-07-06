@@ -13,33 +13,30 @@ export class User {
     id: number;
 
     @Column()
-    isOwner: boolean;  //columna que indicar si es propietario en html optionbutton
-
-    @Column({unique: true})
     fullName: string;
 
-    @Column({unique: true})
+    @Column()
     email: string;
 
-    @Column({unique: true})
+    @Column()
     bio: string;
 
-    @Column({unique: true})
+    @Column()
     phone: string;
 
-    @Column({unique: true})
+    @Column()
     idioma: string;
 
-    @Column({unique: true})
+    @Column()
     code: string;
 
-    @Column({unique: true})
+    @Column()
     city: string;
 
-    @Column({unique: true})
+    @Column()
     street: string;
 
-    @Column({unique: true})
+    @Column()
     photo: string;
 
     @Column({
@@ -48,6 +45,8 @@ export class User {
         default: UserRole.USER
     })
     role: UserRole;
+
+    @Column()
     password: string;
 
 
