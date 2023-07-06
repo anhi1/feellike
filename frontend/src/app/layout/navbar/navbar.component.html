@@ -11,14 +11,13 @@
   <!-- <span class="example-spacer"></span> -->
   
   <div id="botones" class="button-container">
-    <button class="btn2">Iniciar sesión</button>
-    <button class="btn2">Registrarse</button>
+    <button class="btn2" *ngIf="!authService.isLoggedIn()" routerLink="/auth/login">Iniciar sesión</button>
+    <button class="btn2"  *ngIf="!authService.isLoggedIn()" routerLink="/auth/register">Registrarse</button>
+    <button class="btn2" *ngIf="authService.isLoggedIn()" (click)="authService.logout()">Cerrar sesión</button>
   </div>
 </mat-toolbar>
  
-   <!--Enlace al listado
-      <button mat-menu-item><a routerLink="/casa-list">Listado</a></button>
-    -->
+   
 
 
     

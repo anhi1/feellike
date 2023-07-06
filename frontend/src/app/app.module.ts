@@ -18,12 +18,13 @@ import {MatButtonModule} from '@angular/material/button';
 
 
 import { MatGridListModule } from '@angular/material/grid-list';
-import { UsersModule } from './users/users.module';
 import { CategoriesModule } from './categories/categories.module';
 import { CommentsModule } from './comments/comments.module';
 import { ReservasModule } from './reservas/reservas.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
-//login
+
 
 
 
@@ -44,12 +45,13 @@ import { ReservasModule } from './reservas/reservas.module';
     MatButtonModule,
     MatMenuModule,
     MatGridListModule,
-    UsersModule,
     CategoriesModule,
     CasasModule,
     NgOptimizedImage,
     CommentsModule,
     ReservasModule,
+    AuthModule,
+    UsersModule
 
 
 

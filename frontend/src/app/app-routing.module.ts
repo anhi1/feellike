@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: () => import('./reservas/reservas.module').then(m => m.ReservasModule) // lazy loading
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) // lazy loading
+  },
+  {
     path: '', redirectTo: 'casas', pathMatch: 'full'
   },
   {
