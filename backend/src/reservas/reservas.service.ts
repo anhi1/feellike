@@ -16,7 +16,7 @@ export class ReservasService {
             return await this.reservaRepo.save(reserva);
         } catch (error) {
             console.log(error.message);
-            throw new ConflictException('Cant save');
+            throw new ConflictException('no puede guardar');
         }
     }
 

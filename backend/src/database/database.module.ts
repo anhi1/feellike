@@ -15,11 +15,11 @@ import { Comment } from 'src/comments/comments.model';
             port: 3306,
             username: 'root',
             // password: 'admin', // sustituir por variable de entorno
-            password: process.env.NEST_PASSWORD,
+            password: 'admin',
             database: 'backend_nest_casas',
             entities: [
                 // __dirname + 'src/**/*.model.ts'
-                Casa, Category, Reserva, User, //Comment
+                Casa, Category, Reserva, User, Comment
             ],
             synchronize: true, // generar tablas automáticamente en base a entidades
             logging: true
