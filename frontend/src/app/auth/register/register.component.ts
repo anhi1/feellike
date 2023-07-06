@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
 
   userForm = new FormGroup({
-    username: new FormControl('', [Validators.required]),
+    fullName: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   });
@@ -25,7 +25,7 @@ export class RegisterComponent {
   save() {
 
     let register = {
-      username: this.userForm.get('username')?.value ?? '',
+      username: this.userForm.get('fullName')?.value ?? '',
       email: this.userForm.get('email')?.value ?? '',
       password: this.userForm.get('password')?.value ?? ''
     }
