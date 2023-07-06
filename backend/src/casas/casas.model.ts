@@ -42,8 +42,16 @@ export class Casa {
     @Column()
     comodidad: string;
 
-    @CreateDateColumn({name: 'created_date'})
-    createdDate: Date;
+    @Column()
+    photo: string;
+
+    @Column()
+    images: string;
+
+   
+
+    // @CreateDateColumn({name: 'created_date'})
+    // createdDate: Date;
 
     // @Column({type: 'int'})
     // quantity: number;
@@ -59,4 +67,8 @@ export class Casa {
     @ManyToOne(() => Category)
     @JoinColumn({ name: 'id_category'})
     category: Category;
+
+    // @ManyToOne(() => Casa)
+    // @JoinColumn({ name: 'Id_casa'})
+    // casa: Category;    ??????
 }
