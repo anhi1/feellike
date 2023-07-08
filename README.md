@@ -1,3 +1,23 @@
+### PROYECTO 3_angular: Alquiler  vacacional: feellike App
+
+[!logo1.png] (https://1.postimg.cc/flFoxzBs/logo1.png)
+
+## Proyecto Final "Curso Desarrollo Web Frontend con Angular, importadido por:
+
+  * La Fundación Adecco y subvencionado por el Ayuntamiento de Madrid
+    <a target="_blanck" rel="noopener noreferrer" href="https://formacion.fundacionaddecco.org/
+    categories/escuela-digital-desarrollo-web/">img src="https://res.cloudinary.com/dquxFl0fe/image/
+    upload/v1657192729/API-GA/ adecco_o0ddcs.png" alt="Fundación Adecco" style="max-width:40%
+    border-radius:1rem"></a>
+
+## Tecnologías utilizadas
+
+  * Angular Cli
+  * Angular Material
+  * JSON Server NodeJS
+
+
+
 # Full Stack: Frontend con Angular + Backend con NestJS y TypeORM
 
 ## Backend
