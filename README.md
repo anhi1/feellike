@@ -2,13 +2,10 @@
 
 [![logo.png](https://i.postimg.cc/pTdMLHSY/logo.png)](https://postimg.cc/nsNP36pC)
 
-## Proyecto Final "Curso Desarrollo Web Frontend con Angular, importadido por:
+## Proyecto Final "Curso Desarrollo Web Frontend con Angular, impartido por:
 
-  * La Fundación Adecco y subvencionado por el Ayuntamiento de Madrid
-    <a target="_blanck" rel="noopener noreferrer" href="https://formacion.fundacionaddecco.org/
-    categories/escuela-digital-desarrollo-web/">img src="https://res.cloudinary.com/dquxFl0fe/image/
-    upload/v1657192729/API-GA/ adecco_o0ddcs.png" alt="Fundación Adecco" style="max-width:40%
-    border-radius:1rem;marging-top:1rem"></a>
+  * La Fundación Adecco y financiado por el Ayuntamiento de Madrid
+    [![Edigital-Adecco.jpg](https://i.postimg.cc/kgzTbczV/Edigital-Adecco.jpg)](https://postimg.cc/YvNNc1pk)
 
 ## Tecnologías utilizadas
 
