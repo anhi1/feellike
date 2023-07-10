@@ -5,6 +5,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class CategoriesService {
+    create(categories: Category): Category | PromiseLike<Category> {
+        throw new Error('Method not implemented.');
+    }
 
     constructor(
         @InjectRepository(Category) 

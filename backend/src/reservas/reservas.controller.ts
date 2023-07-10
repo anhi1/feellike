@@ -15,6 +15,20 @@ export class ReservasController {
         return this.reservaService.findAllByUserId(userId);
     }
 
+    /*
+    {
+        "id": 0,
+        "startDate": "2023-07-30T22:00:00.000Z",
+        "endDate": "2023-08-04T22:00:00.000Z",
+        "price": 5000,
+        "user": {
+            "id": 1
+        },
+        "casa": {
+            "id": 1
+        }
+    }
+    */
     @Post()
     async create(@Body() reserva: Reserva): Promise<Reserva> {
         return await this.reservaService.create(reserva);

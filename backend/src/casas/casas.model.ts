@@ -42,11 +42,11 @@ export class Casa {
     @Column()
     comodidad: string;
 
-    @Column()
-    photo: string;
+    // @Column()
+    // photo: string;
 
-    @Column()
-    images: string;
+    // @Column()
+    // images: string;
 
    
 
