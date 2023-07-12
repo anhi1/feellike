@@ -53,9 +53,8 @@
       <div *ngFor="let comment of comments">
         <p>{{comment.description}}</p>
         <p *ngIf="comment.photo">
-          <img src="{{comment.photo}}">
+          <img class="img-redonda" src="{{comment.photo}}">
         </p>
-        <p><img class="img-redonda" src="{{comment.photo}}"></p>
       </div>
     </div>
   </div>
