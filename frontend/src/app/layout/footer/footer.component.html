@@ -1,23 +1,64 @@
 <footer>
-    <mat-grid-list cols="3" rowHeight="125px">
+
+
+    <mat-grid-list cols="3" rowHeight="auto">
+
+      <div class="container-img">
+        <img src="../../../assets/icon/ubicacion2.png" alt="ubicación">
+      </div> 
       
-      <mat-grid-tile rowspan="2">
-        <nav class="map">
-          <a routerLink="/">Empresa</a> <br>
-          <a routerLink="/">Opiniones</a> <br>
-          <a routerLink="/">Newsroom</a> <br>
-          <a routerLink="/">Privacidad</a>
-        </nav>
-      </mat-grid-tile>
-  
+      <div class="flex">
+        <div class="slogan">
+          <p>Te sentirás en</p><br>
+          <p> casa donde vayas</p>
+        </div>
+        <div class="bajo">
+          <p>©Todos los derechos reservados -feellike - 2023</p>
+        </div>
+        <div class="lista">
+          <div>
+            <ul class="social-icons">
+            <a href=""><i class="efecto fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="efecto fa-brands fa-twitter"></i></a>
+            <a href=""><i class="efecto fa-brands fa-instagram"></i></a>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="">Privacidad</a></li>
+              <li><a href="">Condiciones</a></li>
+              <li><a href="">Anfitriones</a></li>
+            </ul>
+          </div> 
+        </div>
+      </div>
+      
+      
+
+      
+      <!-- <mat-grid-tile rowspan="2"> 
+        
+        <div class="container-nav1">
+          <nav>          
+            <a class="color-font"routerLink="/">Empresa</a> <br>
+            <a class="color-font"routerLink="/">Opiniones</a> <br>
+            <div class="container-nav2">
+              <a class="color-font"routerLink="/">Newsroom</a> <br>
+              <a class="color-font"routerLink="/">Privacidad</a> <br>
+            </div>
+          </nav>
+        </div>
+      
+      </mat-grid-tile> -->
+      
       
   
     
   
       <!-- fila que ocupa 3 columnas -->
-      <mat-grid-tile colspan="3" rowspan="1">
+      <!-- <mat-grid-tile colspan="3" rowspan="1">
         <p>©Todos los derechos reservados- feellike - 2023</p>
-      </mat-grid-tile>
+      </mat-grid-tile> -->
   
     </mat-grid-list>
   </footer>
