@@ -9,27 +9,37 @@
     <div *ngIf="casa" class="bed">
       <h2>{{casa.title}}</h2>
       <p>Habitaciones: {{casa.bedrooms }}</p>
+      <div class="space">
       <img src="../../../assets/icon/bed.png" width="40px" alt="">
       <img src="../../../assets/icon/sofa.png" width="40px" alt="">
+    </div>
       <p>Baños: {{casa.bathrooms }}</p>
     </div>
   </div>
 
   <div *ngIf="casa">
-    <h2>Descripción: </h2>
+    <h2>Descripción </h2>
     <p>{{casa.description}}</p>
     <p>Comodidad: {{casa.comodidad}}</p>
     <p> {{casa.squarefeet}}</p>
   </div>
 
   <div *ngIf="casa">
-    <p>País: {{casa.country}}</p>
-    <p>Ciudad: {{casa.city}}</p>
-    <p>Código postal: {{casa.cp}}</p>
+    <p>País: {{casa.country}}</p><br>
+    <p>Ciudad: {{casa.city}}</p><br>
+    <p>Código postal: {{casa.cp}}</p><br>
+    <img src="../../../assets/icon/mapa.png" alt="mapa">
   </div>
 
 
+<!--------Boton de reserva----->
 
+  <div class="text-center">
+    <a [routerLink]="['/reservas/casaId/:casaId']">
+      <button>Reservar</button> </a>
+  </div>
+
+        
 
 
 
@@ -43,7 +53,7 @@
       <div *ngFor="let comment of comments">
         <p>{{comment.email}}</p>
         <p>{{comment.description}}</p>
-        <p><img src="{{comment.photo}}"></p>
+        <p><img class="img-redonda" src="{{comment.photo}}"></p>
       </div>
     </div>
   </div>
@@ -51,10 +61,11 @@
 
 
   <!--------User detail----->
+  <h2 class="centrar">Propietario</h2>
   <mat-grid-list *ngIf="casa">
     <mat-list *ngIf="user">
-      <mat-list-item>
-        <img matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
+      <mat-list-item id="anfitrion-caja">
+        <img id="anfitrion-img" matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
         <a [routerLink]="['/users', user.id]">
           {{user.fullName}}
         </a>
@@ -65,11 +76,7 @@
 
 
 
-<!--------Boton de reserva----->
-  
-        <a [routerLink]="['/reservas/casaId/:casaId']">
-          <button>Reservar</button>
- 
+
 
 
 

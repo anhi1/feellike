@@ -1,7 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css);
+
 footer {
     background-color:#6B79FF;
     color: white;
-  }
+}
+
+.color-font {
+  color:aliceblue;
+}
 
   
-  
+/* POSICIONAMIENTOS FOOTER */
+
+.mat-grid-list{
+  position: relative;
+  height: 300px;
+}
+
+.container-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 300px;
+  z-index: 1;
+}
+
+.container-img img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.flex div{
+  width: 100%;
+}
+.slogan{
+  font-size: 38px;
+  font-weight: bold;
+  margin-left: 125px; 
+  margin-top: 125px;
+}
+.bajo{
+  display: flex;
+  align-items: flex-end;
+}
+
+.lista{
+  display: flex;
+  align-items: center;
+}
+
+.lista ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icons {
+  display: inline-block;
+  padding-top: 6em;
+  padding-left: 0em;
+}
+.efecto {
+  font-size: 2em;
+}
+.fa-facebook-f {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 0.5px solid;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.fa-twitter {
+  padding-top: 0.3em;
+  padding-bottom: 0.2em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  border: 0.5px solid;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.fa-instagram {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  border: 0.5px solid;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.efecto:hover {
+  color: #ec1eca;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  box-shadow: 0px 0px 2px 20px hsl(192, 91%, 27%);
+  -webkit-box-shadow: 0px 0px 20px 20px hsl(192, 91%, 27%);
+}
+
+
+
+.lista ul li a{
+  text-decoration: none;
+  color: white;
+}

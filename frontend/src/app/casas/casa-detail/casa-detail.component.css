@@ -31,3 +31,31 @@
  .gallery__item:nth-child(4) {
      grid-column-start: span 2;
  }
+
+ div .space {
+    display:flex;
+    align-content: space-between;
+ }
+
+  
+
+ .img-redonda{
+    border-radius: 50%;
+    width: 100px;
+ }
+
+ .centrar {
+    text-align: center; 
+ }
+
+ #anfitrion-caja{
+    height: 200px;
+ }
+#anfitrion-img{
+    width: 100px;
+    height: 100px;
+ }
+
+ .text-center{
+    text-align: center;
+ }
