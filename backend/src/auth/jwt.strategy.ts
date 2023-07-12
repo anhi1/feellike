@@ -21,9 +21,9 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
         if(!user) 
             throw new UnauthorizedException('Autenticación incorrecta'); // 401
 
-        // quitar la password por seguridad
-        // let {password, ...userInfo} = user; 
-        // return userInfo;
+         //quitar la password por seguridad
+         let {password, ...userInfo} = user; 
+         return userInfo;
     }
     
 }

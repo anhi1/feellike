@@ -12,32 +12,32 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
-    fullName: string;
+    @Column({nullable: true})
+    fullName?: string;
 
     @Column()
     email: string;
 
-    @Column()
-    bio: string;
+    @Column({nullable: true})
+    bio?: string;
 
-    @Column()
-    phone: string;
+    @Column({nullable: true})
+    phone?: string;
 
-    @Column()
-    idioma: string;
+    @Column({nullable: true})
+    idioma?: string;
 
-    @Column()
-    code: string;
+    @Column({nullable: true})
+    code?: string;
 
-    @Column()
-    city: string;
+    @Column({nullable: true})
+    city?: string;
 
-    @Column()
-    street: string;
+    @Column({nullable: true})
+    street?: string;
 
-    @Column()
-    photo: string;
+    @Column({nullable: true})
+    photo?: string;
 
     @Column({
         type: 'enum',

@@ -33,7 +33,7 @@ export class RegisterComponent {
     this.authService.register(register).subscribe(data => {
       console.log(data.token);
       // Guardar el token para utilizarlo en las posteriores peticiones
-      localStorage.setItem('jwt_token', data.token);
+      this.authService.handleLoginResponse(data.token);
       this.router.navigate(['/casas']);
 
     });

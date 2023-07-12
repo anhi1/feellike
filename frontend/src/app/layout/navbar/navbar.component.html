@@ -1,4 +1,6 @@
 
+<nav>
+
 <mat-toolbar id="contenedor" class="navbar">
   
   <div id="logo">
@@ -9,13 +11,50 @@
   
   
   <!-- <span class="example-spacer"></span> -->
-  
-  <div id="botones" class="button-container">
-    <button class="btn2" *ngIf="!authService.isLoggedIn()" routerLink="/auth/login">Iniciar sesión</button>
-    <button class="btn2"  *ngIf="!authService.isLoggedIn()" routerLink="/auth/register">Registrarse</button>
-    <button class="btn2" *ngIf="authService.isLoggedIn()" (click)="authService.logout()">Cerrar sesión</button>
-  </div>
+
+  <button mat-button  *ngIf="isLoggedIn">
+    <mat-icon>shopping_cart</mat-icon>
+    Reservas
+  </button>
+  <mat-menu #menuReservas="matMenu">
+    <button mat-menu-item routerLink="/reservas">Reservas</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menuCasas">
+    <mat-icon>menu_casa</mat-icon>
+    Casas
+  </button>
+  <mat-menu #menuCasas="matMenu">
+    <button mat-menu-item routerLink="/casas">Listado de casas</button>
+    <button mat-menu-item routerLink="/casas/new" *ngIf="isAdmin">Crear nueva casa</button>
+  </mat-menu>  
+
+  <button mat-button *ngIf="!isLoggedIn" routerLink="/user/login">
+    <mat-icon>login</mat-icon>
+    Iniciar sesión
+  </button>
+
+
+  <button mat-button *ngIf="!isLoggedIn" routerLink="/user/register">
+    <mat-icon>person_add</mat-icon>
+    Crear cuenta
+  </button>
+
+  <button mat-button *ngIf="isLoggedIn" routerLink="/users/profile">
+    <mat-icon>account_circle</mat-icon>
+    Mi perfil
+  </button>
+
+  <button mat-button *ngIf="isLoggedIn" (click)="authService.logout()">
+    <mat-icon>logout</mat-icon>
+    Cerrar sesión
+  </button>
+
 </mat-toolbar>
+
+
+</nav>
+
  
    
 

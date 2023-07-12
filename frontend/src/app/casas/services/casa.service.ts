@@ -2,6 +2,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ICasa } from '../models/casa.model';
+import { BASE_URL } from 'src/app/shared/constants';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { ICasa } from '../models/casa.model';
 })
 export class CasaService {
 
-  url: string = "http://localhost:3000/casas";
+  url: string = `${BASE_URL}/casas`;
   
 
   constructor(private httpClient: HttpClient) { }

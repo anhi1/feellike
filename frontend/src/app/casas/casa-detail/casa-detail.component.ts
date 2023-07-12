@@ -5,10 +5,10 @@ import { IUser } from 'src/app/users/models/user.model';
 import { CasaService } from '../services/casa.service';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/users/services/user.service';
-import { CommentService } from 'src/app/comments/services/comment.service';
-import { IComment } from 'src/app/comments/models/comment.model';
 import { ReservaService } from 'src/app/reservas/services/reserva.service';
 import { IReserva } from 'src/app/reservas/reserva-casa/reserva.model';
+import { CommentService } from 'src/app/comments/comment.service';
+import { IComment } from 'src/app/comments/comment.model';
 
 @Component({
   selector: 'app-casa-detail',
@@ -46,7 +46,7 @@ export class CasaDetailComponent {
 
       });
 
-      this.commentService.getAllCommentsByCasaId(id).subscribe(data => this.comments = data);
+       this.commentService.getAllCommentsByCasaId(id).subscribe(data => this.comments = data);
 
       
     

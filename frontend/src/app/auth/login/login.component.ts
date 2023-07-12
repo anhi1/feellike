@@ -30,7 +30,7 @@ export class LoginComponent {
   }
   this.authService.login(login).subscribe(data =>{
     console.log(data.token);
-    localStorage.setItem('jwt_token', data.token) //guardar el token para utilizarlo en las posteriores peticiones
+    this.authService.handleLoginResponse(data.token); //guardar el token para utilizarlo en las posteriores peticiones
   this.router.navigate(['/casas']); //te redirige a books lista
   });
 

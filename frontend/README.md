@@ -1,27 +1,34 @@
-# Feellike
+## Módulos Comments
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+1. Generar módulo y componentes:
 
-## Development server
+ng generate module comments --routing --module app.module
+ng generate component comments/comment-form
+ng generate interface comments/comment --type=model --prefix=I
+ng generate service comments/comment
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. Crear routes para comments
+* app-routing.module.ts /comments CommentsModule
+* comments-routing.module.ts
+ 
+  * '/:commentId/new' CommentFormComponent
+  * '/:id/edit' CommentFormComponent
 
-## Code scaffolding
+## Formulario Comments
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. CommentFormComponent
 
-## Build
+ Comment:
+* id
+* user?
+* description
+* photo
+* casaId
+* userId
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+ 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Mis comentarios (user)
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Todos los comentarios (admin)

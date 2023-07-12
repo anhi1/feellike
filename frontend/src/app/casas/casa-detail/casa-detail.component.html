@@ -41,9 +41,10 @@
     <div *ngIf="comments.length===0">No hay comentarios</div>
     <div *ngIf="comments.length>0">
       <div *ngFor="let comment of comments">
-        <p>{{comment.email}}</p>
         <p>{{comment.description}}</p>
-        <p><img src="{{comment.photo}}"></p>
+        <p *ngIf="comment.photo">
+          <img src="{{comment.photo}}">
+        </p>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <form [formGroup]="reservaForm" (ngSubmit)="save()"> 
 
-
+  <input type="hidden" formControlName="id">
       
 
     <label for="startDate">Fecha de inicio</label>
@@ -12,7 +12,7 @@
     <br>
 
     <label for="price">Precio</label>
-    <input type="number" id="precio" formControlName="precio" >
+    <input type="number" id="price" formControlName="price" >
 
     <button type="submit" [disabled]="reservaForm.invalid">Reservar</button>
 
@@ -50,5 +50,4 @@
     <mat-error *ngIf="reservaForm.get('price')?.invalid && reservaForm.get('price')?.touched">
         El precio debe estar comprendido en un rango de 5 y 500 €.
   </mat-error>
-  </mat-form-field>
--->
+  </mat-form-field> -->

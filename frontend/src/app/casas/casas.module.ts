@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { CommentsModule } from '../comments/comments.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CasasRoutingModule } from './casas-routing.module';
 import { CasaListComponent } from './casa-list/casa-list.component';
@@ -20,6 +20,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatChipsModule } from '@angular/material/chips';
+import { CommentFormComponent } from '../comments/comment-form/comment-form.component';
 
 
 
@@ -30,6 +31,7 @@ import { MatChipsModule } from '@angular/material/chips';
     CasaGalleryComponent,
     CasaDetailComponent,
     CasaFormComponent,
+    
 
   ],
   imports: [

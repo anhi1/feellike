@@ -5,7 +5,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class ReservasService {
-
+    
     constructor(
         @InjectRepository(Reserva)
         private reservaRepo: Repository<Reserva>
@@ -18,6 +18,10 @@ export class ReservasService {
             console.log(error.message);
             throw new ConflictException('no puede guardar');
         }
+    }
+
+    findAll(): Promise<Reserva[]> {
+        return this.reservaRepo.find();
     }
 
     findAllByUserId(userId: number): Promise<Reserva[]> {

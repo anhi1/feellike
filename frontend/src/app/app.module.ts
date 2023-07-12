@@ -19,10 +19,10 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CategoriesModule } from './categories/categories.module';
-import { CommentsModule } from './comments/comments.module';
 import { ReservasModule } from './reservas/reservas.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { CommentsModule } from './comments/comments.module';
 
 
 
@@ -48,10 +48,11 @@ import { UsersModule } from './users/users.module';
     CategoriesModule,
     CasasModule,
     NgOptimizedImage,
-    CommentsModule,
+    
     ReservasModule,
     AuthModule,
-    UsersModule
+    UsersModule,
+    CommentsModule
 
 
 

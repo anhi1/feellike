@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ICategory } from 'src/app/categories/models/category.model';
 import { ReservaService } from '../services/reserva.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route } from '@angular/router';
 import { CasaService } from 'src/app/casas/services/casa.service';
 import { IReserva } from './reserva.model';
 import { IUser } from 'src/app/users/models/user.model';
@@ -17,13 +17,13 @@ import { ICasa } from 'src/app/casas/models/casa.model';
 export class ReservaCasaComponent {
   
   reservaForm = new FormGroup({
-    fullName: new FormControl('', [Validators.required]),
+    // fullName: new FormControl('', [Validators.required]),
     startDate: new FormControl(new Date()), 
     endDate: new FormControl(new Date()),
     price: new FormControl(0, [
-      Validators.required, Validators.min(5), Validators.max(500), Validators.pattern("^[0-9]+([.,][0-9]{1,2})?$")
+      Validators.required, Validators.min(5), Validators.pattern("^[0-9]+([.,][0-9]{1,2})?$")
     ]),
-    categories: new FormControl('', [Validators.required]),
+    // categories: new FormControl('', [Validators.required]),
   });
 
 
@@ -31,13 +31,14 @@ export class ReservaCasaComponent {
   users: IUser[] = [];
   categories: ICategory | undefined;
   casa : ICasa | undefined;
+  router: any;
   
 
   constructor(
     private reservaService: ReservaService,
     private casaService: CasaService,
     private activatedRoute: ActivatedRoute,
-    private categoryService: CategoryService
+    
   ) {}
 
   ngOnInit(): void {
@@ -48,7 +49,7 @@ export class ReservaCasaComponent {
       const casaId = parseInt(idString, 10);
       this.casaService.findById(casaId).subscribe(data => this.casa = data);
       this.reservaService.findById(casaId).subscribe(reserva => this.loadReservaForm(reserva));
-      //this.categoryService.findById(this.casa.category).subscribe(data =>this.category = data);
+      
     });
     
     
@@ -69,11 +70,28 @@ export class ReservaCasaComponent {
 
    //extraer los datos del formulario para guardar en el backend
   save() : void{
-    let startDate = this.reservaForm.get('startDate')?.value ?? '';
-    let endDate = this.reservaForm.get('endDate')?? '';
-    let precio = this.reservaForm.get('precio')?.value ?? 5;
+    let id = this.reservaForm.get('id')?.value ?? 0;
+    let startDate = this.reservaForm.get('startDate')?.value ;
+    let endDate = this.reservaForm.get('endDate')?. value ;
+    let price = this.reservaForm.get('price')?.value ?? 5;
+    let userId = this.reservaForm.get('userId')?.value ?? 0;
+    let casaId = this.reservaForm.get('userId')?.value ?? 0;
     //let category = this.reservaForm.get('category')?.value ?? '';
 
+    let reserva: IReserva = {
+      id: id,
+      userId: userId,
+      casaId: casaId,
+      startDate:startDate,
+      endDate: endDate,
+      price: price,
+ 
+    }
+
+    if (id === 0) // crear nueva casa
+    this.reservaService.create(reserva).subscribe(reserva => this.router.navigate(['/reserva', reserva.id]));
+  else // editando una casa
+    this.reservaService.update(reserva).subscribe(reserva => this.router.navigate(['/reserva', reserva.id]));
    
   }
   

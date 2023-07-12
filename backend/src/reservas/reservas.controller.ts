@@ -1,6 +1,8 @@
-import { Controller, Body, Delete, Get, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
+import { Controller, Body, Request,Delete, Get, Param, ParseIntPipe, Post, Put, UseGuards } from '@nestjs/common';
 import { ReservasService } from './reservas.service';
 import { Reserva } from './reservas.model';
+import { AuthGuard } from '@nestjs/passport';
+import { UserRole } from 'src/users/user-role.enum';
 
 
 @Controller('reservas')
@@ -8,29 +10,25 @@ export class ReservasController {
 
     constructor(private reservaService: ReservasService) {}
 
-    @Get('user/:userId')
-    findAllByUserId(
-        @Param("userId", ParseIntPipe) 
-        userId: number): Promise<Reserva[]> {
-        return this.reservaService.findAllByUserId(userId);
+    @UseGuards(AuthGuard('jwt'))
+    @Get()
+    findAll(@Request() request): Promise<Reserva[]> {
+
+        if(request.user.role === UserRole.ADMIN)
+            return this.reservaService.findAll();
+
+        return this.reservaService.findAllByUserId(request.user.id);
     }
 
-    /*
-    {
-        "id": 0,
-        "startDate": "2023-07-30T22:00:00.000Z",
-        "endDate": "2023-08-04T22:00:00.000Z",
-        "price": 5000,
-        "user": {
-            "id": 1
-        },
-        "casa": {
-            "id": 1
-        }
-    }
-    */
+
+
+    @UseGuards(AuthGuard('jwt'))
     @Post()
-    async create(@Body() reserva: Reserva): Promise<Reserva> {
+    async create(
+        @Request() request, 
+        @Body() reserva: Reserva): Promise<Reserva> {
+        console.log(request.user);
+        reserva.user = request.user;
         return await this.reservaService.create(reserva);
     }
 }

@@ -59,12 +59,12 @@
       ver
      </button>
 
-     <button  [routerLink]="['/casas', casa.id, 'edit']">
+     <button  [routerLink]="['/casas', casa.id, 'edit']" *ngIf="isAdmin">
       <img class="icono" src="assets/icon/editar.png" alt="" style="max-width: 15px;">
       Editar
       </button>
 
-      <button (click)="deleteCasa(casa)">
+      <button (click)="deleteCasa(casa)" *ngIf="isAdmin">
         <img class="icono" src="assets/icon/borrar.png" alt="" style="max-width: 15px;">
         Eliminar
       </button>
@@ -72,6 +72,8 @@
     
   </div>
 </div>
+
+
 
 
   

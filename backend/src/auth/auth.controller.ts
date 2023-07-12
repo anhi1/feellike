@@ -24,15 +24,15 @@ export class AuthController {
 
     @Get('hola1')
     hola1() {
-        console.log('hola1');
-        return 'hola1';
+        console.log('hola7');
+        return 'hola7';
     }
 
     @UseGuards(AuthGuard('jwt'))
     @Get('hola2')
     hola2() {
-        console.log('hola2');
-        return 'hola2';
+        console.log('hola5');
+        return 'hola5';
     }
 
     @UseGuards(AuthGuard('jwt'))
