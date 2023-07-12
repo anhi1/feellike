@@ -1,0 +1,39 @@
+<form [formGroup]="reservaForm" (ngSubmit)="save()">
+
+    <input type="hidden" formControlName="id">
+  
+
+    <mat-form-field floatLabel="always">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" class="example-right-align" placeholder="0" step="0.01" min="5" max="500" formControlName="price">
+      <span matTextPrefix>&euro;&nbsp;</span>
+      <mat-error *ngIf="reservaForm.get('price')?.invalid && reservaForm.get('price')?.touched">
+          El precio debe estar comprendido en un rango de 5 y 500 €.
+    </mat-error>
+    </mat-form-field>
+
+  
+    <mat-form-field>
+      <mat-label>Fecha inicio</mat-label>
+      <input matInput [matDatepicker]="picker1" formControlName="startDate">
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+  
+
+    <mat-form-field>
+      <mat-label>Fecha fin</mat-label>
+      <input matInput [matDatepicker]="picker2" formControlName="finishDate">
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+  
+    <button mat-fab extended type="submit"
+    [disabled]="reservaForm.invalid">
+        Enviar
+  </button>
+  </form>
+  
+  

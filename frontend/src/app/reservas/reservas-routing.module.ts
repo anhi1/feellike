@@ -1,19 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ReservaCasaComponent } from './reserva-casa/reserva-casa.component';
+import { ReservaListComponent } from './reserva-list/reserva-list.component';
+import { ReservaFormComponent } from './reserva-form/reserva-form.component';
 
 const routes: Routes = [
-  
   {
-    path: 'casaId/:casaId',
-    component: ReservaCasaComponent
+    path: '',
+    component: ReservaListComponent
   },
   {
-    path: '**', redirectTo: 'reservas', pathMatch: 'full'
+    path: ':casaId/new',
+    component: ReservaFormComponent
   },
   {
-    path: '', redirectTo: 'reservas', pathMatch: 'full'
+    path: ':id/edit',
+    component: ReservaFormComponent
   }
+//{
+// path: '**', redirectTo: 'reservas', pathMatch: 'full'
+// },
+//{
+//   path: '', redirectTo: 'reservas', pathMatch: 'full'
+// }
   
 ];
 

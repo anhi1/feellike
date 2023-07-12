@@ -1,35 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IReserva } from '../reserva-casa/reserva.model';
+import { BASE_URL } from 'src/app/shared/constants';
+import { IReserva } from '../reserva.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ReservaService {
-  
-  url : string = "http://localhost:3000/reservas"
+  url: string = `${BASE_URL}/reservas`;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   findAll(): Observable<IReserva[]> {
     return this.httpClient.get<IReserva[]>(this.url);
   }
 
-  findById(id: number): Observable<IReserva> {
-    return this.httpClient.get<IReserva>(`${this.url}/${id}`);
+  create(reserva: IReserva): Observable<IReserva> {
+    return this.httpClient.post<IReserva>(this.url, reserva);
   }
 
-  getAllReservasByCasaId(casaId: number): Observable<IReserva[]> {
-    return this.httpClient.get<IReserva[]>(`${this.url}/${casaId}`);
-}
-   create(reserva :IReserva): Observable<IReserva> {
-     return this.httpClient.post<IReserva>(this.url, reserva);
-   }
-
-   update(reserva: IReserva): Observable<IReserva> {
-     return this.httpClient.put<IReserva>(`${this.url}/${reserva.id}`, reserva);
-   }
+  update(reserva: IReserva): Observable<IReserva> {
+    return this.httpClient.put<IReserva>(`${this.url}`, reserva);
+  }
 
   // deleteById(id: number): void {
   //   this.httpClient.delete(`${this.url}/${id}`);
