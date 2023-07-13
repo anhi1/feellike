@@ -19,6 +19,10 @@ export class CasaService {
     return this.httpClient.get<ICasa[]>(this.url);
   }
 
+  findAllWithRelations(): Observable<ICasa[]> {
+    return this.httpClient.get<ICasa[]>(`${this.url}/load-relations`);
+  }
+
   // http://localhost:3000/casas?userId=1
   findAllByUserId(userId: number): Observable<ICasa[]> {
     return this.httpClient.get<ICasa[]>(`${this.url}?userId=${userId}`);
