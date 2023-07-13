@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./reservas/reservas.module').then(m => m.ReservasModule)
   },
   {
+    path: 'comments',
+    loadChildren: () => import('./comments/comments.module').then(m => m.CommentsModule)
+  },
+  {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) 
   },
