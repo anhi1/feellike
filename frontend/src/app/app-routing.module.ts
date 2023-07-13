@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CasaDetailComponent } from './casas/casa-detail/casa-detail.component';
 
 
 const routes: Routes = [
@@ -10,15 +9,15 @@ const routes: Routes = [
   },
   {
     path: 'casas',
-    loadChildren: () => import('./casas/casas.module').then(m => m.CasasModule) // lazy loading
+    loadChildren: () => import('./casas/casas.module').then(m => m.CasasModule) 
   },
   {
     path: 'reservas',
-    loadChildren: () => import('./reservas/reservas.module').then(m => m.ReservasModule) // lazy loading
+    loadChildren: () => import('./reservas/reservas.module').then(m => m.ReservasModule)
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) // lazy loading
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) 
   },
   {
     path: '', redirectTo: 'casas', pathMatch: 'full'

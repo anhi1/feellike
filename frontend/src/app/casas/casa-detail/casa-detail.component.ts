@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ICasa } from '../models/casa.model';
 import { IUser } from 'src/app/users/models/user.model';
 import { CasaService } from '../services/casa.service';
@@ -15,7 +15,7 @@ import { IReserva } from 'src/app/reservas/reserva.model';
   templateUrl: './casa-detail.component.html',
   styleUrls: ['./casa-detail.component.css']
 })
-export class CasaDetailComponent {
+export class CasaDetailComponent implements OnInit{
   casa: ICasa | undefined;
   user: IUser | undefined;
   casas: ICasa[]=[];
