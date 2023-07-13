@@ -1,8 +1,10 @@
+/* eslint-disable prettier/prettier */
 import { ConflictException, Injectable, Delete, NotFoundException } from '@nestjs/common';
 import { Casa } from './casas.model';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Between, ILike, Repository, In, MoreThan, MoreThanOrEqual } from 'typeorm';
 import { CategoriesService } from 'src/categories/categories.service';
+
 
 
 @Injectable()
@@ -24,7 +26,7 @@ export class CasasService {
         return this.casaRepo.find({
             relations: {
                 user: true,
-                //categories: true
+                categories: true
             }
 
         });
@@ -61,6 +63,8 @@ export class CasasService {
             }
         });
     }
+
+   
 
     findById(id: number): Promise<Casa | null> {
         // SELECT * FROM casa WHERE id = 1;
@@ -103,14 +107,7 @@ export class CasasService {
         });
     }
 
-    // findAllByAvailableTrue(): Promise<Casa[]> {
-    //     return this.casaRepo.find({
-    //         where: {
-    //             available: true
-    //         }
-    //     });
-    // }
-
+    
     findAllOrderByPriceAsc(): Promise<Casa[]> {
         return this.casaRepo.find({
             order: {
@@ -128,6 +125,7 @@ export class CasasService {
         }
     }
 
+    //Metodo actualizar casa
     async update(casa: Casa): Promise<Casa> {
         let casaFromDB = await this.casaRepo.findOne({ 
             where: {
@@ -140,20 +138,12 @@ export class CasasService {
          try {
             console.log(casa);
             casaFromDB.price = casa.price;
-            casaFromDB.title = casa.title;
             casaFromDB.city = casa.city;
-            casaFromDB.title = casa.title;
             casaFromDB.user = casa.user;
            
-            
-             //Opción 1: buscar las categorías
-            //  let categoryIds = casa.categories.map(cat => cat.id);
-            //  let categories = await this.categoryService.findAllByIds(categoryIds);
-            //  casaFromDB.categories = categories;
-
-             // Opción 2: cargar las categorías directamente
-            // casaFromDB.categories = casa.categories;
-            return await this.casaRepo.save(casaFromDB);
+              // Opción 2: cargar las categorías directamente
+             casaFromDB.categories = casa.categories;
+             return await this.casaRepo.save(casaFromDB);
 
          } catch (error) {
             console.log(error);
@@ -180,23 +170,6 @@ export class CasasService {
     }
 
     async deleteAllByUserId(userId: number) {
-
-        // Opcion 1
-        // let casa = await this.casaRepo.find({
-        //     select: {
-        //         id: true            
-        //     },
-        //     relations: {
-        //         user: false
-        //     },
-        //     where: {
-        //         user: {
-        //             id: userId
-        //         }
-        //     }
-        // });
-        // let ids = casa.map(casa => casa.id)
-        // await this.casaRepo.delete(ids);
 
         // Opcion 2: una sola sentencia sql
         await this.casaRepo.delete({
