@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { Repository, In } from 'typeorm';
 import { Category } from './categories.model';

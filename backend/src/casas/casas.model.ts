@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Category } from "src/categories/categories.model";
 import { User } from "src/users/users.model";
-import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable,  ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity()
@@ -43,23 +43,15 @@ export class Casa {
     @Column()
     comodidad: string;
 
-    // @Column()
-    // photo: string;
+     @Column()
+    photo: string;
 
-    // @Column()
-    // images: string;
+    @Column()
+    images:string[];
 
+
+ @CreateDateColumn({name: 'created_date'})
    
-
-    // @CreateDateColumn({name: 'created_date'})
-    // createdDate: Date;
-
-    // @Column({type: 'int'})
-    // quantity: number;
-
-    // @Column({type: 'boolean', default: false})
-    // available: boolean;
-
     @ManyToOne(() => User)
     @JoinColumn({ name: 'id_user'})
     user: User;
@@ -67,9 +59,7 @@ export class Casa {
     
     @ManyToOne(() => Category)
     @JoinColumn({ name: 'id_category'})
-    category: Category;
+    categories: Category[];
 
-    // @ManyToOne(() => Casa)
-    // @JoinColumn({ name: 'Id_casa'})
-    // casa: Category;    ??????
+    
 }
