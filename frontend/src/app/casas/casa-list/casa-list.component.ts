@@ -66,12 +66,7 @@ export class CasaListComponent implements OnInit{
       const userIdStr = params['userId'];
       const categoryIdStr = params['categoryId'];
 
-      if (userIdStr) { //filtro por usuario
-        const id = parseInt(userIdStr, 10);
-        this.casaService.findAllByUserId(id).subscribe((data) => (this.casas = data));
-        this.userService.findById(id).subscribe(data => this.user = data);
-
-      } else if(categoryIdStr){ //Filtro por category
+      if(categoryIdStr){ //Filtro por category
         const id = parseInt(categoryIdStr, 10);
         this.casaService.findAllByCategoryId(id).subscribe(data => this.casas = data);
         this.categoryService.findById(id).subscribe(data => this.category = data);
@@ -80,7 +75,7 @@ export class CasaListComponent implements OnInit{
       }
 
     });
-    this.userService.findAll().subscribe(data => this.users = data);
+    //this.userService.findAll().subscribe(data => this.users = data);
     this.categoryService.findAll().subscribe(data => this.categories = data);
   }
 

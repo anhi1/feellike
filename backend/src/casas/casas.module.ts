@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { CasasService } from './casas.service';
 import { CasasController } from './casas.controller';
@@ -12,4 +13,5 @@ import { CategoriesModule } from 'src/categories/categories.module';
   providers: [CasasService],
   controllers: [CasasController]
 })
+// eslint-disable-next-line prettier/prettier
 export class CasasModule {}

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Category } from "src/categories/categories.model";
 import { User } from "src/users/users.model";
 import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";

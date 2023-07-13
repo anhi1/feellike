@@ -32,3 +32,14 @@ ng generate service comments/comment
 ## Mis comentarios (user)
 
 ## Todos los comentarios (admin)
+
+
+## Tareas
+
+* Terminar controladores y servicios backend con las operaciones CRUD
+
+* Que los modelos de backend y frontend coincidan
+
+* Revisar uno a uno los componentes de angular para que reciban los datos de backend correctanmente
+
+* Revisar enrutados y botones de navbar y la aplicacion para que coincidan

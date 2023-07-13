@@ -1,3 +1,6 @@
+import { ICategory } from "src/app/categories/models/category.model";
+import { IUser } from "src/app/users/models/user.model";
+
 export interface ICasa {
     id: number;
     title: string;
@@ -12,8 +15,8 @@ export interface ICasa {
     price: number;
     comodidad: string;
     photo: string;
-    categories: number[];
-    userId: number; 
+    categories?: ICategory[];
+    user?: Partial<IUser>; 
     images: string [];
     
 }

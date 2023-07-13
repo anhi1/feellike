@@ -38,9 +38,9 @@ export class CasaDetailComponent implements OnInit{
       this.casaService.findById(id).subscribe(data => {
         this.casa = data;
         //prueba
-        for (const currentCasa of this.casas) {
-          this.images = currentCasa.images
-        }
+        // for (const currentCasa of this.casas) {
+        //   this.images = currentCasa.images
+        // }
         if (!(this.casa.userId > 0)) return;
         this.userService.findById(this.casa.userId).subscribe(data => this.user = data)
 

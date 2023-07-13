@@ -29,13 +29,13 @@
     <button mat-menu-item routerLink="/casas/new" *ngIf="isAdmin">Crear nueva casa</button>
   </mat-menu>  
 
-  <button mat-button *ngIf="!isLoggedIn" routerLink="/user/login">
+  <button mat-button *ngIf="!isLoggedIn" routerLink="/auth/login">
     <mat-icon>login</mat-icon>
     Iniciar sesión
   </button>
 
 
-  <button mat-button *ngIf="!isLoggedIn" routerLink="/user/register">
+  <button mat-button *ngIf="!isLoggedIn" routerLink="/auth/register">
     <mat-icon>person_add</mat-icon>
     Crear cuenta
   </button>
