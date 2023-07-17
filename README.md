@@ -5,11 +5,11 @@
 ## Proyecto Final "Curso Desarrollo Web Frontend con Angular, impartido por:
 
   * La Fundación Adecco y financiado por el Ayuntamiento de Madrid
-    [Logo-fundacion-adecco-rgb-grande.png](https://postimg.cc/2q1YwyTX) - [agencia-empleo.png](https://postimg.cc/XZbhZvmC)
+  [![Logo-fundacion-adecco-rgb-grande.png](https://i.postimg.cc/pV1QdS52/Logo-fundacion-adecco-rgb-grande.png)](https://postimg.cc/F13kWDxq) - [![agencia-empleo.png](https://i.postimg.cc/wBpxQ9Z9/agencia-empleo.png)](https://postimg.cc/TKtXRvTs)
 
 ## Diseño en Figma
 
-[Img-Figma1.png](https://postimg.cc/hQtws31b)
+[![Img-Figma1.png](https://i.postimg.cc/WbTQ8hbW/Img-Figma1.png)](https://postimg.cc/jC3gdqfP)
 
 ## Tecnologías utilizadas
 
