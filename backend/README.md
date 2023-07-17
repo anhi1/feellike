@@ -12,7 +12,7 @@ Módulo base de datos:
 * Añadir la configuración MySQL
 * Crear base de datos backend_nest desde MySQL Workbench
 
-Módulo Books:
+Módulo Casas:
 * nest generate module casas
 * nest generate controller casas
 * nest generate service casas
