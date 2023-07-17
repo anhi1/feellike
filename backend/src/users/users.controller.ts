@@ -1,29 +1,52 @@
-import { Controller, Get, Post, Param, ParseIntPipe, Body } from '@nestjs/common';
-import { User } from './users.model';
+import { Body, Controller, UseGuards, Request, Delete, Get, Param, ParseIntPipe, Post, Put, UnauthorizedException, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { UsersService } from './users.service';
+import { User } from './users.model';
+import { AuthGuard } from '@nestjs/passport';
+import { UserRole } from './user-role.enum';
+import { FileInterceptor } from '@nestjs/platform-express';
+
 
 @Controller('users')
 export class UsersController {
 
     constructor(private userService: UsersService) {}
 
-
-    // http://localhost:3000/users/id/1
-    @Get('id/:id')
-    findById(
-        @Param("id", ParseIntPipe) id: number
-    ): Promise<User | null> {
-        return this.userService.findById(id);
+    @Get()
+    findAll(): Promise<User[]> {
+        return this.userService.findAll();
     }
 
-    // http://localhost:3000/users
-    @Post()
-    async create(@Body() user: User): Promise<User> {
-        return await this.userService.create(user);
+
+    @UseGuards(AuthGuard('jwt'))
+    @Get('current')
+    findCurrentUser(@Request() request): Promise<User> {
+        return request.user;
     }
+
+    @UseGuards(AuthGuard('jwt'))
+    @Put()
+    async update(@Request() request, @Body() user: User): Promise<User> {
+
+        // si el id de request.user.id no coincide con user.id
+        if (request.user.id !== user.id && 
+            request.user.role !== UserRole.ADMIN)
+            throw new UnauthorizedException('No se puede editar');
+
+        return await this.userService.update(user);
+        // TODO: en caso de actualizar datos que están en el token JWT será necesario
+        // crear un nuevo token JWT y devolverlo para que se actualice en frontend
+    }
+
+    // avatar (se puede separar a un nuevo controlador FilesController o AvatarController)
+    @UseGuards(AuthGuard('jwt'))
+    @Post('photo')
+    @UseInterceptors(FileInterceptor('file'))
+    async uploadAvatar(@Request() request, @UploadedFile() file: Express.Multer.File) {
+        console.log(file);
+        request.user.photo = file.filename;
+        console.log(request.user);
+        return await this.userService.updatePhoto(request.user);
+    }
+
     
 }
-
-
-
-

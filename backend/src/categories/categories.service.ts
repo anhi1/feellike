@@ -6,9 +6,11 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class CategoriesService {
-    create(categories: Category): Category | PromiseLike<Category> {
-        throw new Error('Method not implemented.');
-    }
+    findById: any;
+
+    // create(categories: Category): Category | PromiseLike<Category> {
+    //     throw new Error('Method not implemented.');
+    
 
     constructor(
         @InjectRepository(Category) 
@@ -21,7 +23,6 @@ export class CategoriesService {
         return this.categoryRepo.find();
     }
 
-
     findAllByIds(ids: number[]): Promise<Category[]> {
         return this.categoryRepo.find({
             where: {
@@ -30,4 +31,5 @@ export class CategoriesService {
         });
     }
 
-}
+}    
+

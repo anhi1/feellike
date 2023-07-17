@@ -46,8 +46,8 @@ export class Casa {
      @Column()
     photo: string;
 
-    @Column()
-    images:string[];
+    // @Column()
+    // images:string[];
 
 
  @CreateDateColumn({name: 'created_date'})

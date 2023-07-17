@@ -8,5 +8,8 @@ export interface IUser {
     code: string;
     city: string,
     street: string,
-    photo: string;  
+    photo: string;  //Avatar Imagenes
+    password?: string; 
+    // role?: UserRole;
+    
 }

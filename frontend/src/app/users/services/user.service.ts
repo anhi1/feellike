@@ -31,6 +31,12 @@ export class UserService {
   deleteById(id: number): void {
     this.httpClient.delete(`${this.url}/${id}`);
   }
-}
+
+  //findCurrentUser(): Observable<IUser> {
+    findCurrentUser(): Observable<IUser> {
+      return this.httpClient.get<IUser>(`${this.url}/current`);
+    }
   
 
+
+}

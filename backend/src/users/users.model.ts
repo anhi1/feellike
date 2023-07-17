@@ -36,15 +36,15 @@ export class User {
     @Column({nullable: true})
     street?: string;
 
-    @Column({nullable: true})
-    photo?: string;
-
     @Column({
         type: 'enum',
         enum: UserRole,
         default: UserRole.USER
     })
     role: UserRole;
+
+    @Column({nullable: true})
+    photo?: string;
 
     @Column()
     password: string;
