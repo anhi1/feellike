@@ -45,6 +45,11 @@
     Mi perfil
   </button>
 
+  <button mat-button *ngIf="isLoggedIn" routerLink="/users/profile">
+    <mat-icon>account_circle</mat-icon>
+    Mi perfil
+  </button>
+
   <button mat-button *ngIf="isLoggedIn" (click)="authService.logout()">
     <mat-icon>logout</mat-icon>
     Cerrar sesión
