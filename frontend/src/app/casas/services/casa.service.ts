@@ -25,7 +25,7 @@ export class CasaService {
 
   // http://localhost:3000/casas?userId=1
   findAllByUserId(userId: number): Observable<ICasa[]> {
-    return this.httpClient.get<ICasa[]>(`${this.url}?userId=${userId}`);
+    return this.httpClient.get<ICasa[]>(`${this.url}/user/${userId}`);
   }
 
   //http://localhost:3000/casas?categories_like=3
@@ -42,7 +42,7 @@ export class CasaService {
   }
 
   update(casa: ICasa): Observable<ICasa> {
-    return this.httpClient.put<ICasa>(`${this.url}/${casa.id}`, casa);
+    return this.httpClient.put<ICasa>(`${this.url}`, casa);
   }
 
   // Opción 1
@@ -59,17 +59,6 @@ export class CasaService {
   }
 
 
-
-  /*
-  createNewReserve(reserve : IReserve): Observable<IReserve>{
-   return this.httpClient.post<IReserve>(this.baseUrl, reserve)
-  }
-
-  deleteReservation(id: number): Observable<any> {
-    const url = `${this.baseUrl}/${id}`;
-    return this.httpClient.delete(url);
-  }
-*/
 
 }
 
