@@ -2,12 +2,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
-    path: ':id',
-    component: UserDetailComponent
-  }
+    path: '',
+    component: UserDetailComponent  // http://localhost:4200/users
+  },
+   
+  {
+  path: 'profile',
+  component: ProfileComponent   // http://localhost:4200/users/profile
+},
   
 ];
 

@@ -11,11 +11,6 @@ export class UsersController {
 
     constructor(private userService: UsersService) {}
 
-    @Get()
-    findAll(): Promise<User[]> {
-        return this.userService.findAll();
-    }
-
 
     @UseGuards(AuthGuard('jwt'))
     @Get('current')
@@ -39,14 +34,13 @@ export class UsersController {
 
     // avatar (se puede separar a un nuevo controlador FilesController o AvatarController)
     @UseGuards(AuthGuard('jwt'))
-    @Post('photo')
+    @Post('avatar')
     @UseInterceptors(FileInterceptor('file'))
     async uploadAvatar(@Request() request, @UploadedFile() file: Express.Multer.File) {
         console.log(file);
-        request.user.photo = file.filename;
+        request.user.avatarImage = file.filename;
         console.log(request.user);
-        return await this.userService.updatePhoto(request.user);
+        return await this.userService.updateAvatar(request.user);
     }
-
     
 }
