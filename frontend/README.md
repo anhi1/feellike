@@ -43,3 +43,28 @@ ng generate service comments/comment
 * Revisar uno a uno los componentes de angular para que reciban los datos de backend correctanmente
 
 * Revisar enrutados y botones de navbar y la aplicacion para que coincidan
+
+## Tareas
+
+* Detalle casa 
+* Botón Reservar en detalle casa
+* Botón Agregar comentario en detalle casa
+* Formulario comentario se llega desde el botón Agregar comentario en detalle casa
+* Rellenar el fomulario comentario y comprobar que se genera un nuevo comentario en base de datos
+* Entrar en detalle casa y comprobar que aparece una lista de comentarios
+
+en routerlink de botones:
+
+Botón Agregar comentario:
+localhost:4200/comments/casaId/new
+
+Botón Reservar casa
+localhost:4200/reservas/casaId/new
+
+Botón editar comentario
+localhost:4200/comments/id/edit
+
+Botón editar reserva en el listado Reservas
+localhost:4200/reservas/id/edit
+
+En el botón de agregar casa hay que poner ngIf="isAdmin"

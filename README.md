@@ -5,17 +5,120 @@
 ## Proyecto Final "Curso Desarrollo Web Frontend con Angular, impartido por:
 
   * La Fundación Adecco y financiado por el Ayuntamiento de Madrid
-    [![Edigital-Adecco.jpg](https://i.postimg.cc/kgzTbczV/Edigital-Adecco.jpg)](https://postimg.cc/YvNNc1pk)
+    [Logo-fundacion-adecco-rgb-grande.png](https://postimg.cc/2q1YwyTX) - [agencia-empleo.png](https://postimg.cc/XZbhZvmC)
+
+## Diseño en Figma
+
+[Img-Figma1.png](https://postimg.cc/hQtws31b)
 
 ## Tecnologías utilizadas
 
-  * Angular Cli
-  * Angular Material
-  * JSON Server NodeJS
+  # NodeJS
+
+  https://nodejs.org/es
+  Node.js es un entorno de tiempo de ejecución de JavaScript, incluye todo lo que se necesita para ejecutar un programa escrito en JavaScript del lado del servidor. Y para instalar Angular Cli, debemos tener instalado este entorno.
+
+  # Editor de Código Fuente Visual Studio Code
+  De este editor hemos aprovechado varias extensiones para optimiar el uso de lenguajes de programación y diversos comandos que han facilitado la estructuración del código y el funcionamiento de la aplicación.
+  
+  https://code.visualstudio.com/
 
 
+  # Angular CLI
+  https://angular.io/
+
+  * Comandos de Instalación
+
+    * Opción1: npm install -g @angular/cli
+    * Opción2: npm install --save-dev @angular/cli
+
+  * Comando de Ejecución:
+
+    * ng serve
+
+
+  # Angular Material
+  https://material.angular.io/
+  En este proyecto sólo se ha instalado esta Biblioteca desde la cual hemos importado módulos, componentes y estilos.
+
+  * Comandos de Instalación
+
+    * ng add @angular/material
+    * ng add @angular/material -y --theme=indigo-pink --typography=true --animations=true
+    Con este comando elegimos tema y tipografía.
+ 
+  # JSON Server NodeJS
+  Json server es una API REST NodeJS para entornos de desarrollo y pruebas. 
+
+  * Comando de Instalación
+
+    * npm install -g json-server
+    Una vez instalado creamos un fichero db.json 
+    
+    * Comando de ejecución:
+      * json-server --watch db.json
+
+  # Json Placeholder
+  https://jsonplaceholder.typicode.com/
+  Principalmente se utiliza para crear prototipos y probarlos. Además proporciona una API REST falsa, que proporciona un servicio en línea al que se puede acceder desde cualquier lugar y en cualquier momento.
+
+  # Postman
+  https://www.postman.com/
+  Esta herramienta es muy útil para programar porque da la posibilidad de hacer pruebas y comprobar el correcto funcionamiento de los proyectos que realizan los desarrolladores web.
+
+  # Mockaroo
+  https://www.mockaroo.com/
+  Es una aplicación que permite generar, de forma automática, grandes conjuntos de datos de prueba a partir de una serie de definiciones de campos y el tipo de dato correspondiente.
+
+
+  # Base de datos: MySQL
+
+  Windows MYSQL Installer:
+ https://dev.mysql.com/downloads/installer/
+
+  Elegir instalación completa.
+
+  # GUI 
+  La Interfaz gráfica de usuario, conocida también como GUI (Graphical user interface) crea un entorno en el que una máquina y un usuario interactúan.
+
+  * MySQL Workbench
+  https://dbeaver.io/download/
 
 # Full Stack: Frontend con Angular + Backend con NestJS y TypeORM
+
+# NestJS
+
+https://nestjs.com/
+Framework para desarrollo de aplicaciones web backend que se ejecuta sobre la plataforma NodeJS. Nest tiene foco en la arquitectura de las aplicaciones y está pensado para crear servicios web o API REST.
+
+* Comando de Inntalación
+* npm i -g @nestjs/cli
+
+* Comando para crear un proyecto
+* nest new project-name
+
+# Git
+https://git-scm.com/
+Software de control de versiones (Repositorio).
+
+# GitHub
+https://github.com/
+Github es una plataforma creada para alojar el código de las aplicaciones de cualquier desarrollador web.
+
+# Compodoc
+https://compodoc.app/
+Es una herramienta de código abierto que facilita la generación de documentación para un proyecto Angular.
+
+* Comando de Instalación
+
+  * npm install -g @compodoc/compodoc
+
+# Swagger
+https://swagger.io/
+“Swagger es una serie de reglas, especificaciones y herramientas que nos ayudan a documentar nuestras APIs.”
+
+
+
 
 ## Backend
 
@@ -30,27 +133,5 @@ cd frontend
 ng add @angular/material -y --theme=indigo-pink
 
 
-## Tareas
 
-* Detalle casa 
-* Botón Reservar en detalle casa
-* Botón Agregar comentario en detalle casa
-* Formulario comentario se llega desde el botón Agregar comentario en detalle casa
-* Rellenar el fomulario comentario y comprobar que se genera un nuevo comentario en base de datos
-* Entrar en detalle casa y comprobar que aparece una lista de comentarios
 
-en routerlink de botones:
-
-Botón Agregar comentario:
-localhost:4200/comments/casaId/new
-
-Botón Reservar casa
-localhost:4200/reservas/casaId/new
-
-Botón editar comentario
-localhost:4200/comments/id/edit
-
-Botón editar reserva en el listado Reservas
-localhost:4200/reservas/id/edit
-
-En el botón de agregar casa hay que poner ngIf="isAdmin"
