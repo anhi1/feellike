@@ -6,5 +6,5 @@ export interface IReserva {
     casa?: Partial<ICasa>;
     price: number;
     startDate: Date;
-    finishDate: Date;
+    endDate: Date;
   }
