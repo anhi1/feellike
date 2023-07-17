@@ -6,12 +6,11 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class CategoriesService {
-    findById: any;
-
-    // create(categories: Category): Category | PromiseLike<Category> {
-    //     throw new Error('Method not implemented.');
+    findById(id: number): Promise<Category> {
+        throw new Error('Method not implemented.');
+    }
     
-
+    
     constructor(
         @InjectRepository(Category) 
         private categoryRepo: Repository<Category>

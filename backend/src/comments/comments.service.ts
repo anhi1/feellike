@@ -1,20 +1,23 @@
-import { Injectable } from '@nestjs/common';
+import { ConflictException, Injectable } from '@nestjs/common';
+import { Comment } from './comments.model';
+import { Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class CommentsService {
 
-    // findAllByUserId(userId: number): Promise<Comment[]> {
-    //     return this.commentRepo.find({
-    //         relations: {
-    //             user: true,
-    //             casa: true
-    //         },
-    //         where: {
-    //             user: {
-    //                 id: userId
-    //             }
-    //         }
-    //     });
+    constructor(
+        @InjectRepository(Comment)
+        private commentRepo: Repository<Comment>
+    ) {}
 
+    async create(comment: Comment): Promise<Comment> {
+        try {
+            return await this.commentRepo.save(comment);
+        } catch (error) {
+            console.log(error.message);
+            throw new ConflictException('Cant save');
+        }
+    }
 
 }

@@ -1,20 +1,21 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Post, UseGuards, Request, Body } from '@nestjs/common';
 import { CommentsService } from './comments.service';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('comments')
 export class CommentsController {
 
-//      constructor((private commentService: CommentsService))
+     constructor(private commentService: CommentsService){}
 
 
-//      @Get('user/:userId')
-//      findAllByUserId(
-//          @Param("userId", ParseIntPipe) 
-//          userId: number): Promise<Comment[]> {
-//          return this.commentService.findAllByUserId(userId);
-//      }
-//  }
-//  function findAllByUserId(arg0: any, userId: any, number: any) {
-//      throw new Error('Function not implemented.');
+@UseGuards(AuthGuard('jwt'))
+    @Post()
+    async create(
+        @Request() request, 
+        @Body() comment: Comment): Promise<Comment> {
+        console.log(request.user);
+        comment.user = request.user;
+        return await this.commentService.create(comment);
+    }
 }
 
