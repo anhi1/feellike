@@ -14,6 +14,9 @@ export class Comment {
     @Column()
     rating: number;
 
+    @Column()
+    photo?: string;
+
     @ManyToOne(() => User)
     @JoinColumn({ name: 'id_user'})
     user: User;
