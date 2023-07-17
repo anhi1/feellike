@@ -12,7 +12,7 @@ export class ReservaListComponent implements OnInit {
   displayedColumns: string[] = [
     'price',
     'startDate',
-    'finishDate',
+    'endDate',
     'actions',
   ];
   reservas: IReserva[] = [];
