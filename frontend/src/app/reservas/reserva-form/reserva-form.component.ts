@@ -16,7 +16,7 @@ export class ReservaFormComponent implements OnInit {
       Validators.required, Validators.min(5), Validators.max(500), Validators.pattern("^[0-9]+([.,][0-9]{1,2})?$")
     ]),
     startDate: new FormControl<Date>(new Date()),
-    finishDate: new FormControl<Date>(new Date()),
+    endDate: new FormControl<Date>(new Date()),
   });
   casaId: number | undefined;
 
@@ -41,13 +41,13 @@ export class ReservaFormComponent implements OnInit {
     let id = this.reservaForm.get('id')?.value ?? 0;
     let price = this.reservaForm.get('price')?.value ?? 5;
     let startDate = this.reservaForm.get('startDate')?.value ?? new Date();
-    let finishDate = this.reservaForm.get('endDate')?.value ?? new Date();
+    let endDate = this.reservaForm.get('endDate')?.value ?? new Date();
 
     let reserva: IReserva = {
       id: id,
       price: price,
       startDate: startDate,
-      endDate: finishDate,
+      endDate: endDate,
       casa: {
         id: this.casaId,
       }
