@@ -5,9 +5,9 @@ import { User } from './users.model';
 
 @Injectable()
 export class UsersService {
-    updatePhoto(user: any) {
-        throw new Error('Method not implemented.');
-    }
+    // updatePhoto(user: any) {
+    //     throw new Error('Method not implemented.');
+    // }
 
     constructor(
         @InjectRepository(User) 

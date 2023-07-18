@@ -17,9 +17,11 @@ export class CommentFormComponent implements OnInit {
     id: new FormControl<number>(0),
     description:new FormControl<String>('', [Validators.required, 
       Validators.minLength(5), Validators.maxLength(1000)]),
+      rating: new FormControl<number>(0)
+      
     
-    // photo: new FormControl<string>("") [
-    //   Validators.required,  
+   
+     
     // casaId: new FormControl<number>(0),
     // userId: new FormControl<number>(0),
   })
@@ -45,6 +47,7 @@ export class CommentFormComponent implements OnInit {
   save(): void {
     let id = this.commentForm.get('id')?.value ?? 0;
     let description = this.commentForm.get('description')?.value ?? '';
+    let rating = this.commentForm.get('rating')?.value ?? 0;
     //let photo = this.commentForm.get('img')?.value ?? "";
     
     // let casaId = this.commentForm.get('id')?.value ?? 0;
@@ -53,6 +56,7 @@ export class CommentFormComponent implements OnInit {
     let comment: IComment = {
       id: id,
       description: description,
+      rating: rating,
       // photo: photo,
       casa: {
         id: this.casaId,

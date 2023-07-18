@@ -41,8 +41,8 @@ export class CasaDetailComponent implements OnInit{
         // for (const currentCasa of this.casas) {
         //   this.images = currentCasa.images
         // }
-        if (!(this.casa.userId > 0)) return;
-        this.userService.findById(this.casa.userId).subscribe(data => this.user = data)
+        if (!(this.casa.user.id > 0)) return;
+        this.userService.findById(this.casa.user.id).subscribe(data => this.user = data)
 
       });
 
