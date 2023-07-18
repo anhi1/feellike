@@ -17,6 +17,6 @@ export interface ICasa {
     photo: string;
     categories?: ICategory[];
     user?: Partial<IUser>; 
-    images: string [];
+    //images: string [];
     
 }
