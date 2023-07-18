@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AvatarComponent } from './avatar/avatar.component';
 
 
 
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserDetailComponent,
     ProfileComponent,
     UserDetailComponent,
+    AvatarComponent,
     
   ],
   imports: [
