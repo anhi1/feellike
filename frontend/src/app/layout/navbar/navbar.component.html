@@ -12,13 +12,10 @@
   
   <!-- <span class="example-spacer"></span> -->
 
-  <button mat-button  *ngIf="isLoggedIn">
+  <button mat-button *ngIf="isLoggedIn" routerLink="/reservas">
     <mat-icon>shopping_cart</mat-icon>
     Reservas
   </button>
-  <mat-menu #menuReservas="matMenu">
-    <button mat-menu-item routerLink="/reservas">Reservas</button>
-  </mat-menu>
 
   <button mat-button [matMenuTriggerFor]="menuCasas">
     <mat-icon>menu_casa</mat-icon>
