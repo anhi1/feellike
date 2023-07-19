@@ -37,16 +37,11 @@ export class CasaDetailComponent implements OnInit{
 
       this.casaService.findById(id).subscribe(data => {
         this.casa = data;
-        //prueba
-        // for (const currentCasa of this.casas) {
-        //   this.images = currentCasa.images
-        // }
-        if (!(this.casa.user.id > 0)) return;
-        this.userService.findById(this.casa.user.id).subscribe(data => this.user = data)
+
+        this.commentService.findAllCommentsByCasaId(id).subscribe(data => this.comments = data);
 
       });
 
-       this.commentService.getAllCommentsByCasaId(id).subscribe(data => this.comments = data);
 
       
     

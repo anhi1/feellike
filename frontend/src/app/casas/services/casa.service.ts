@@ -34,7 +34,7 @@ export class CasaService {
   }
 
   findById(id: number): Observable<ICasa> {
-    return this.httpClient.get<ICasa>(`${this.url}/${id}`);
+    return this.httpClient.get<ICasa>(`${this.url}/id/${id}`);
   }
 
   create(casa :ICasa): Observable<ICasa> {

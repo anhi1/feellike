@@ -46,11 +46,9 @@ export class Casa {
      @Column()
     photo: string;
 
-    // @Column()
-    // images:string[];
+    @Column("simple-array")
+    images:string[];
 
-
- @CreateDateColumn({name: 'created_date'})
    
     @ManyToOne(() => User)
     @JoinColumn({ name: 'id_user'})

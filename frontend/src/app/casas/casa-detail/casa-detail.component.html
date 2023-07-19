@@ -37,7 +37,7 @@
 
 <!--------Boton de reserva----->
 
-  <div class="text-center">
+  <div class="text-center" *ngIf="casa">
     <a [routerLink]="['/reservas', casa.id, 'new']">
       <button>Reservar casa</button>
     </a>
@@ -52,31 +52,30 @@
   <!-- Comentario detail-->
   <div>
     <h2>Opiniones</h2>
-    <div *ngIf="comments.length===0">No hay comentarios>
-      <div *ngIf="comments.length>0">
-        <div *ngFor="let comment of comments">
-          <p>{{comment.description}}</p>
-          <p *ngIf="comment.photo">
-            <img class="img-redonda" src="{{comment.photo}}">
-          </p>
-        </div>
+    <div *ngIf="comments.length===0">
+      No hay comentarios
+    </div>
+
+    <div *ngIf="comments.length>0">
+      <div *ngFor="let comment of comments">
+        <p>Puntuación: {{comment.rating}}</p>
+        <p>Observaciones: {{comment.description}}</p>
       </div>
     </div>
+    
   </div> 
 
 
   <!--------User detail----->
-  <h2 class="centrar">Propietario</h2>
-  <mat-grid-list *ngIf="casa">
-    <mat-list *ngIf="user">
-      <mat-list-item id="anfitrion-caja">
+    <div *ngIf="user">
+      <h2 class="centrar">Propietario</h2>
+
         <img id="anfitrion-img" matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
+
         <a [routerLink]="['/users', user.id]">
           {{user.fullName}}
         </a>
-      </mat-list-item>
-    </mat-list>
-  </mat-grid-list>
+    </div>
 
 
 

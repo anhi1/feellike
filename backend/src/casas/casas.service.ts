@@ -70,6 +70,9 @@ export class CasasService {
         // SELECT * FROM casa WHERE id = 1;
         console.log(id);
         return this.casaRepo.findOne({ 
+            relations: {
+                user: true
+            },
             where: {
                 id: id
             }

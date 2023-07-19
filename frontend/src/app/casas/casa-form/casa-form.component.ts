@@ -35,9 +35,9 @@ export class CasaFormComponent implements OnInit {
       Validators.required, Validators.min(5), Validators.max(3000), Validators.pattern("^[0-9]+([.,][0-9]{1,2})?$")
     ]),
 
-    //no se pone la photo
-    userId: new FormControl<number>(0, [Validators.required]),
-    categories: new FormControl<number[]>([])
+
+    user: new FormControl<any>(null, [Validators.required]),
+    categories: new FormControl<any[]>([])
  
   });
   
@@ -93,54 +93,31 @@ export class CasaFormComponent implements OnInit {
        price: casa.price,
        comodidad: casa.comodidad,
        categories: casa.categories,
-       userId: casa.userId,
+       user: casa.user,
      
      });
    }
 
   save(): void {
-    let id = this.casaForm.get('id')?.value ?? 0;
-    let title = this.casaForm.get('title')?.value ?? '';
-    let bedrooms = this.casaForm.get('bedrooms')?.value ?? 1;
-    let bathrooms = this.casaForm.get('bathrooms')?.value ?? 1;
-    let squarefeet = this.casaForm.get('squarefeet')?.value ?? '';
-    let description = this.casaForm.get('description')?.value ?? '';
-    // let available = this.casaForm.get('available')?.value ?? '';
-    let country = this.casaForm.get('country')?.value ?? '';
-    let city = this.casaForm.get('city')?.value ?? '';
-    let cp = this.casaForm.get('cp')?.value ?? '';
-    let price = this.casaForm.get('price')?.value ?? 5;
-    let comodidad = this.casaForm.get('comodidad')?.value ?? 5;
-    // let photo = "https://stock.adobe.com/es/search?k=casas&search_type=usertyped"
-    let categories = this.casaForm.get('categories')?.value ?? [];
-    let userId = this.casaForm.get('userId')?.value ?? 0;
-    
 
-    
-
-    // TODO añadir validación extra de datos, si alguno está mal hacer return y mostrar error y no guardar.
     let casa: ICasa = {
-      id: id,
-      title: title,
-      description,
-      country: country,
-      bedrooms: bedrooms,
-      bathrooms: bathrooms,
-      price: price,
-      squarefeet: 0,
-      // available: false,
-      city: '',
-      cp: '',
-      comodidad: '',
-      // photo: '',
-      categories: [],
-      userId: 0,
-      images: [],
-      available: false,
-      photo: ''
+      id: this.casaForm.get('id')?.value ?? 0,
+      title: this.casaForm.get('title')?.value ?? '',
+      description: this.casaForm.get('description')?.value ?? '',
+      country: this.casaForm.get('country')?.value ?? '',
+      bedrooms: this.casaForm.get('bedrooms')?.value ?? 1,
+      bathrooms: this.casaForm.get('bathrooms')?.value ?? 1,
+      price: this.casaForm.get('price')?.value ?? 5,
+      squarefeet: this.casaForm.get('squarefeet')?.value ?? 0,
+      available: true,
+      city: this.casaForm.get('city')?.value ?? '',
+      cp: this.casaForm.get('cp')?.value ?? '',
+      comodidad: this.casaForm.get('comodidad')?.value ?? '',
+      photo: '',
+      categories: this.casaForm.get('categories')?.value ?? [],
     }
 
-    if (id === 0) // crear nueva casa
+    if (casa.id === 0) // crear nueva casa
       this.casaService.create(casa).subscribe(casa => this.router.navigate(['/casas', casa.id]));
     else // editando una casa
       this.casaService.update(casa).subscribe(casa => this.router.navigate(['/casas', casa.id]));
