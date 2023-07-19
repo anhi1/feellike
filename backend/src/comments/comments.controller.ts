@@ -1,4 +1,4 @@
-import { Controller, Post, UseGuards, Request, Get,Body, Put } from '@nestjs/common';
+import { Controller, Post, UseGuards, Request, Get,Body, Put, Param, ParseIntPipe } from '@nestjs/common';
 import { CommentsService } from './comments.service';
 import { AuthGuard } from '@nestjs/passport';
 import { UsersService } from 'src/users/users.service';
@@ -9,11 +9,11 @@ import { UserRole } from 'src/users/user-role.enum';
 export class CommentsController {
      
 
-     constructor(private commentService: CommentsService, private userService: UsersService){}
+     constructor(private commentService: CommentsService){}
 
 
-     //findaLL
-     @UseGuards(AuthGuard('jwt'))
+    // http://localhost:3000/comments
+    @UseGuards(AuthGuard('jwt'))
     @Get()
     findAll(@Request() request): Promise<Comment[]> {
 
@@ -21,6 +21,18 @@ export class CommentsController {
             return this.commentService.findAll();
 
         return this.commentService.findAllByUserId(request.user.id);
+    }
+
+    // http://localhost:3000/comments/casa/1
+    // http://localhost:3000/comments/casa/2
+    @UseGuards(AuthGuard('jwt'))
+    @Get('casa/:casaId')
+    findAllCommentsByCasaId(
+        @Request() request,
+        @Param("casaId", ParseIntPipe) casaId: number
+        ): Promise<Comment[]> {
+
+        return this.commentService.findAllCommentsByCasaId(casaId);
     }
 
      // find all by casa id

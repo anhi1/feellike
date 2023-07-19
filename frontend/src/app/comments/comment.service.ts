@@ -9,12 +9,15 @@ import { Observable } from 'rxjs';
 })
 export class CommentService {
   url: string = `${BASE_URL}/comments`;
-  getAllCommentsByCasaId: any;
 
   constructor(private httpClient: HttpClient) { }
 
   findAll(): Observable<IComment[]> {
     return this.httpClient.get<IComment[]>(this.url);
+  }
+
+  findAllCommentsByCasaId(casaId: number): Observable<IComment[]> {
+    return this.httpClient.get<IComment[]>(`${this.url}/casa/${casaId}`);
   }
 
   create(comment :IComment): Observable<IComment> {

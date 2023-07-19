@@ -2,8 +2,6 @@ import { ConflictException, Injectable, NotFoundException } from '@nestjs/common
 import { Comment } from './comments.model';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Casa } from 'src/casas/casas.model';
-import { CasasService } from 'src/casas/casas.service';
 
 @Injectable()
 export class CommentsService {
@@ -11,35 +9,35 @@ export class CommentsService {
 
     constructor(
         @InjectRepository(Comment)
-        private commentRepo: Repository<Comment>,
-        private casaService: CasasService
-    ) {}
+        private commentRepo: Repository<Comment>) {}
 
+    // Trae todos los comentarios sin filtrar
     findAll(): Promise<Comment[]> {
         return this.commentRepo.find();
     }
 
-    findAllCommentId(commentId: number): Promise<Casa[]> {
-        return this.casaRepo.find({
+
+    findAllCommentsByCasaId(casaId: number): Promise<Comment[]> {
+        return this.commentRepo.find({
             relations: {
-                commentId: true
+                user: true
             },
             where: {
-                comment: {
-                    id: commentId
+                casa: {
+                    id: casaId // Filtra comentarios por id de casa
                 }
             }
         });
     }
 
-    findAllByCasasId(id: number): Promise<Casa[]> {
-        return this.casaRepo.find({
+    findAllByUserId(userId: number): Promise<Comment[]> {
+        return this.commentRepo.find({
             relations: {
-                Comment: true
+                casa: true
             },
             where: {
-                Comment: {
-                    id: commentId
+                user: {
+                    id: userId // Filtra comentarios por id de usuario
                 }
             }
         });
