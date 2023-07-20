@@ -6,12 +6,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { AvatarComponent } from './avatar/avatar.component';
 
 const routes: Routes = [
+  
   {
-    path: '',
-    component: UserDetailComponent  // http://localhost:4200/users
-  },
-  {
-    path: ':userId', 
+    path: ':id', 
     component: UserDetailComponent  
   },
   {
