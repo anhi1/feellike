@@ -3,10 +3,13 @@
     box-sizing: border-box;  
 }
 
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
 .logo {
-    width: 140px;
-    height: auto;   
-    /* margin: 10px;  */
+width: 145px;
+ margin: 10px;  
 }
 
 .navbar{
@@ -33,38 +36,12 @@
 }
 
 
-
-/* */
 .navbar{
     display: flex;
     justify-content: space-between;
 }
 
-
-
-/* Para móviles */
-@media only screen and (max-width: 600px) {
-    .navbar{
-        flex-direction: column;
-
-    }
-    #contenedor{
-        height: 120px;
-    }
-
-    #logo{
-        margin-top: 15px
-      /*  height: 140px; */
-    }
-
-   /*  .logo-container .button-container{
-        width: 100%;
-    }
-
-    .logo-container {
-        text-align: center;
-        width: 100%;
-    } */
-
+.icon{
+    width: 22px;
 }
 

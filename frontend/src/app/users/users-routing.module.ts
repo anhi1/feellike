@@ -10,15 +10,18 @@ const routes: Routes = [
     path: '',
     component: UserDetailComponent  // http://localhost:4200/users
   },
-   
+  {
+    path: ':userId', 
+    component: UserDetailComponent  
+  },
   {
   path: 'profile',
   component: ProfileComponent   // http://localhost:4200/users/profile
-},
-{
+  },
+  {
   path: 'avatar',
   component: AvatarComponent // http://localhost:4200/users/avatar
-}
+  }
   
 ];
 

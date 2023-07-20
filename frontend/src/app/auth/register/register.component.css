@@ -1,0 +1,29 @@
+* {
+    font-family: poppins;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 70px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.btn {
+    border-radius: 10px;
+    background: #7885FC;
+    border: none;
+    width: 329px;
+    height: 56px;
+    color: white;
+}
+
