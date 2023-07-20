@@ -63,6 +63,19 @@ export class CasasService {
             }
         });
     }
+    findAllByCategoryId(categoryId: number): Promise<Casa[]> {
+        return this.casaRepo.find({
+            relations: {
+                user: true,
+                categories: true
+            },
+            where: {
+                categories: {
+                    id: categoryId,
+                }
+            }
+        });
+    }
 
    
 

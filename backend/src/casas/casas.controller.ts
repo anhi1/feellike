@@ -15,6 +15,12 @@ export class CasasController {
         return this.casaService.findAll();
     }
 
+    // FILTRAR CASAS POR ID DE CATEGORÍA
+    @Get('category/:categoryId')
+    findAllByCategoryId( @Param("categoryId", ParseIntPipe) categoryId: number): Promise<Casa[]> {
+        return this.casaService.findAllByCategoryId(categoryId);
+    }
+
     @Get('load-relations')
     findAllWithRelations(): Promise<Casa[]> {
         return this.casaService.findAllWithRelations();

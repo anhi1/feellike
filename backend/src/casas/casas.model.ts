@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Category } from "src/categories/categories.model";
 import { User } from "src/users/users.model";
-import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable,  ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable,  ManyToMany,  ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity()
@@ -55,9 +55,15 @@ export class Casa {
     user: User;
 
     
-    @ManyToOne(() => Category)
-    @JoinColumn({ name: 'id_category'})
+    @ManyToMany(() => Category, {cascade: true})
+    @JoinTable({
+        name: 'casa_category',
+        joinColumn: {name: 'id_casa'},
+        inverseJoinColumn: {name: 'id_category'}
+    })
     categories: Category[];
 
     
 }
+
+
