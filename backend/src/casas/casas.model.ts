@@ -16,38 +16,38 @@ export class Casa {
     @Column({type: 'int'})
     bedrooms:  number;
 
-    @Column({type: 'int'})
-    bathrooms: number;
+    // @Column({type: 'int'})
+    // bathrooms: number;
 
-    @Column({type: 'int'})
-    squarefeet:  number;
+    // @Column({type: 'int'})
+    // squarefeet:  number;
     
-    @Column()
-    description:  string;
+    // @Column()
+    // description:  string;
 
-    @Column({type: 'boolean', default: false})
-    available: boolean;
+    // @Column({type: 'boolean', default: false})
+    // available: boolean;
 
-    @Column()
-    country: string;
+    // @Column()
+    // country: string;
 
-    @Column()
-    city: string;
+    // @Column()
+    // city: string;
 
-    @Column()
-    cp: string;
+    // @Column()
+    // cp: string;
 
-    @Column({type: 'decimal', precision: 10, scale: 2})
-    price: number;
+    // @Column({type: 'decimal', precision: 10, scale: 2})
+    // price: number;
 
-    @Column()
-    comodidad: string;
+    // @Column()
+    // comodidad: string;
 
-     @Column()
-    photo: string;
+    //  @Column()
+    // photo: string;
 
-    @Column("simple-array")
-    images:string[];
+    // @Column("simple-array")
+    // images:string[];
 
    
     @ManyToOne(() => User)

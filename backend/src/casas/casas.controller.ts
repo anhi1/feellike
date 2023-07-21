@@ -53,12 +53,12 @@ export class CasasController {
         return this.casaService.findAllByTitleLike(title);
     }
 
-    @Get('price/min/:min/max/:max')
-    findAllByPriceBetween(
-        @Param('min') min: number, 
-        @Param('max') max: number): Promise<Casa[]> {
-        return this.casaService.findAllByPriceBetween(min, max);
-    }
+    // @Get('price/min/:min/max/:max')
+    // findAllByPriceBetween(
+    //     @Param('min') min: number, 
+    //     @Param('max') max: number): Promise<Casa[]> {
+    //     return this.casaService.findAllByPriceBetween(min, max);
+    // }
 
     
     
@@ -77,6 +77,10 @@ export class CasasController {
     */
     @Post()
     async create(@Body() casa: Casa): Promise<Casa> {
+
+        // sacar el usuario de la request y asignarlo a la casa si es OWNER
+
+        
         return await this.casaService.create(casa);
     }
     
