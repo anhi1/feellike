@@ -42,33 +42,70 @@
 
 
 
-<!-- Comentario detail-->
-  <div>
-    <h2>Opiniones</h2>
-    <div *ngIf="comments.length===0">
-      No hay comentarios
-    </div>
-
-    <div *ngIf="comments.length>0">
-      <div *ngFor="let comment of comments">
-        <p>Puntuación: {{comment.rating}}</p>
-        <p>Observaciones: {{comment.description}}</p>
-      </div>
-    </div>
-  </div> 
 
 
-  <!--------User detail----->
-    
-  
-  
-  <!-- <div *ngIf="casa && casa.user">
+
+
+  <!--------User detail
+    <div *ngIf="casa">
       <h2>Propietario</h2>
         <img id="anfitrion-img" matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
         <a [routerLink]="['/users', user.id]"> 
           {{user.fullName}}
         </a>
-    </div> -->
+    </div>
+----->
+
+  <div *ngIf="casa.user" class="container">
+
+  <div class="card">
+    <img class="circle" src="{{ casa.user.photo }}"/>
+    <h2>Anfitrión</h2>
+    <p>{{casa.user.fullName }}</p>
+  </div>
+
+  <div class="tarjeta">
+    <p> Sobre mí: {{ casa.user.bio }}</p>
+  </div>
+
+  <div class="tarjeta">
+    <p>Cuidad: {{casa.user.city }}</p>
+    <p>Calle: {{casa.user.street}}</p>
+    <p>Código postal: {{casa.user.code}}</p>
+  </div>
+
+  <div class="tarjeta">
+    <p>Email: {{casa.user.email}}</p>
+    <p>Phone: {{casa.user.phone}}</p>
+    <p>Idioma: {{casa.user.idioma}}</p>
+  </div>
+</div>
+
+
+<!-- Comentarios:-->
+<div>
+  <h2>Opiniones</h2>
+  <div *ngIf="comments.length===0">
+    No hay comentarios
+  </div>
+
+  <div *ngIf="comments.length>0">
+    <div *ngFor="let comment of comments">
+      <p>Puntuación: {{comment.rating}}</p>
+      <p>Observaciones: {{comment.description}}</p>
+    </div>
+  </div>
+</div> 
+
+
+  <!--------User detail----->
+    <div *ngIf="casa">
+      <h2>Propietario</h2>
+        <img id="anfitrion-img" matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
+        <a [routerLink]="['/users', user.id]"> 
+          {{user.fullName}}
+        </a>
+    </div>
 
 
 
