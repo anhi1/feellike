@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Category } from "src/categories/categories.model";
 import { User } from "src/users/users.model";
-import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable,  ManyToMany,  ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable,  ManyToMany,  ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity()
@@ -50,7 +50,7 @@ export class Casa {
     // images:string[];
 
    
-    @ManyToOne(() => User)
+    @OneToOne(() => User)
     @JoinColumn({ name: 'id_user'})
     user: User;
 
