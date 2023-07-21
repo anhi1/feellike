@@ -6,9 +6,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class CategoriesService {
-    findById(id: number): Promise<Category> {
-        throw new Error('Method not implemented.');
-    }
+    
     
     
     constructor(

@@ -13,7 +13,7 @@ export class ReservaFormComponent implements OnInit {
   reservaForm = new FormGroup({
     id: new FormControl<number>(0),
     price: new FormControl<number>(0, [
-      Validators.required, Validators.min(5), Validators.max(500), Validators.pattern("^[0-9]+([.,][0-9]{1,2})?$")
+      Validators.required, Validators.min(5), Validators.max(1000), Validators.pattern("^[0-9]+([.,][0-9]{1,2})?$")
     ]),
     startDate: new FormControl<Date>(new Date()),
     endDate: new FormControl<Date>(new Date()),

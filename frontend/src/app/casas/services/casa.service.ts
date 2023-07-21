@@ -30,7 +30,7 @@ export class CasaService {
 
   //http://localhost:3000/casas?categories_like=3
   findAllByCategoryId(categoryId: number): Observable<ICasa[]>{
-    return this.httpClient.get<ICasa[]>(`${this.url}?categories_like=${categoryId}`);
+    return this.httpClient.get<ICasa[]>(`${this.url}/category/${categoryId}`);
   }
 
   findById(id: number): Observable<ICasa> {
