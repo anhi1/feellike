@@ -42,26 +42,29 @@
 
 <!-----------  description de categorias ------------>
 <div class="descategory" *ngIf="category">
-<p >{{category.description}}</p>
+  <p >{{category.description}}</p>
 </div>
 
 
 <!------- card  ------>
 <div class="container" >
   <div class="card" *ngFor=" let casa of casas" [routerLink]="['/casas', casa.id]"> <!--<div class="card" *ngFor=" let casa of casas">-->
-    <img [src]="casa.photo"  class="card__imagen">
-    <p>{{casa.city}}</p>
-    <p>Precio {{casa.price}}€</p>
+    <!-- <img [src]="casa.photo"  class="card__imagen"> -->
+    <!-- <p>{{casa.city}}</p>
+    <p>Precio {{casa.price}}€</p> -->
 
     <div>
-     <button  [routerLink]="['/casas', casa.id]">
-      <img class="icono" src="assets/icon/ver.png" alt="" style="max-width: 15px;">
-      ver
-     </button>
+
+
+    <div>
+      <button  [routerLink]="['/casas', casa.id]">
+        <img class="icono" src="assets/icon/ver.png" alt="" style="max-width: 15px;">
+        ver
+      </button>
 
      <button  [routerLink]="['/casas', casa.id, 'edit']" *ngIf="isAdmin">
-      <img class="icono" src="assets/icon/editar.png" alt="" style="max-width: 15px;">
-      Editar
+        <img class="icono" src="assets/icon/editar.png" alt="" style="max-width: 15px;">
+        Editar
       </button>
 
       <button (click)="deleteCasa(casa)" *ngIf="isAdmin">

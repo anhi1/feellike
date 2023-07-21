@@ -19,7 +19,7 @@
   </mat-error>
   </mat-form-field>
 
-  <mat-form-field floatLabel="always">
+  <!-- <mat-form-field floatLabel="always">
     <mat-label>Número de baños</mat-label>
     <input matInput type="number" placeholder="0" formControlName="bathrooms" min="1">
     <mat-error *ngIf="casaForm.get('bathrooms')?.invalid && casaForm.get('bathrooms')?.touched">
@@ -44,14 +44,14 @@
     <mat-hint align="end">{{message.value.length}} / 700</mat-hint>
   </mat-form-field>
 
-  <!-- <mat-form-field floatLabel="always">
+   <mat-form-field floatLabel="always">
     <mat-label>Disponibilidad</mat-label>
     <input matInput type="boolean" formControlName="available">
     <mat-error *ngIf="casaForm.get('available')?.invalid && casaForm.get('available')?.touched"></mat-error> 
   </mat-form-field> -->
 
 
-  <mat-form-field>
+  <!-- <mat-form-field>
     <mat-label>Pais</mat-label>
     <input matInput type="text" formControlName="country">
   </mat-form-field>
@@ -79,7 +79,7 @@
   <mat-form-field>
     <mat-label>Comodidad</mat-label>
     <input matInput type="text" formControlName="comodidad">
-  </mat-form-field>
+  </mat-form-field> --> 
 
   
 <!--
@@ -92,14 +92,20 @@
   </mat-form-field>
 -->
   
-    <mat-form-field>
-      <mat-label>categorías</mat-label>
-      <mat-select formControlName="categories">
-        <mat-option value="uno">Diseño</mat-option>
-        <mat-option value="dos">Domo</mat-option>
-        <mat-option value="tres">Playa</mat-option>
-        <mat-option value="cuatro">Camping</mat-option>
+    <!--  <mat-form-field>
+      <mat-label>Géneros o categorías</mat-label>
+      <mat-select formControlName="categories" multiple>
+        <mat-option *ngFor="let category of categories" [value]="category">{{category.name}}</mat-option>
       </mat-select>
+      <mat-hint>Puedes seleccionar más de una categoría.</mat-hint>
+    </mat-form-field> -->
+
+    <mat-form-field>
+      <mat-label>Géneros o categorías</mat-label>
+      <mat-select formControlName="categories">
+        <mat-option *ngFor="let category of categories" [value]="category">{{category.name}}</mat-option>
+      </mat-select>
+      <mat-hint>Puedes seleccionar más de una categoría.</mat-hint>
     </mat-form-field>
 
   <input type="hidden" formControlName="userId">

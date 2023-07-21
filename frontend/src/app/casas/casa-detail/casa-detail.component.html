@@ -16,21 +16,21 @@
           <img src="assets/icon/bed.png" width="40px" alt="">
           <img src="assets/icon/sofa.png" width="40px" alt="">
         </div>
-        <p>Baños: {{casa.bathrooms}}</p>
+        <!-- <p>Baños: {{casa.bathrooms}}</p> -->
       </div>
   
     <div class="caja" *ngIf="casa">
-      <h2>Descripción </h2>
+      <!-- <h2>Descripción </h2>
       <p>{{casa.description}}</p>
       <p>Comodidad: {{casa.comodidad}}</p>
-      <p>Medidas: {{casa.squarefeet}}</p>
+      <p>Medidas: {{casa.squarefeet}}</p> -->
     </div>
   
     <div class="caja" *ngIf="casa">
-      <h2>Ubicación</h2>
+      <!-- <h2>Ubicación</h2>
       <p>País: {{casa.country}}</p>
       <p>Ciudad: {{casa.city}}</p>
-      <p>Código postal: {{casa.cp}}</p>
+      <p>Código postal: {{casa.cp}}</p> -->
     </div>
 
     <div class="caja"  *ngIf="casa">
@@ -59,13 +59,16 @@
 
 
   <!--------User detail----->
-    <div *ngIf="casa">
+    
+  
+  
+  <!-- <div *ngIf="casa && casa.user">
       <h2>Propietario</h2>
         <img id="anfitrion-img" matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
         <a [routerLink]="['/users', user.id]"> 
           {{user.fullName}}
         </a>
-    </div>
+    </div> -->
 
 
 
