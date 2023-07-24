@@ -37,7 +37,7 @@
 
 
 
-  <!-- <mat-form-field>
+  <mat-form-field>
     <mat-label>Descripcion</mat-label>
     <textarea matInput #message maxlength="700" rows="5"
         placeholder="Ex. I need help with..." formControlName="description">
@@ -46,11 +46,11 @@
     <mat-hint align="end">{{message.value.length}} / 700</mat-hint>
   </mat-form-field>
 
-   <mat-form-field floatLabel="always">
+   <!-- <mat-form-field floatLabel="always">
     <mat-label>Disponibilidad</mat-label>
     <input matInput type="boolean" formControlName="available">
     <mat-error *ngIf="casaForm.get('available')?.invalid && casaForm.get('available')?.touched"></mat-error> 
-  </mat-form-field>  -->
+  </mat-form-field>  --> 
 
 
   <!-- <mat-form-field>
@@ -84,17 +84,17 @@
   </mat-form-field> --> 
 
   
-<!--
+
     <mat-form-field>
     <mat-label>categorías</mat-label>
-    <mat-select formControlName="categories">
-      <mat-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</mat-option>
+    <mat-select formControlName="categories" multiple>
+      <mat-option *ngFor="let category of categories" [value]="category">{{category.name}}</mat-option>
     </mat-select>
     <mat-hint>seleccionar una categoría.</mat-hint>
   </mat-form-field>
--->
+
   
-    <!--  <mat-form-field>
+     <!-- <mat-form-field>
       <mat-label>Géneros o categorías</mat-label>
       <mat-select formControlName="categories" multiple>
         <mat-option *ngFor="let category of categories" [value]="category">{{category.name}}</mat-option>
@@ -102,13 +102,13 @@
       <mat-hint>Puedes seleccionar más de una categoría.</mat-hint>
     </mat-form-field> -->
 
-    <mat-form-field>
+    <!-- <mat-form-field>
       <mat-label>Géneros o categorías</mat-label>
       <mat-select formControlName="categories">
         <mat-option *ngFor="let category of categories" [value]="category">{{category.name}}</mat-option>
       </mat-select>
       <mat-hint>Puedes seleccionar más de una categoría.</mat-hint>
-    </mat-form-field>
+    </mat-form-field> -->
 
   <input type="hidden" formControlName="userId">
 

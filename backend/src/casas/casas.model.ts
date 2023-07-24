@@ -22,8 +22,8 @@ export class Casa {
      @Column({type: 'int'})
      squarefeet:  number;
     
-    // @Column()
-    // description:  string;
+     @Column()
+     description:  string;
 
     // @Column({type: 'boolean', default: false})
     // available: boolean;

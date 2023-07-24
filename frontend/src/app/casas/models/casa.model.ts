@@ -7,7 +7,7 @@ export interface ICasa {
     bedrooms: number;
     bathrooms: number;
     squarefeet: number;
-    // description: string;
+    description: string;
     // available: boolean;
     // country: string;
     // city: string;
