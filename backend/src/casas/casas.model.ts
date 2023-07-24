@@ -25,20 +25,20 @@ export class Casa {
      @Column()
      description:  string;
 
-    // @Column({type: 'boolean', default: false})
-    // available: boolean;
+     @Column({type: 'boolean', default: false})
+     available: boolean;
 
-    // @Column()
-    // country: string;
+     @Column()
+     country: string;
 
-    // @Column()
-    // city: string;
+     @Column()
+     city: string;
 
     // @Column()
     // cp: string;
 
-    // @Column({type: 'decimal', precision: 10, scale: 2})
-    // price: number;
+     @Column({type: 'decimal', precision: 10, scale: 2})
+     price: number;
 
     // @Column()
     // comodidad: string;

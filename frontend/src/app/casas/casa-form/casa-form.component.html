@@ -46,14 +46,19 @@
     <mat-hint align="end">{{message.value.length}} / 700</mat-hint>
   </mat-form-field>
 
+  <div>
+    <mat-checkbox formControlName = "available">Disponible</mat-checkbox>
+    <mat-error *ngIf="casaForm.get('available')?.invalid && casaForm.get('available')?.touched"></mat-error> 
+  </div>
+
    <!-- <mat-form-field floatLabel="always">
     <mat-label>Disponibilidad</mat-label>
     <input matInput type="boolean" formControlName="available">
     <mat-error *ngIf="casaForm.get('available')?.invalid && casaForm.get('available')?.touched"></mat-error> 
-  </mat-form-field>  --> 
+  </mat-form-field>  -->
 
 
-  <!-- <mat-form-field>
+  <mat-form-field>
     <mat-label>Pais</mat-label>
     <input matInput type="text" formControlName="country">
   </mat-form-field>
@@ -63,12 +68,6 @@
     <input matInput type="text" formControlName="city">
   </mat-form-field>
 
-  <mat-form-field>
-    <mat-label>Codigo Postal</mat-label>
-    <input matInput type="text" formControlName="cp">
-  </mat-form-field>
-
-
   <mat-form-field floatLabel="always">
     <mat-label>Precio</mat-label>
     <input matInput type="number" class="example-right-align" placeholder="0" step="0.01" min="5" max="3000" formControlName="price">
@@ -77,6 +76,13 @@
         El precio debe estar comprendido en un rango de 1000 y 5000 €.
   </mat-error>
   </mat-form-field>
+
+  <!-- 
+  <mat-form-field>
+    <mat-label>Codigo Postal</mat-label>
+    <input matInput type="text" formControlName="cp">
+  </mat-form-field>
+
 
   <mat-form-field>
     <mat-label>Comodidad</mat-label>
