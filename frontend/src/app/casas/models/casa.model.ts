@@ -5,7 +5,7 @@ export interface ICasa {
     id: number;
     title: string;
     bedrooms: number;
-    // bathrooms: number;
+    bathrooms: number;
     // squarefeet: number;
     // description: string;
     // available: boolean;
