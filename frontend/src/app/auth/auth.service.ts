@@ -22,8 +22,12 @@ export class AuthService {
 
   // BehaviorSubject emite valores a suscriptores, es un Observable especializado
   // que siempre emite el último valor a sus observadores
+  // BehaviorSubject emite valores a suscriptores, es un Observable especializado
+  // que siempre emite el último valor a sus observadores
   isAdmin = new BehaviorSubject<boolean>(this.hasAdminToken());
+  isOwner = new BehaviorSubject<boolean>(this.hasOwnerToken());
   isLoggedIn = new BehaviorSubject<boolean>(this.hasToken());
+  // currentUserName = new BehaviorSubject<string>(this.getCurrentUserName());
 
   constructor(
     private httpClient: HttpClient,
@@ -44,8 +48,19 @@ export class AuthService {
     // Cuando el usuario cierra la sesión,
     // emitimos false para isAdmin y isLoggedIn
     this.isAdmin.next(false);
+    this.isOwner.next(false);
     this.isLoggedIn.next(false);
+    // this.currentUserName.next('');
   }
+
+  // getCurrentUserName(): string {
+  //   let token = localStorage.getItem(TOKEN);
+  //   if (!token) return '';
+
+  //   let decoded_token: Token = jwt_decode(token);
+  //   // return decoded_token.fullName;
+  // }
+
 
   hasAdminToken(): boolean {
     let token = localStorage.getItem(TOKEN);
@@ -64,7 +79,17 @@ export class AuthService {
     localStorage.setItem(TOKEN, token);
     let decoded_token: Token = jwt_decode(token);
     this.isAdmin.next(decoded_token.role === 'admin');
+    this.isOwner.next(decoded_token.role === 'owner');
     this.isLoggedIn.next(true);
+    // this.currentUserName.next(decoded_token.fullName);
+  }
+
+  hasOwnerToken(): boolean {
+    let token = localStorage.getItem(TOKEN);
+    if (!token) return false;
+
+    let decoded_token: Token = jwt_decode(token);
+    return decoded_token.role === 'owner';
   }
 
 

@@ -20,6 +20,15 @@ export class CategoriesService {
         return this.categoryRepo.find();
     }
 
+    findById(id: number): Promise<Category | null> {
+        console.log(id);
+        return this.categoryRepo.findOne({ 
+            where: {
+                id: id
+            }
+         });
+    }
+
     findAllByIds(ids: number[]): Promise<Category[]> {
         return this.categoryRepo.find({
             where: {

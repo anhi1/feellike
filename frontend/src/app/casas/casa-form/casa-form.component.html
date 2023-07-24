@@ -102,7 +102,7 @@
 
     <mat-form-field>
       <mat-label>Géneros o categorías</mat-label>
-      <mat-select formControlName="categories">
+      <mat-select formControlName="categories" multiple>
         <mat-option *ngFor="let category of categories" [value]="category">{{category.name}}</mat-option>
       </mat-select>
       <mat-hint>Puedes seleccionar más de una categoría.</mat-hint>

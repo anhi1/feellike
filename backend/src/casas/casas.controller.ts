@@ -1,14 +1,18 @@
 /* eslint-disable prettier/prettier */
-import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, ParseIntPipe,Request,Post, Put, UnauthorizedException, UseGuards } from '@nestjs/common';
 import { Casa } from './casas.model';
 import { CasasService } from './casas.service';
+import { UserRole } from 'src/users/user-role.enum';
+import { AuthGuard } from '@nestjs/passport';
+import { UsersService } from 'src/users/users.service';
 
 @Controller('casas')
 export class CasasController {
    
    
 
-    constructor(private casaService: CasasService) {}
+    constructor(private casaService: CasasService,
+                private userService: UsersService) {}
 
     @Get()
     findAll(): Promise<Casa[]> {
@@ -75,13 +79,28 @@ export class CasasController {
       
     }
     */
+    @UseGuards(AuthGuard('jwt'))
     @Post()
-    async create(@Body() casa: Casa): Promise<Casa> {
+    async create(@Request() request, @Body() casa: Casa): Promise<Casa> {
 
-        // sacar el usuario de la request y asignarlo a la casa si es OWNER
+        // si el user es ADMIN entonces create
+        if(request.user.role === UserRole.ADMIN)
+            return await this.casaService.create(casa);
 
-        
-        return await this.casaService.create(casa);
+        // si el user es OWNER se asocia al user de request
+        if(request.user.role === UserRole.OWNER) {
+            casa.user = request.user;
+            casa = await this.casaService.create(casa);
+            // Opción 1: el user es dueño de la asociación
+            // request.user.casa = casa;
+            // await this.userService.update(request.user);
+            return casa;
+            // Opción 2: el book es dueño de la asociación
+            // casa.user = request.user;
+            // this.bookService.create(casa)
+        }
+
+        throw new UnauthorizedException('Cant create casa');
     }
     
 

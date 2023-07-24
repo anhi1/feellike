@@ -1,6 +1,7 @@
 
-import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { UserRole } from "./user-role.enum";
+import { Casa } from "src/casas/casas.model";
 
 
         
@@ -49,6 +50,12 @@ export class User {
     @Column()
     password: string;
 
+    // @OneToOne(
+    //     () => Casa, 
+    //     { nullable:true, cascade: true, eager: true }
+    //     )
+    // @JoinColumn({name: 'id_casa'}) 
+    // casa: Casa;
 
 
 

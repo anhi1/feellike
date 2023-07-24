@@ -48,11 +48,14 @@
 
 <!------- card  ------>
 <div class="container" >
-  <div class="card" *ngFor=" let casa of casas" [routerLink]="['/casas', casa.id]"> <!--<div class="card" *ngFor=" let casa of casas">-->
+  <div class="card" *ngFor=" let casa of casas" [routerLink]="['/casas', casa.id]"> 
+    <!--<div class="card" *ngFor=" let casa of casas">-->
     <!-- <img [src]="casa.photo"  class="card__imagen"> -->
     <!-- <p>{{casa.city}}</p>
     <p>Precio {{casa.price}}€</p> -->
 
+    <p>{{casa.title}}</p>
+    <p>{{casa.bedrooms}}</p>
     <div>
 
 
