@@ -19,8 +19,8 @@ export class Casa {
      @Column({type: 'int'})
      bathrooms: number;
 
-    // @Column({type: 'int'})
-    // squarefeet:  number;
+     @Column({type: 'int'})
+     squarefeet:  number;
     
     // @Column()
     // description:  string;

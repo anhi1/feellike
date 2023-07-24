@@ -27,15 +27,17 @@
   </mat-error>
   </mat-form-field>
 
-  <!-- <mat-form-field floatLabel="always">
+  <mat-form-field floatLabel="always">
     <mat-label>Metros cuadrados</mat-label>
-    <input matInput type="number" placeholder="0" formControlName="squarefeet">
-    <mat-error *ngIf="casaForm.get('squarefeet')?.invalid && casaForm.get('squarefeet')?.touched">
-        El número de metros cuadrados 
-  </mat-error>
+      <input matInput type="number" placeholder="0" formControlName="squarefeet" min="1" step="0">
+      <mat-error *ngIf="casaForm.get('squarefeet')?.invalid && casaForm.get('squarefeet') ?.touched">
+         El número de metros cuadrados 
+    </mat-error>
   </mat-form-field>
 
-  <mat-form-field>
+
+
+  <!-- <mat-form-field>
     <mat-label>Descripcion</mat-label>
     <textarea matInput #message maxlength="700" rows="5"
         placeholder="Ex. I need help with..." formControlName="description">
@@ -48,7 +50,7 @@
     <mat-label>Disponibilidad</mat-label>
     <input matInput type="boolean" formControlName="available">
     <mat-error *ngIf="casaForm.get('available')?.invalid && casaForm.get('available')?.touched"></mat-error> 
-  </mat-form-field> --> 
+  </mat-form-field>  -->
 
 
   <!-- <mat-form-field>
