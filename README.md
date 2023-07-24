@@ -1,11 +1,11 @@
 ### PROYECTO 3_angular: Alquiler  vacacional: feellike App
 
-[![logo.png](https://i.postimg.cc/pTdMLHSY/logo.png)](https://postimg.cc/nsNP36pC)
+[![logo.png](https://i.postimg.cc/MTv9qFGd/logo.png)](https://postimg.cc/XG6fgxdC)
 
 ## Proyecto Final "Curso Desarrollo Web Frontend con Angular, impartido por:
 
   * La Fundación Adecco y financiado por el Ayuntamiento de Madrid
-[![F-Adecco.png](https://i.postimg.cc/LXFSsFb0/F-Adecco.png)](https://postimg.cc/1gB2W2Pp) - [![agencia-empleo.png](https://i.postimg.cc/wBpxQ9Z9/agencia-empleo.png)](https://postimg.cc/TKtXRvTs)
+[![F-Adecco.png](https://i.postimg.cc/LXFSsFb0/F-Adecco.png)] - [![agencia-empleo.png](https://i.postimg.cc/wBpxQ9Z9/agencia-empleo.png)](https://postimg.cc/TKtXRvTs)
 
 ## Diseño en Figma
 
