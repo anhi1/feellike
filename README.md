@@ -1,4 +1,4 @@
-![image](https://github.com/anhi1/feellike/assets/69080000/2ae941b6-3034-4de3-87c2-f2761e70445e)![image](https://github.com/anhi1/feellike/assets/69080000/a3527b00-d3f1-4891-8451-fdb4d9d55f8a)### PROYECTO 3_angular: Alquiler  vacacional: feellike App
+### PROYECTO 3_angular: Alquiler  vacacional: feellike App
 
 [![logo.png](https://i.postimg.cc/MTv9qFGd/logo.png)](https://postimg.cc/XG6fgxdC)
 
