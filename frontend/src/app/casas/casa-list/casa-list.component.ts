@@ -37,6 +37,7 @@ export class CasaListComponent implements OnInit{
   category: ICategory | undefined;
   isLoggedIn = false;
   isAdmin = false;
+  isOwner = false;
 
 
   constructor(
@@ -53,6 +54,7 @@ export class CasaListComponent implements OnInit{
     this.loadCasas();
     this.authService.isLoggedIn.subscribe(loggedIn => {
     this.isLoggedIn = loggedIn;
+    this.authService.isOwner.subscribe(owner => this.isOwner = owner);
   });
 
   this.authService.isAdmin.subscribe(admin => {
@@ -60,6 +62,7 @@ export class CasaListComponent implements OnInit{
   });
 
   }
+  
 
   loadCasas(): void {
     this.activatedRoute.params.subscribe((params) => {
