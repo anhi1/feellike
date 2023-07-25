@@ -1,4 +1,4 @@
-### PROYECTO 3_angular: Alquiler  vacacional: feellike App
+![image](https://github.com/anhi1/feellike/assets/69080000/2ae941b6-3034-4de3-87c2-f2761e70445e)![image](https://github.com/anhi1/feellike/assets/69080000/a3527b00-d3f1-4891-8451-fdb4d9d55f8a)### PROYECTO 3_angular: Alquiler  vacacional: feellike App
 
 [![logo.png](https://i.postimg.cc/MTv9qFGd/logo.png)](https://postimg.cc/XG6fgxdC)
 
@@ -15,9 +15,9 @@
 
 ## Equipo de Trabajo:
 
-Anhie Molina: Diseñadora Gráfica. https://www.linkedin.com/in/annie-m-0a69b016a
+Anhie Molina: Diseñadora Gráfica. http://www.linkedin.com/in/anniemolinaalarcon
 Daisy Delgado: Informática. http://www.linkedin.com/in/daysidelgadodiaz
-Claudia Muñoz: Administrativa. https://www.linkedin.com/in/cmunoz-9b58
+Claudia Muñoz: Administrativa. https://www.linkedin.com/in/claudiamunozgarcia
 
 ## Diseño en Figma
 <a target="blanck" rel="noopener noreferrer" href="https://www.figma.com/file/R82BxrgeLRFYb4ZeHAiyeq/plantilla?node-id=0%3A1&mode=dev">
