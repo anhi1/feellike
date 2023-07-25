@@ -46,8 +46,8 @@ export class Casa {
     //  @Column()
     // photo: string;
 
-    @Column("simple-array")
-    images:string[];
+    @Column("simple-array", {nullable: true})
+    images?:string[];
 
    
     @OneToOne(() => User)
