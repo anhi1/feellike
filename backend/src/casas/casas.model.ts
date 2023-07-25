@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Category } from "src/categories/categories.model";
 import { User } from "src/users/users.model";
-import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable,  ManyToMany,  ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable,  ManyToMany,  ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity()
@@ -16,41 +16,41 @@ export class Casa {
     @Column({type: 'int'})
     bedrooms:  number;
 
-    @Column({type: 'int'})
-    bathrooms: number;
+     @Column({type: 'int'})
+     bathrooms: number;
 
-    @Column({type: 'int'})
-    squarefeet:  number;
+     @Column({type: 'int'})
+     squarefeet:  number;
     
-    @Column()
-    description:  string;
+     @Column()
+     description:  string;
 
-    @Column({type: 'boolean', default: false})
-    available: boolean;
-
-    @Column()
-    country: string;
-
-    @Column()
-    city: string;
-
-    @Column()
-    cp: string;
-
-    @Column({type: 'decimal', precision: 10, scale: 2})
-    price: number;
-
-    @Column()
-    comodidad: string;
+     @Column({type: 'boolean', default: false})
+     available: boolean;
 
      @Column()
-    photo: string;
+     country: string;
 
-    @Column("simple-array")
-    images:string[];
+     @Column()
+     city: string;
+
+    // @Column()
+    // cp: string;
+
+     @Column({type: 'decimal', precision: 10, scale: 2})
+     price: number;
+
+    // @Column()
+    // comodidad: string;
+
+    //  @Column()
+    // photo: string;
+
+    @Column("simple-array", {nullable: true})
+    images?:string[];
 
    
-    @ManyToOne(() => User)
+    @OneToOne(() => User)
     @JoinColumn({ name: 'id_user'})
     user: User;
 

@@ -11,6 +11,11 @@ const routes: Routes = [
     path: 'casas',
     loadChildren: () => import('./casas/casas.module').then(m => m.CasasModule) 
   },
+
+  {
+    path: 'casas/casa-forms',
+    loadChildren: () => import('./casas/casas.module').then(m => m.CasasModule) 
+  },
   {
     path: 'reservas',
     loadChildren: () => import('./reservas/reservas.module').then(m => m.ReservasModule)

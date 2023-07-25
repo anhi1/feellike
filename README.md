@@ -4,6 +4,7 @@
 
 ## Proyecto Final "Curso Desarrollo Web Frontend con Angular, impartido por:
   * La Fundación Adecco y financiado por el Ayuntamiento de Madrid
+<<<<<<< HEAD
 
 ## Temática: 
 * Nuestra aplicación simula una app de alquiler vacacional.  El nombre, rememora un lugar tranquilo, un lugar donde sentirse bien.
@@ -18,6 +19,9 @@
 Anhie Molina: Diseñadora Gráfica. https://www.linkedin.com/in/annie-m-0a69b016a
 Daisy Delgado: Informática. http://www.linkedin.com/in/daysidelgadodiaz
 Claudia Muñoz: Administrativa. https://www.linkedin.com/in/cmunoz-9b58
+=======
+[![F-Adecco.png](https://i.postimg.cc/LXFSsFb0/F-Adecco.png)] - [![agencia-empleo.png](https://i.postimg.cc/wBpxQ9Z9/agencia-empleo.png)](https://postimg.cc/TKtXRvTs)
+>>>>>>> d0da134c4ab8473cb608bdfe1f148acc5a0dccf1
 
 ## Diseño en Figma
 <a target="blanck" rel="noopener noreferrer" href="https://www.figma.com/file/R82BxrgeLRFYb4ZeHAiyeq/plantilla?node-id=0%3A1&mode=dev">

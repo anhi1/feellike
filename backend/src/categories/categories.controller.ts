@@ -14,9 +14,9 @@ export class CategoriesController {
         return this.categoryService.findAll();
     }
 
-    // @Get()
-    // findById(@Param("id", ParseIntPipe) id: number): Promise<Category | null> {
-    //     return this.categoryService.findById(id);
-    // }
+    @Get(':id')
+    findById(@Param("id", ParseIntPipe) id: number): Promise<Category | null> {
+        return this.categoryService.findById(id);
+    }
 
 }

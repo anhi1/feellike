@@ -18,8 +18,8 @@
   </button>
   <mat-menu #menuCasas="matMenu">
     <button mat-menu-item routerLink="/casas">Listado de casas</button>
-    <button mat-menu-item routerLink="/casas/new" *ngIf="isAdmin">Crear casa</button>
-    <button mat-menu-item *ngIf="isLoggedIn" routerLink="/reservas">Reservas</button>
+    <button mat-menu-item routerLink="/casas/new" *ngIf="isOwner">Crear casa</button>
+    <button mat-menu-item routerLink="/reservas" *ngIf="isAdmin" routerLink="/reservas">Reservas</button>
   </mat-menu>  
 
   <button mat-button *ngIf="!isLoggedIn" routerLink="/auth/login">
@@ -33,8 +33,17 @@
     Crear cuenta
   </button>
 
+  <button mat-button routerLink="/reservas" *ngIf="isLoggedIn && !isOwner && !isAdmin">
+    <mat-icon>confirmation_number</mat-icon>
+    Mis reservas
+  </button>
+
+  <button mat-button *ngIf="isOwner" routerLink="/casas/owner">
+    Mi casa
+  </button>
+
   <button mat-button *ngIf="isLoggedIn" routerLink="/users/avatar">
-    <mat-icon>photo_camera</mat-icon>
+    <!-- <mat-icon>photo_camera</mat-icon> -->
     Mi avatar
   </button>
 

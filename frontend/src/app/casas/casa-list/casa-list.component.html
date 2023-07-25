@@ -13,7 +13,7 @@
 
 
 <!--Boton de agregar casa-->
-<div class="btn_add">
+<div class="btn_add" *ngIf="isOwner">
    <button mat-raised-button color="primary" routerLink="/casas/new">
     Agregar casa
   </button> 
@@ -42,26 +42,32 @@
 
 <!-----------  description de categorias ------------>
 <div class="descategory" *ngIf="category">
-<p >{{category.description}}</p>
+  <p >{{category.description}}</p>
 </div>
 
 
 <!------- card  ------>
 <div class="container" >
-  <div class="card" *ngFor=" let casa of casas" [routerLink]="['/casas', casa.id]"> <!--<div class="card" *ngFor=" let casa of casas">-->
-    <img [src]="casa.photo"  class="card__imagen">
-    <p>{{casa.city}}</p>
-    <p>Precio {{casa.price}}€</p>
+  <div class="card" *ngFor=" let casa of casas" [routerLink]="['/casas', casa.id]"> 
+    <!--<div class="card" *ngFor=" let casa of casas">-->
+     <img *ngIf="casa.images && casa.images.length > 0" [src]="'http://localhost:3000/uploads/' + casa.images[0]"  class="card__imagen">
+    <!-- <p>{{casa.city}}</p>
+    <p>Precio {{casa.price}}€</p> -->
+
+    <p>{{casa.title}}</p>
+    <p>{{casa.bedrooms}}</p>
+    <div>
+
 
     <div>
-     <button  [routerLink]="['/casas', casa.id]">
-      <img class="icono" src="assets/icon/ver.png" alt="" style="max-width: 15px;">
-      ver
-     </button>
+      <button  [routerLink]="['/casas', casa.id]">
+        <img class="icono" src="assets/icon/ver.png" alt="" style="max-width: 15px;">
+        ver
+      </button>
 
      <button  [routerLink]="['/casas', casa.id, 'edit']" *ngIf="isAdmin">
-      <img class="icono" src="assets/icon/editar.png" alt="" style="max-width: 15px;">
-      Editar
+        <img class="icono" src="assets/icon/editar.png" alt="" style="max-width: 15px;">
+        Editar
       </button>
 
       <button (click)="deleteCasa(casa)" *ngIf="isAdmin">

@@ -21,6 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatChipsModule } from '@angular/material/chips';
 import { CommentFormComponent } from '../comments/comment-form/comment-form.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CasaFormImagesComponent } from './casa-form-images/casa-form-images.component';
 
 
 
@@ -31,6 +33,7 @@ import { CommentFormComponent } from '../comments/comment-form/comment-form.comp
     CasaGalleryComponent,
     CasaDetailComponent,
     CasaFormComponent,
+    CasaFormImagesComponent,
     
 
   ],
@@ -51,6 +54,7 @@ import { CommentFormComponent } from '../comments/comment-form/comment-form.comp
     MatSelectModule,
     MatChipsModule,
     SharedModule,
+    MatCheckboxModule
     
     
 
