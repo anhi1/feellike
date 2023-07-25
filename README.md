@@ -15,9 +15,12 @@
 
 ## Equipo de Trabajo:
 
-Anhie Molina: Diseñadora Gráfica. http://www.linkedin.com/in/anniemolinaalarcon
-Daisy Delgado: Informática. http://www.linkedin.com/in/daysidelgadodiaz
-Claudia Muñoz: Administrativa. https://www.linkedin.com/in/claudiamunozgarcia
+* Anhie Molina: Diseñadora Gráfica.
+* http://www.linkedin.com/in/anniemolinaalarcon
+* Daisy Delgado: Informática.
+* http://www.linkedin.com/in/daysidelgadodiaz
+* Claudia Muñoz: Administrativa.
+* https://www.linkedin.com/in/claudiamunozgarcia
 
 ## Diseño en Figma
 <a target="blanck" rel="noopener noreferrer" href="https://www.figma.com/file/R82BxrgeLRFYb4ZeHAiyeq/plantilla?node-id=0%3A1&mode=dev">
