@@ -1,64 +1,61 @@
-<!--COLLAGE DE IMAGENES-->
+<!--COLLAGE DE IMAGENES -->
 <div class="gallery-container" *ngIf="casa">
-  <div class="gallery__item" *ngFor="let img of casa.images">
-    <img class="gallery__img" [src]="img" [alt]="casa.title">
+  <div class="gallery__item" *ngFor="let image of casa.images">
+    <img class="gallery__img" [src]="'http://localhost:3000/uploads/' + image" [alt]="casa.title">
   </div>
 </div>
 
 
-  <!--Datos de la casa-->
-  <div class="grid">
-    
-      <div class="caja" *ngIf="casa">
-        <h2>{{casa.title}}</h2>
-        <p>Habitaciones: {{casa.bedrooms }}</p>
-        <div class="space">
-          <img src="assets/icon/bed.png" width="40px" alt="">
-          <img src="assets/icon/sofa.png" width="40px" alt="">
-        </div>
-        <p>Baños: {{casa.bathrooms}}</p>
-      </div>
-  
-    <div class="caja" *ngIf="casa">
-      <h2>Descripción </h2>
-      <p>{{casa.description}}</p>
-      <p>Comodidad: {{casa.comodidad}}</p>
-      <p>Medidas: {{casa.squarefeet}}</p>
-    </div>
-  
-    <div class="caja" *ngIf="casa">
-      <h2>Ubicación</h2>
-      <p>País: {{casa.country}}</p>
-      <p>Ciudad: {{casa.city}}</p>
-      <p>Código postal: {{casa.cp}}</p>
-    </div>
 
-    <div class="caja"  *ngIf="casa">
-      <a  [routerLink]="['/reservas', casa.id, 'new']">
-        <button class="btn">Reservar</button>
-      </a>
+<!--Boton de agregar/cambiar imágenes-->
+<button class="btn_add" mat-raised-button color="primary" style="width: 20%;" *ngIf="isOwner"
+  [routerLink]="['/casas', casa.id, 'images']"> <!-- /casas/1/images -->
+  agregar/cambiar imágenes
+</button>
+
+
+<!--Datos de la casa-->
+<div class="grid">
+
+  <div class="caja" *ngIf="casa">
+    <h2>{{casa.title}}</h2>
+    <p>Habitaciones: {{casa.bedrooms }}</p>
+    <p>Baños: {{casa.bathrooms}}</p>
+    <div class="space">
+      <img src="assets/icon/bed.png" width="40px" alt="">
+      <img src="assets/icon/sofa.png" width="40px" alt="">
     </div>
   </div>
 
+  <div class="caja" *ngIf="casa">
+    <h2>Descripción </h2>
+      <p>{{casa.description}}</p>
+      <!-- <p>Comodidad: {{casa.comodidad}}</p> -->
+      <p>Medidas: {{casa.squarefeet}}</p> 
+  </div>
+
+  <div class="caja" *ngIf="casa">
+     <h2>Ubicación</h2>
+      <p>País: {{casa.country}}</p>
+      <p>Ciudad: {{casa.city}}</p>
+      <!-- <p>Código postal: {{casa.cp}}</p> -->
+  </div>
+
+  <div class="caja" *ngIf="casa" >
+    <a [routerLink]="['/reservas', casa.id, 'new']">
+      <button class="btn" *ngIf="isUser">Reservar</button>
+      
+    </a>
+  </div>
+</div>
 
 
-<!-- Comentario detail-->
-  <div>
-    <h2>Opiniones</h2>
-    <div *ngIf="comments.length===0">
-      No hay comentarios
-    </div>
-
-    <div *ngIf="comments.length>0">
-      <div *ngFor="let comment of comments">
-        <p>Puntuación: {{comment.rating}}</p>
-        <p>Observaciones: {{comment.description}}</p>
-      </div>
-    </div>
-  </div> 
+<hr>
 
 
-  <!--------User detail----->
+
+
+<!--------User detail
     <div *ngIf="casa">
       <h2>Propietario</h2>
         <img id="anfitrion-img" matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
@@ -66,7 +63,61 @@
           {{user.fullName}}
         </a>
     </div>
+----->
+<h2>Propietario</h2>
+<div *ngIf="casa.user" class="container">
+  
+  <div class="card">
+    <img class="circle" src="{{ casa.user.photo }}" />
+    <h2>Anfitrión</h2>
+    <p>{{casa.user.fullName }}</p>
+  </div>
 
+  <div class="tarjeta">
+    <p> Sobre mí: {{ casa.user.bio }}</p>
+  </div>
+
+  <div class="tarjeta">
+    <p>Cuidad: {{casa.user.city }}</p>
+    <p>Calle: {{casa.user.street}}</p>
+    <p>Código postal: {{casa.user.code}}</p>
+  </div>
+
+  <div class="tarjeta">
+    <p>Email: {{casa.user.email}}</p>
+    <p>Phone: {{casa.user.phone}}</p>
+    <p>Idioma: {{casa.user.idioma}}</p>
+  </div>
+</div>
+
+
+<hr>
+
+<!-- Comentarios:-->
+<div>
+  <h2>Opiniones</h2>
+  <div *ngIf="comments.length===0">
+    No hay comentarios
+  </div>
+
+  <div *ngIf="comments.length>0">
+    <div *ngFor="let comment of comments">
+      <p>Puntuación: {{comment.rating}}</p>
+      <p>Observaciones: {{comment.description}}</p>
+    </div>
+  </div>
+</div>
+
+
+<!--------User detail
+<div *ngIf="casa">
+  <h2>Propietario</h2>
+  <img id="anfitrion-img" matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
+  <a [routerLink]="['/users', user.id]">
+    {{user.fullName}}
+  </a>
+</div>
+----->
 
 
 

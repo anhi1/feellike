@@ -37,9 +37,9 @@ export class CasasService {
             select: {
                 id: true,
                 title: true,
-                country: true,
-                city: true,
-                price: true,
+                // country: true,
+                // city: true,
+                // price: true,
                 user: {
                     id: true,
                     fullName: true
@@ -112,25 +112,25 @@ export class CasasService {
         });
     }
 
-    findAllByPriceBetween(minPrice: number, maxPrice: number): Promise<Casa[]> {
-        console.log(minPrice);
-        console.log(maxPrice);
+    // findAllByPriceBetween(minPrice: number, maxPrice: number): Promise<Casa[]> {
+    //     console.log(minPrice);
+    //     console.log(maxPrice);
 
-        return this.casaRepo.find({ 
-            where: {
-                price: Between(minPrice, maxPrice)
-            }
-        });
-    }
+    //     return this.casaRepo.find({ 
+    //         where: {
+    //             price: Between(minPrice, maxPrice)
+    //         }
+    //     });
+    // }
 
     
-    findAllOrderByPriceAsc(): Promise<Casa[]> {
-        return this.casaRepo.find({
-            order: {
-                price: "ASC"
-            }
-        });
-    }
+    // findAllOrderByPriceAsc(): Promise<Casa[]> {
+    //     return this.casaRepo.find({
+    //         order: {
+    //             price: "ASC"
+    //         }
+    //     });
+    // }
 
     async create(casa: Casa): Promise<Casa> {
         try {
@@ -153,9 +153,10 @@ export class CasasService {
 
          try {
             console.log(casa);
-            casaFromDB.price = casa.price;
-            casaFromDB.city = casa.city;
+            // casaFromDB.price = casa.price;
+            // casaFromDB.city = casa.city;
             casaFromDB.user = casa.user;
+            casaFromDB.images = casa.images;
            
               // Opción 2: cargar las categorías directamente
              casaFromDB.categories = casa.categories;

@@ -22,21 +22,21 @@ export class CasaFormComponent implements OnInit {
     bedrooms: new FormControl<number>(0, [Validators.min(1)]),
     bathrooms: new FormControl<number>(0, [Validators.min(1)]),
     squarefeet: new FormControl<number>(0, [Validators.min(1)]),
-    // photo: new FormControl<string>('', []),
+     // photo: new FormControl<string>('', []),
 
-    description: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
-    // available: new FormControl<number>(0, [Validators.min(1)]),
-    country: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
-    city: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
-    cp: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
-    comodidad: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
+     description: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
+     available: new FormControl<boolean>(false),
+     country: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
+     city: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
+    // cp: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
+    // comodidad: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
     
-    price: new FormControl<number>(0, [
-      Validators.required, Validators.min(5), Validators.max(3000), Validators.pattern("^[0-9]+([.,][0-9]{1,2})?$")
-    ]),
+     price: new FormControl<number>(0, [
+       Validators.required, Validators.min(5), Validators.max(3000), Validators.pattern("^[0-9]+([.,][0-9]{1,2})?$")
+     ]),
 
 
-    user: new FormControl<any>(null, [Validators.required]),
+    // user: new FormControl<any>(null, []),
     categories: new FormControl<any[]>([])
  
   });
@@ -86,14 +86,14 @@ export class CasaFormComponent implements OnInit {
        bathrooms: casa.bathrooms,
        squarefeet:  casa.squarefeet,
        description: casa.description,
-      //  available: casa.available,
+       available: casa.available,
        country: casa.country,
-       city: casa.city,
-       cp: casa.cp,
-       price: casa.price,
-       comodidad: casa.comodidad,
+        city: casa.city,
+      //  cp: casa.cp,
+        price: casa.price,
+      //  comodidad: casa.comodidad,
        categories: casa.categories,
-       user: casa.user,
+       // user: casa.user,
      
      });
    }
@@ -103,17 +103,18 @@ export class CasaFormComponent implements OnInit {
     let casa: ICasa = {
       id: this.casaForm.get('id')?.value ?? 0,
       title: this.casaForm.get('title')?.value ?? '',
-      description: this.casaForm.get('description')?.value ?? '',
-      country: this.casaForm.get('country')?.value ?? '',
       bedrooms: this.casaForm.get('bedrooms')?.value ?? 1,
       bathrooms: this.casaForm.get('bathrooms')?.value ?? 1,
-      price: this.casaForm.get('price')?.value ?? 5,
       squarefeet: this.casaForm.get('squarefeet')?.value ?? 0,
-      available: true,
-      city: this.casaForm.get('city')?.value ?? '',
-      cp: this.casaForm.get('cp')?.value ?? '',
-      comodidad: this.casaForm.get('comodidad')?.value ?? '',
-      photo: '',
+       description: this.casaForm.get('description')?.value ?? '',
+       country: this.casaForm.get('country')?.value ?? '',
+       city: this.casaForm.get('city')?.value ?? '',
+       price: this.casaForm.get('price')?.value ?? 5,
+       available: false,
+      
+      // // cp: this.casaForm.get('cp')?.value ?? '',
+      // // comodidad: this.casaForm.get('comodidad')?.value ?? '',
+      // photo: '',
       categories: this.casaForm.get('categories')?.value ?? [],
     }
 
