@@ -13,7 +13,7 @@
 
 
 <!--Boton de agregar casa-->
-<div class="btn_add">
+<div class="btn_add" *ngIf="isOwner">
    <button mat-raised-button color="primary" routerLink="/casas/new">
     Agregar casa
   </button> 

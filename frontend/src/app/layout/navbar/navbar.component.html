@@ -18,7 +18,7 @@
   </button>
   <mat-menu #menuCasas="matMenu">
     <button mat-menu-item routerLink="/casas">Listado de casas</button>
-    <button mat-menu-item routerLink="/casas/new" *ngIf="isAdmin">Crear casa</button>
+    <button mat-menu-item routerLink="/casas/new" *ngIf="isOwner">Crear casa</button>
     <button mat-menu-item routerLink="/reservas" *ngIf="isAdmin" routerLink="/reservas">Reservas</button>
   </mat-menu>  
 
