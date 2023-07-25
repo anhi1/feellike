@@ -41,9 +41,10 @@
       <!-- <p>Código postal: {{casa.cp}}</p> -->
   </div>
 
-  <div class="caja" *ngIf="casa">
+  <div class="caja" *ngIf="casa" >
     <a [routerLink]="['/reservas', casa.id, 'new']">
-      <button class="btn">Reservar</button>
+      <button class="btn" *ngIf="isUser">Reservar</button>
+      
     </a>
   </div>
 </div>

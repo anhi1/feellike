@@ -34,7 +34,8 @@
   </button>
 
   <button mat-button routerLink="/reservas" *ngIf="isLoggedIn && !isOwner && !isAdmin">
-    <mat-icon>confirmation_number</mat-icon>
+    <!-- <mat-icon>confirmation_number</mat-icon> -->
+    <img class="icon" src="assets/icon/cita.png" alt="">
     Mis reservas
   </button>
 
@@ -42,10 +43,10 @@
     Mi casa
   </button>
 
-  <button mat-button *ngIf="isLoggedIn" routerLink="/users/avatar">
-    <!-- <mat-icon>photo_camera</mat-icon> -->
+  <!-- <button mat-button *ngIf="isLoggedIn" routerLink="/users/avatar">
+    <mat-icon>photo_camera</mat-icon>
     Mi avatar
-  </button>
+  </button> -->
 
   <button mat-button *ngIf="isLoggedIn" routerLink="/users/profile">
     <img class="icon" src="assets/icon/perfil.png" alt="">

@@ -26,6 +26,7 @@ export class AuthService {
   // que siempre emite el último valor a sus observadores
   isAdmin = new BehaviorSubject<boolean>(this.hasAdminToken());
   isOwner = new BehaviorSubject<boolean>(this.hasOwnerToken());
+  isUser = new BehaviorSubject<boolean>(this.hasUserToken());
   isLoggedIn = new BehaviorSubject<boolean>(this.hasToken());
   // currentUserName = new BehaviorSubject<string>(this.getCurrentUserName());
 
@@ -49,6 +50,7 @@ export class AuthService {
     // emitimos false para isAdmin y isLoggedIn
     this.isAdmin.next(false);
     this.isOwner.next(false);
+    this.isUser.next(false);
     this.isLoggedIn.next(false);
     // this.currentUserName.next('');
   }
@@ -80,6 +82,7 @@ export class AuthService {
     let decoded_token: Token = jwt_decode(token);
     this.isAdmin.next(decoded_token.role === 'admin');
     this.isOwner.next(decoded_token.role === 'owner');
+    this.isUser.next(decoded_token.role === 'user');
     this.isLoggedIn.next(true);
     // this.currentUserName.next(decoded_token.fullName);
   }
@@ -90,6 +93,14 @@ export class AuthService {
 
     let decoded_token: Token = jwt_decode(token);
     return decoded_token.role === 'owner';
+  }
+
+  hasUserToken(): boolean {
+    let token = localStorage.getItem(TOKEN);
+    if (!token) return false;
+
+    let decoded_token: Token = jwt_decode(token);
+    return decoded_token.role === 'user';
   }
 
 
