@@ -9,6 +9,7 @@ import { ReservaService } from 'src/app/reservas/services/reserva.service';
 import { CommentService } from 'src/app/comments/comment.service';
 import { IComment } from 'src/app/comments/comment.model';
 import { IReserva } from 'src/app/reservas/reserva.model';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-casa-detail',
@@ -16,6 +17,7 @@ import { IReserva } from 'src/app/reservas/reserva.model';
   styleUrls: ['./casa-detail.component.css']
 })
 export class CasaDetailComponent implements OnInit{
+  
   casa: ICasa | undefined;
   user: IUser | undefined;
   casas: ICasa[]=[];
@@ -23,15 +25,19 @@ export class CasaDetailComponent implements OnInit{
   comments: IComment[]=[];
   comment: IComment | undefined; // ngFor cada comentario es un objeto
   reservas: IReserva[] | undefined;
+  isOwner = false;
   
 
   constructor(private activatedRoute: ActivatedRoute,
               private casaService: CasaService,
               private userService: UserService,
               private reservaService: ReservaService,
-              private commentService: CommentService) {}
+              private commentService: CommentService,
+              public authService: AuthService) {}
 
   ngOnInit(): void {
+   
+    this.authService.isOwner.subscribe(owner => this.isOwner = owner);
     this.activatedRoute.params.subscribe(params => {
       const id = parseInt(params['id'], 10);
 

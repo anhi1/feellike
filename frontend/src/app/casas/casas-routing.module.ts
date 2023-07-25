@@ -5,6 +5,7 @@ import { CasaDetailComponent } from './casa-detail/casa-detail.component';
 
 import { CasaListComponent } from './casa-list/casa-list.component';
 import { CasaFormComponent } from './casa-form/casa-form.component';
+import { CasaFormImagesComponent } from './casa-form-images/casa-form-images.component';
 
 
 
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: ':id/edit',
     component: CasaFormComponent
+  },
+  {
+    path: ':id/images',
+    component: CasaFormImagesComponent
   },
   {
   path: 'user/:userId',

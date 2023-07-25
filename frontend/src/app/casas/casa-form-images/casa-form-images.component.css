@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+.btn{
+    background-color: #04D9D9;
+    color: white;
+}

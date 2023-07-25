@@ -1,10 +1,11 @@
 /* eslint-disable prettier/prettier */
-import { Body, Controller, Delete, Get, Param, ParseIntPipe,Request,Post, Put, UnauthorizedException, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, ParseIntPipe,Request,Post, Put, UnauthorizedException, UseGuards, NotFoundException, UploadedFiles, UseInterceptors } from '@nestjs/common';
 import { Casa } from './casas.model';
 import { CasasService } from './casas.service';
 import { UserRole } from 'src/users/user-role.enum';
 import { AuthGuard } from '@nestjs/passport';
 import { UsersService } from 'src/users/users.service';
+import { FilesInterceptor } from '@nestjs/platform-express';
 
 @Controller('casas')
 export class CasasController {
@@ -140,6 +141,31 @@ export class CasasController {
     ): Promise<void> {
         return await this.casaService.deleteAllByUserId(userId);
     }
+
+
+
+    @UseGuards(AuthGuard('jwt'))
+    @Post(':casaId/images')
+    @UseInterceptors(FilesInterceptor('file'))
+    async uploadCasaImages(
+        @Request() request, 
+        @Param('casaId', ParseIntPipe) casaId: number,
+        @UploadedFiles() files: Express.Multer.File[]
+        ){
+            console.log(files);
+            console.log(files.length);
+
+            // obtener la casa y si no existe lanzar excepción
+            let casa = await this.casaService.findById(casaId);
+            if(!casa) throw new NotFoundException('Casa not found');
+            
+            // asociar los nombres de los archivos en el atributo images del objeto casa
+            casa.images = [];
+            files.forEach(file => casa.images.push(file.filename));
+
+            // guardar el casa en base de datos
+            return await this.casaService.update(casa);
+        }
 
 
 }

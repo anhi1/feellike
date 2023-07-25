@@ -50,7 +50,7 @@
 <div class="container" >
   <div class="card" *ngFor=" let casa of casas" [routerLink]="['/casas', casa.id]"> 
     <!--<div class="card" *ngFor=" let casa of casas">-->
-    <!-- <img [src]="casa.photo"  class="card__imagen"> -->
+     <img *ngIf="casa.images && casa.images.length > 0" [src]="'http://localhost:3000/uploads/' + casa.images[0]"  class="card__imagen">
     <!-- <p>{{casa.city}}</p>
     <p>Precio {{casa.price}}€</p> -->
 

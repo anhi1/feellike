@@ -1,9 +1,9 @@
 
+INSERT INTO `backend_nest_casas`.`category` (`id`, `name`, `description`, `icono`) VALUES ('1', 'Playa', 'Ubicada en una idílica bahía de arena blanca y aguas cristalinas, esta encantadora casa con playa se encuentra enclavada en un lugar paradisíaco', 'assets/icon/playa.svg');
+INSERT INTO `backend_nest_casas`.`category` (`id`, `name`, `description`, `icono`) VALUES ('2', 'Domo', 'Bienvenido a una casa única y vanguardista: la casa domo. Desde el exterior, esta residencia se destaca por su diseño futurista y su forma esférica, que contrasta con el paisaje circundante.', 'assets/icon/domo.svg');
+INSERT INTO `backend_nest_casas`.`category` (`id`, `name`, `description`, `icono`) VALUES ('3', 'Camping', 'La casa de camping es una estructura modesta pero funcional, hecha de materiales resistentes para enfrentar los elementos naturales. ', 'assets/icon/camping.svg');
+INSERT INTO `backend_nest_casas`.`category` (`id`, `name`, `description`, `icono`) VALUES ('4', 'Diseño', '¡Bienvenido a una casa de diseño excepcionalmente elegante y contemporánea! Cada rincón de esta residencia ha sido creado para fusionar la funcionalidad con el arte arquitectónico.', 'assets/icon/diseño.svg');
 
-​INSERT INTO `backend_nest_casas`.`category` (`id`, `name`, `description`, `icono`) VALUES ('1', 'Playa', 'sdgdsfg', 'assets/icon/playa.svg');
-INSERT INTO `backend_nest_casas`.`category` (`id`, `name`, `description`, `icono`) VALUES ('2', 'Domo', 'Se caracteriza por jjd', 'assets/icon/domo.svg');
-INSERT INTO `backend_nest_casas`.`category` (`id`, `name`, `description`, `icono`) VALUES ('3', 'Camping', 'Se caracteriza por jjd', 'assets/icon/camping.svg');
-INSERT INTO `backend_nest_casas`.`category` (`id`, `name`, `description`, `icono`) VALUES ('4', 'Diseño', 'Diseñadas por jjd', 'assets/icon/diseño.svg');
 
 INSERT INTO `backend_nest_casas`.`casa` (`id`, `title`, `bedrooms`, `bathrooms`, `squarefeet`, `description`, `available`, `country`, `city`, `cp`, `price`, `comodidad`, `photo`, `images`, `id_user`) VALUES ('1', 'Casa Playa', '2', '4', '4887', 'velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit', '1', 'España', 'Madrid', '06175', '787', 'Tennis court', 'https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg', 'https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg,https://img.freepik.com/foto-gratis/piscina_74190-2104.jpg,https://img.freepik.com/foto-gratis/silla-azul-centro-turistico-tropical-relajarse_1203-5076.jpg,https://img.freepik.com/foto-gratis/hermosa-playa-tropical-mar_74190-6732.jpg,https://img.freepik.com/foto-gratis/sombrilla-tumbona-alrededor-piscina_1203-2409.jpg', '1');
 INSERT INTO `backend_nest_casas`.`casa` (`id`, `title`, `bedrooms`, `bathrooms`, `squarefeet`, `description`, `available`, `country`, `city`, `cp`, `price`, `comodidad`, `photo`, `images`, `id_user`) VALUES ('2', 'Casa Domo', '2', '5', '7835', 'tempus sit amet sem fusce consequat nulla nisl nunc nisl duis', '1', 'España', 'Madrid', '25481', ' 821', 'Sauna', 'https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440','https://a0.muscache.com/im/pictures/b7756897-ef31-4080-b881-c4c7b9ec0df7.jpg?im_w=1440,https://a0.muscache.com/im/pictures/9b5e2eff-ca68-4f22-adb0-029a33e466aa.jpg?im_w=1200,https://a0.muscache.com/im/pictures/a41678d9-cb0c-44dc-b79d-dfbd3aaa435a.jpg?im_w=1440,https://a0.muscache.com/im/pictures/fdceadd1-ac47-4278-8ca9-a11ecf85dc6f.jpg?im_w=1440,https://a0.muscache.com/im/pictures/9b5e2eff-ca68-4f22-adb0-029a33e466aa.jpg?im_w=1200', '2');
@@ -21,7 +21,7 @@ INSERT INTO `backend_nest_casas`.`reserva` (`id`, `price`, `id_user`, `id_casa`)
 INSERT INTO `backend_nest_casas`.`reserva` (`id`, `price`, `id_user`, `id_casa`) VALUES ('3', '900', '3', '3');
 INSERT INTO `backend_nest_casas`.`reserva` (`id`, `price`, `id_user`, `id_casa`) VALUES ('4', '800', '4', '4');
 
-INSERT INTO `backend_nest_casas`.`user` (`id`, `fullName`, `email`, `bio`, `phone`, `idioma`, `code`, `city`, `street`, `role`, `photo`, `password`) VALUES ('1', 'user1', 'fgdf', 'fgd', 'dfg', 'df', 'dfg', 'dfg', 'dfg', 'fdg', 'dfg', '1234');
+INSERT INTO `backend_nest_casas`.`user` (`id`, `fullName`, `email`, `bio`, `phone`, `idioma`, `code`, `city`, `street`, `role`, `photo`, `password`) VALUES ('1', 'user1', 'fgdf', 'fgd', 'dfg', 'df', 'dfg', 'dfg', 'dfg', 'fdg', 'https://xsgames.co/randomusers/avatar.php?g=male', '1234');
 
 
 
