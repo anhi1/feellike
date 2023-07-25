@@ -156,6 +156,7 @@ export class CasasService {
             // casaFromDB.price = casa.price;
             // casaFromDB.city = casa.city;
             casaFromDB.user = casa.user;
+            casaFromDB.images = casa.images;
            
               // Opción 2: cargar las categorías directamente
              casaFromDB.categories = casa.categories;

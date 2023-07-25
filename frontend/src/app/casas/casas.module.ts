@@ -22,6 +22,7 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatChipsModule } from '@angular/material/chips';
 import { CommentFormComponent } from '../comments/comment-form/comment-form.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CasaFormImagesComponent } from './casa-form-images/casa-form-images.component';
 
 
 
@@ -32,6 +33,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     CasaGalleryComponent,
     CasaDetailComponent,
     CasaFormComponent,
+    CasaFormImagesComponent,
     
 
   ],
