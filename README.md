@@ -3,13 +3,28 @@
 [![logo.png](https://i.postimg.cc/MTv9qFGd/logo.png)](https://postimg.cc/XG6fgxdC)
 
 ## Proyecto Final "Curso Desarrollo Web Frontend con Angular, impartido por:
-
   * La Fundación Adecco y financiado por el Ayuntamiento de Madrid
-[![F-Adecco.png](https://i.postimg.cc/LXFSsFb0/F-Adecco.png)] - [![agencia-empleo.png](https://i.postimg.cc/wBpxQ9Z9/agencia-empleo.png)](https://postimg.cc/TKtXRvTs)
+
+## Temática: 
+* Nuestra aplicación simula una app de alquiler vacacional.  El nombre, rememora un lugar tranquilo, un lugar donde sentirse bien.
+
+## Objetivos:
+  * Diseñar una aplicación con la tecnología de Angular CLI, poniendo en práctica los conceptos aprendidos durante el curso.
+  * Generar y conectar el Backend con el Frontend.
+  * Ejecutar la aplicación y poder evidenciar que un “supuesto” usuario puede interactuar de manera intuitiva con ella.
+
+## Equipo de Trabajo:
+
+* Anhie Molina: Diseñadora Gráfica.
+* http://www.linkedin.com/in/anniemolinaalarcon
+* Daisy Delgado: Informática.
+* http://www.linkedin.com/in/daysidelgadodiaz
+* Claudia Muñoz: Administrativa.
+* https://www.linkedin.com/in/claudiamunozgarcia
 
 ## Diseño en Figma
-
-[![Img-Figma1.png](https://i.postimg.cc/WbTQ8hbW/Img-Figma1.png)](https://postimg.cc/jC3gdqfP)
+<a target="blanck" rel="noopener noreferrer" href="https://www.figma.com/file/R82BxrgeLRFYb4ZeHAiyeq/plantilla?node-id=0%3A1&mode=dev">
+[![Img-Figma1.png](https://i.postimg.cc/WbTQ8hbW/Img-Figma1.png)](https://postimg.cc/jC3gdqfP)</a>
 
 ## Tecnologías utilizadas
 
@@ -84,18 +99,22 @@
   * MySQL Workbench
   https://dbeaver.io/download/
 
-# Full Stack: Frontend con Angular + Backend con NestJS y TypeORM
-
 # NestJS
 
 https://nestjs.com/
-Framework para desarrollo de aplicaciones web backend que se ejecuta sobre la plataforma NodeJS. Nest tiene foco en la arquitectura de las aplicaciones y está pensado para crear servicios web o API REST.
+Framework para desarrollo de aplicaciones web backend que se ejecuta sobre la plataforma NodeJS. Nest se focaliza en la arquitectura de las aplicaciones y está pensado para crear servicios web o API REST.
 
-* Comando de Inntalación
+* Comando de Instalación
 * npm i -g @nestjs/cli
 
 * Comando para crear un proyecto
-* nest new project-name
+* nest new project-name  
+
+# TypeORM
+(Object Relation Mapping), que permite mapear los objetos que creemos con NestJS y que se refleje en la base de datos.
+
+* Comando de Instalación
+* npm install --save @nestjs/typeorm typeorm mysql2
 
 # Git
 https://git-scm.com/
@@ -110,15 +129,14 @@ https://compodoc.app/
 Es una herramienta de código abierto que facilita la generación de documentación para un proyecto Angular.
 
 * Comando de Instalación
-
-  * npm install -g @compodoc/compodoc
+* npm install -g @compodoc/compodoc
 
 # Swagger
 https://swagger.io/
-“Swagger es una serie de reglas, especificaciones y herramientas que nos ayudan a documentar nuestras APIs.”
+Swagger es otra herramientas que nos ayuda a documentar nuestras APIs.
 
-
-
+* Comando de Instalación
+* npm install @nestjs/swagger
 
 ## Backend
 

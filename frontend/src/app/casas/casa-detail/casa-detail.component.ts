@@ -26,6 +26,7 @@ export class CasaDetailComponent implements OnInit{
   comment: IComment | undefined; // ngFor cada comentario es un objeto
   reservas: IReserva[] | undefined;
   isOwner = false;
+  isUser = false;
   
 
   constructor(private activatedRoute: ActivatedRoute,
@@ -37,6 +38,7 @@ export class CasaDetailComponent implements OnInit{
 
   ngOnInit(): void {
    
+    this.authService.isUser.subscribe(user => this.isUser = user);
     this.authService.isOwner.subscribe(owner => this.isOwner = owner);
     this.activatedRoute.params.subscribe(params => {
       const id = parseInt(params['id'], 10);
