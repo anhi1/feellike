@@ -22,8 +22,8 @@ export class Reserva {
     @Column()
     endDate: Date;
 
-    @Column({default: 5})
-    price: number;
+     @Column({default: 5})
+     price: number;
 
 }
 
