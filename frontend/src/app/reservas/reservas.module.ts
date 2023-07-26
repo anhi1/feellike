@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { CasasModule } from '../casas/casas.module';
 
 
 
@@ -36,7 +37,8 @@ import { MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     MatButtonModule,
     MatTableModule,
-    MatIconModule 
+    MatIconModule,
+    CasasModule
     
    
   ],

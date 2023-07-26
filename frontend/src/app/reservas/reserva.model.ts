@@ -5,7 +5,7 @@ export interface IReserva {
     id: number;
     user?: Partial<IUser>;
     casa?: Partial<ICasa>;
-    price: number;
+    price?: number;
     startDate: Date;
     endDate: Date;
   }

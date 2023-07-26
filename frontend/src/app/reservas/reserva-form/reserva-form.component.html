@@ -1,16 +1,20 @@
+
+<div *ngIf="casa?.price">
+El precio de tu reserva es de {{casa.price}} &euro;
+</div>
 <form [formGroup]="reservaForm" (ngSubmit)="save()">
 
     <input type="hidden" formControlName="id">
   
 
-    <mat-form-field floatLabel="always">
+    <!-- <mat-form-field floatLabel="always">
       <mat-label>Precio</mat-label>
       <input matInput type="number" class="example-right-align" placeholder="0" step="0.01" min="400" max="1000" formControlName="price">
       <span matTextPrefix>&euro;&nbsp;</span>
       <mat-error *ngIf="reservaForm.get('price')?.invalid && reservaForm.get('price')?.touched">
           El precio debe estar comprendido en un rango de 400 y 1000 €.
     </mat-error>
-    </mat-form-field>
+    </mat-form-field> -->
 
   
     <mat-form-field>

@@ -23,6 +23,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { CommentFormComponent } from '../comments/comment-form/comment-form.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CasaFormImagesComponent } from './casa-form-images/casa-form-images.component';
+import { CasaService } from './services/casa.service';
 
 
 
@@ -62,7 +63,7 @@ import { CasaFormImagesComponent } from './casa-form-images/casa-form-images.com
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'es-Es'}
-  ]
+  ],
 
 })
 export class CasasModule { }
