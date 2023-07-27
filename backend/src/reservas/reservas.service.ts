@@ -1,4 +1,4 @@
-import { ConflictException, Injectable } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { Reserva } from './reservas.model';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -36,6 +36,24 @@ export class ReservasService {
                 }
             }
         });
+
+    }
+
+    async deleteById(id: number): Promise<void> {
+
+        let exist = await this.reservaRepo.exist({
+            where: {
+                id: id
+            }
+        });
+
+        if(!exist) throw new NotFoundException('Not found');
+
+        try {
+            await this.reservaRepo.delete(id);
+        } catch (error) {
+            throw new ConflictException('No se puede borrar')
+        }
 
     }
 

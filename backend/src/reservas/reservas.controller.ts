@@ -31,4 +31,11 @@ export class ReservasController {
         reserva.user = request.user;
         return await this.reservaService.create(reserva);
     }
+
+    @Delete(':id')
+    async deleteById(
+        @Param('id', ParseIntPipe) id: number
+    ): Promise<void> {
+        return await this.reservaService.deleteById(id);
+    }
 }

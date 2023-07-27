@@ -23,8 +23,7 @@ export class UsersController {
     async update(@Request() request, @Body() user: User): Promise<User> {
 
         // si el id de request.user.id no coincide con user.id
-        if (request.user.id !== user.id && 
-            request.user.role !== UserRole.ADMIN)
+        if (request.user.id !== user.id)
             throw new UnauthorizedException('No se puede editar');
 
         return await this.userService.update(user);
