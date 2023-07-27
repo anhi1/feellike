@@ -24,8 +24,15 @@
       <button mat-button color="primary" class="btn-primary"
         [routerLink]="['/reservas', reserva.id, 'edit']">
         <mat-icon>edit</mat-icon>
+       
         Editar
       </button>
+
+      <button mat-button color="primary" class="btn-primary" (click)="deleteById(reserva.id)">
+      <mat-icon>cancelar</mat-icon>
+      
+      Cancelar
+    </button>
 
     </td>
   </ng-container>

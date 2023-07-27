@@ -50,7 +50,7 @@ export class ReservaFormComponent implements OnInit {
 
     let reserva: IReserva = {
       id: id,
-      //price: this.casa.price,
+      price: this.casa.price,
       startDate: startDate,
       endDate: endDate,
       casa: {

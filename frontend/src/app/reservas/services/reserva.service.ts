@@ -24,7 +24,7 @@ export class ReservaService {
     return this.httpClient.put<IReserva>(`${this.url}`, reserva);
   }
 
-  // deleteById(id: number): void {
-  //   this.httpClient.delete(`${this.url}/${id}`);
-  // }
+  deleteById(id: number): Observable<{}> {
+    return this.httpClient.delete(`${this.url}/${id}`);
+  }
 }

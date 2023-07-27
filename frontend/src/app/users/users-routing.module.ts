@@ -8,7 +8,7 @@ import { AvatarComponent } from './avatar/avatar.component';
 const routes: Routes = [
   
   {
-    path: ':id', 
+    path: ':userId/edit', 
     component: UserDetailComponent  
   },
   {
