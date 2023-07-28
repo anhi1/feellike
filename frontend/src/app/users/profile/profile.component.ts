@@ -17,6 +17,8 @@ export class ProfileComponent {
     id: new FormControl<number>(0),
     fullName: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
     bio: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
+    city: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
+    phone: new FormControl<number>(0),
     email: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
   });
 
@@ -30,6 +32,8 @@ export class ProfileComponent {
                         id: this.user.id,
                         fullName: this.user.fullName,
                         bio: this.user.bio,
+                        city: this.user.city,
+                        phone: this.user.phone,
                         email: this.user.email
                       });
                     });
@@ -39,12 +43,16 @@ export class ProfileComponent {
     let id = this.userForm.get('id')?.value ?? 0;
     let fullName = this.userForm.get('fullName')?.value ?? '';
     let bio = this.userForm.get('bio')?.value ?? '';
+    let city = this.userForm.get('city')?.value ?? '';
+    let phone = this.userForm.get('phone')?.value ?? 0;
     let email = this.userForm.get('email')?.value ?? '';
 
     let user: IUser = {
       id: id,
       fullName: fullName,
       bio: bio,
+      city: city,
+      phone: phone,
       email: email
     }
 
