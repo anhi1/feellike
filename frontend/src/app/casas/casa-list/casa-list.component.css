@@ -5,6 +5,12 @@
   
 }
 
+.city{
+  padding-top: 20px;
+  font-family: poppins;
+  font-weight: 800;
+}
+
 .category {
   display: flex;
   justify-content: center;
@@ -138,12 +144,13 @@ line-height: 5.5rem;
     margin-right: 5px;
     border: none;
     border-radius: 3px;
-    font-size: 12px;
+    font-size: 15px;
     color: #6B79FF;
   }
 
   .icono{
     filter: invert(55%) sepia(95%) saturate(4633%) hue-rotate(220deg) brightness(108%) contrast(101%);
+    
   }
 
 

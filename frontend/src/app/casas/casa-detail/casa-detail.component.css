@@ -58,48 +58,62 @@
      justify-content: center;
      align-items: center;
      gap: 16px;
-     padding-bottom: 60px;
+     padding-bottom: 40px;
+     padding-top: 40px;
 
  }
- .caja{
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-background-color:  #FFFFFF;
-border-radius:8px;
-width:300px;
-height: 230px;
-padding:24px;
-font-family: poppins;
-}
 
-.btn{
-    background-color: #6B79FF;;
-    font-family: poppins;
-    color: white
-}
+ .caja {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+     background-color: #FFFFFF;
+     border-radius: 8px;
+     width: 300px;
+     height: 230px;
+     padding: 24px;
+     font-family: poppins;
+ }
 
-.btn_add{
-    background-color: #6B79FF;;
-    font-family: poppins;
-    color: white;
+ .bed{
+    margin-right: 10px;
+ }
 
+ h1{
     
+    font-family: poppins;
+    font-weight: 600;
+    
+ }
+ 
+h2 {
+    color:#6B79FF
+}
+
+.img{
+    filter: invert(68%) sepia(56%) saturate(2341%) hue-rotate(130deg) brightness(98%) contrast(97%);
+   /* filter: invert(80%) sepia(45%) saturate(683%) hue-rotate(343deg) brightness(100%) contrast(102%);
+    filter: invert(48%) sepia(76%) saturate(3301%) hue-rotate(217deg) brightness(103%) contrast(102%);*/
 }
 
 
-/* card de propietario */
+ .btn {
+     background-color: #6B79FF;
+     font-family: poppins;
+     color: white
+ }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-items: center;
-    gap:40px;
-    padding-bottom: 60px;
-}
+ .btn_add {
+     background-color: #6B79FF;
+     font-family: poppins;
+     color: white;
+
+
+ }
+
+
+
 
 .card {
     display:flex;
@@ -116,10 +130,10 @@ font-family: poppins;
 }
 
 .circle {
-
     width: 100px;
     height: 100px;
     border-radius: 50px;
+
 }
 .tarjeta{
     width: 200px;

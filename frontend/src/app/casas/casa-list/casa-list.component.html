@@ -51,27 +51,26 @@
   <div class="card" *ngFor=" let casa of casas" [routerLink]="['/casas', casa.id]"> 
     <!--<div class="card" *ngFor=" let casa of casas">-->
      <img *ngIf="casa.images && casa.images.length > 0" [src]="'http://localhost:3000/uploads/' + casa.images[0]"  class="card__imagen">
-    <!-- <p>{{casa.city}}</p>
-    <p>Precio {{casa.price}}€</p> -->
-
+     <p class="city"> {{casa.city}}</p>
+    <p>Precio {{casa.price}}€</p>
     <p>{{casa.title}}</p>
-    <p>{{casa.bedrooms}}</p>
+    
     <div>
 
 
     <div>
       <button  [routerLink]="['/casas', casa.id]">
-        <img class="icono" src="assets/icon/ver.png" alt="" style="max-width: 15px;">
+        <img class="icono" src="assets/icon/ver.png" alt="" style="max-width: 20px;">
         ver
       </button>
 
      <button  [routerLink]="['/casas', casa.id, 'edit']" *ngIf="isOwner">
-        <img class="icono" src="assets/icon/editar.png" alt="" style="max-width: 15px;">
+        <img class="icono" src="assets/icon/editar.png" alt="" style="max-width: 20px;">
         Editar
       </button>
 
       <button (click)="deleteCasa(casa)" *ngIf="isAdmin">
-        <img class="icono" src="assets/icon/borrar.png" alt="" style="max-width: 15px;">
+        <img class="icono" src="assets/icon/borrar.png" alt="" style="max-width: 20px;">
         Eliminar
       </button>
     </div>
