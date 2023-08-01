@@ -59,6 +59,8 @@ export class UsersService {
             userFromDB.fullName = user.fullName;
             userFromDB.email = user.email;
             userFromDB.bio = user.bio;
+            userFromDB.city = user.city;
+            userFromDB.phone = user.phone;
             return await this.userRepo.save(userFromDB);
 
          } catch (error) {
