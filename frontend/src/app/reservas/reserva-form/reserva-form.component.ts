@@ -63,8 +63,10 @@ export class ReservaFormComponent implements OnInit {
       .subscribe(reserva => this.router.navigate(['/reservas']));
     else
       this.reservaService.update(reserva)
-      .subscribe(reserva => this.router.navigate(['/reservas']));
+      .subscribe(reserva => this.router.navigate(['/reservas', reserva.id, '/edit']));
   }
 
 
 }
+
+

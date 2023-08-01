@@ -135,6 +135,15 @@ h2 {
     border-radius: 50px;
 
 }
+
+.imagen{
+    display:flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .tarjeta{
     width: 200px;
 

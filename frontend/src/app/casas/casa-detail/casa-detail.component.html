@@ -64,26 +64,34 @@
 
 
 
-<!--------User detail
-    <div *ngIf="casa">
+
+    <!-- <div *ngIf="casa">
       <h2>Propietario</h2>
         <img id="anfitrion-img" matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
         <a [routerLink]="['/users', user.id]"> 
           {{user.fullName}}
         </a>
-    </div>
------>
+    </div> -->
 
-<div *ngIf="casa.user" class="grid">
+
+<div *ngIf="casa.user && casa.user.photo" class="grid">
   
   <div class="caja">
     <div class="card">
       <h2>Propietario</h2>
-      <img class="circle" src="{{ casa.user.photo }}" />
-      <h2>Anfitrión</h2>
+      
+      <img class="imagen" [src]="'http://localhost:3000/uploads/' + casa.user!.photo"/>
+      
       <p>{{casa.user.fullName }}</p>
     </div>
   </div>
+
+  <!-- <div *ngIf="casa.user && casa.user.photo">
+    
+    <img [src]="'http://localhost:3000/uploads/' + casa.user!.photo"/>
+    style="max-width: 200px;" alt="user avatar"/>
+  
+  </div> -->
 
   <div class="caja">
     <p> Sobre mí: {{ casa.user.bio }}</p>
