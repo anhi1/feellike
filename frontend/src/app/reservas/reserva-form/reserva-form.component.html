@@ -1,8 +1,15 @@
 
-<div *ngIf="casa?.price">
-El precio de tu reserva es de {{casa.price}} &euro;
-</div>
+
+ 
+
+<div class="formulario">
 <form [formGroup]="reservaForm" (ngSubmit)="save()">
+  <span class="titulo"><b>Reservar</b></span>
+  <br>
+  <div class="precio" *ngIf="casa?.price">
+    El precio de tu reserva es de <b> {{casa.price}} &euro; </b>
+  </div>
+  <br>
 
     <input type="hidden" formControlName="id">
   
@@ -34,10 +41,10 @@ El precio de tu reserva es de {{casa.price}} &euro;
       <mat-datepicker #picker2></mat-datepicker>
     </mat-form-field>
   
-    <button mat-fab extended type="submit"
+    <button class="btn" mat-fab extended type="submit"
     [disabled]="reservaForm.invalid">
         Enviar
   </button>
   </form>
   
-  
+</div>

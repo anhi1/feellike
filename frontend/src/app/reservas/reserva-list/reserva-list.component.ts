@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IReserva } from '../reserva.model';
 import { ReservaService } from '../services/reserva.service';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/users/services/user.service';
 
 @Component({
   selector: 'app-reserva-list',
@@ -20,7 +21,8 @@ export class ReservaListComponent implements OnInit {
 
   constructor(
     private reservaService: ReservaService,
-    private router: Router
+    private router: Router,
+    private userService: UserService,
     ) {}
 
   ngOnInit(): void {
