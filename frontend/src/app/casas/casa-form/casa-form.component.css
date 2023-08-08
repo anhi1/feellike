@@ -1,6 +1,15 @@
+*{
+  font-family: poppins;
+}
+
+h2{
+  font-family: poppins;
+  color: #7885FC;
+}
+
 form {
     min-width: 150px;
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -18,3 +27,14 @@ form {
   input.example-right-align::-webkit-inner-spin-button {
     display: none;
   }
+
+  .btn {
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #7885FC;
+    border: none;
+    width: 500px;
+    height: 56px;
+    color: white;
+    margin-bottom: 50px;
+}
