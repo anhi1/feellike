@@ -1,23 +1,40 @@
 
-<form [formGroup]="commentForm" (ngSubmit)="save()">
 
+<form class="formulario" [formGroup]="commentForm" (ngSubmit)="save()">
+    <h2 class="titulo" *ngIf="commentForm.get('id')?.value === 0">Crear <strong> &nbsp;comentario</strong> </h2>
     <input type="hidden" formControlName="id">
-  
-    <mat-form-field>
+
+    <label for="description">Descripción:</label>
+    <textarea  class="caja" id="description" name="description" rows="4" cols="50" formControlName="description" placeholder=" Describe tu experiencia"></textarea>
+
+    <label for="rating" >Puntaje:</label>
+    <input class="numero" type="number"  id="rating" placeholder="0" step="1" min="0" max="5" formControlName="rating">
+
+
+    <button class="btn" mat-fab extended type="submit" [disabled]="commentForm.invalid">
+        Enviar
+    </button>
+</form>
+
+ <!--
+
+        <mat-form-field>
         <mat-label>Descripcion</mat-label>
-        <textarea matInput #message maxlength="1000" rows="5"
-            placeholder=" Describe tu experiencia    " formControlName="description">
-        </textarea>
+        <textarea class="textarea" matInput #message maxlength="1000" cols="80" rows="5" placeholder=" Describe tu experiencia    "
+            formControlName="description"></textarea>
         <mat-hint align="start"><strong>Escribe tu experiencia.</strong> </mat-hint>
         <mat-hint align="end">{{message.value.length}} / 1000</mat-hint>
-      </mat-form-field>
-  
-    <!-- <--< img class="" placeholder></img>  // photo del usuario//--> -->
-  
-    <button mat-fab extended type="submit"
-    [disabled]="commentForm.invalid">
-        Enviar
-  </button>
-  </form>
-  
-  
+    </mat-form-field>
+        <label for="description">Descripción:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" placeholder=" Describe tu experiencia"></textarea>
+        
+   
+
+    <mat-form-field>
+        <mat-label>Puntaje</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0" step="1" min="0" max="5"
+            formControlName="rating">
+    </mat-form-field>
+
+    
+    < img class="" placeholder></img>  // photo del usuario//-->

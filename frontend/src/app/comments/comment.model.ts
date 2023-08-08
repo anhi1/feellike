@@ -4,7 +4,7 @@ import { IUser } from "../users/models/user.model";
 export interface IComment {
         id: number;
         description: String;
-        rating: number;
+        rating?: number;
         casa?: Partial<ICasa>;
         user?: Partial<IUser>;
         

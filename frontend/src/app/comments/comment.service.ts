@@ -27,4 +27,10 @@ export class CommentService {
   update(comment: IComment): Observable<IComment> {
     return this.httpClient.put<IComment>(`${this.url}`, comment);
   }
+
+  deleteById(id: number): Observable<{}> {
+    return this.httpClient.delete(`${this.url}/${id}`);
+  }
+
+  
 }
