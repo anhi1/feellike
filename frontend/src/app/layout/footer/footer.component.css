@@ -25,6 +25,7 @@ footer {
   width: auto;
   height: 300px;
   z-index: 1;
+  opacity: 35%;
 }
 
 .container-img img{
@@ -45,9 +46,13 @@ footer {
 }
 .slogan{
   font-size: 38px;
-  font-weight: bold;
+  font-weight:800;
   margin-left: 125px; 
   margin-top: 125px;
+  font-family: poppins;
+  line-height: 35px;
+  
+
 }
 .bajo{
   display: flex;
@@ -100,11 +105,11 @@ footer {
   -webkit-border-radius: 50%;
 }
 .efecto:hover {
-  color: #ec1eca;
+  color: #fcf0fa;
   border-radius: 50%;
   -webkit-border-radius: 50%;
-  box-shadow: 0px 0px 2px 20px hsl(192, 91%, 27%);
-  -webkit-box-shadow: 0px 0px 20px 20px hsl(192, 91%, 27%);
+  box-shadow: 0px 0px 2px 20px hsl(0, 0%, 100%);
+  -webkit-box-shadow: 0px 0px 10px 20px hsla(0, 0%, 97%, 0.252);
 }
 
 
@@ -113,3 +118,4 @@ footer {
   text-decoration: none;
   color: white;
 }
+
