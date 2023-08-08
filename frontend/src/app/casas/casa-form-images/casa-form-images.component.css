@@ -3,7 +3,66 @@
     font-family: poppins;
 }
 
+.content{
+  margin-top: 80px;
+  
+}
+
 .btn{
     background-color: #04D9D9;
     color: white;
+    margin-bottom: 80px;
 }
+
+input[type="file"] {
+    display: none;
+  }
+  
+  /* Estilo del botón personalizado */
+  .custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color:#04D9D9; /* Cambia el color de fondo aquí */
+    color: white; /* Cambia el color del texto aquí */
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  
+  .titulo{
+    display: flex;
+    justify-content: center;
+    font-family: poppins;
+    color: #6B79FF;
+    font-size: 1.5rem;
+    padding-right: 10px;
+    
+   
+  }
+
+  .contenedor-cajas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que las cajas se envuelvan en varias filas */
+  }
+
+  .caja {
+  
+  flex: 0 0 calc(10% - 10px); /* Tamaño de las cajas y margen  ejm: flex: 0 0 calc(33.33% - 10px)*/
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+  .imagen{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
