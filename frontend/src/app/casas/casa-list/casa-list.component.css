@@ -85,9 +85,10 @@ padding:  0 13rem;
 }
 .frase{
 font-family: poppins;
-font-size: 2.5rem;
-font-weight: 100;
-line-height: 5.5rem;
+font-size: 2.3rem;
+font-weight: lighter;
+line-height: 4.5rem;
+text-align: left;
 }
 .casas{
  max-width: 80%;
