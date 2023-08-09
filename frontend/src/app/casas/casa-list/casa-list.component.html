@@ -64,7 +64,7 @@
         ver
       </button>
 
-     <button  [routerLink]="['/casas', casa.id, 'edit']" *ngIf="isOwner">
+     <button  [routerLink]="['/casas', casa.id, 'edit']" *ngIf="isAdmin">
         <img class="icono" src="assets/icon/editar.png" alt="" style="max-width: 20px;">
         Editar
       </button>

@@ -20,7 +20,8 @@ export class ProfileComponent {
     city: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
     phone: new FormControl<number>(0),
     email: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
-    photo: new FormControl<string>('')
+    photo: new FormControl<string>(''),
+    code: new FormControl<number>(0),
   });
 
   constructor(private userService: UserService, private router: Router) {}
@@ -36,7 +37,8 @@ export class ProfileComponent {
                         city: this.user.city,
                         phone: this.user.phone,
                         email: this.user.email,
-                        photo: this.user.photo
+                        photo: this.user.photo,
+                        code: this.user.code
                       });
                     });
   }
@@ -49,6 +51,8 @@ export class ProfileComponent {
     let phone = this.userForm.get('phone')?.value ?? 0;
     let email = this.userForm.get('email')?.value ?? '';
     let photo = this.userForm.get('photo')?.value ?? '';
+    let code = this.userForm.get('code')?.value ?? 0;
+
 
     let user: IUser = {
       id: id,
@@ -57,7 +61,8 @@ export class ProfileComponent {
       city: city,
       phone: phone,
       email: email,
-      photo: photo
+      photo: photo,
+      code: code,
     }
 
     this.userService.update(user)

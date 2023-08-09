@@ -90,14 +90,14 @@
 
   <div class="caja">
     <p> <b>Cuidad:</b> {{casa.user.city }}</p>
-    <p><b>Calle:</b> {{casa.user.street}}</p>
+    <!-- <p><b>Calle:</b> {{casa.user.street}}</p> -->
     <p><b> Código postal:</b> {{casa.user.code}}</p>
   </div>
 
   <div class="caja">
     <p><b>Email:</b> {{casa.user.email}}</p>
     <p><b>Phone:</b> {{casa.user.phone}}</p>
-    <p><b>Idioma:</b> {{casa.user.idioma}}</p>
+    <!-- <p><b>Idioma:</b> {{casa.user.idioma}}</p> -->
   </div>
 </div>
 
@@ -108,7 +108,7 @@
 <!-- COMENTARIOS -->
 <div class="opinion">
   <a [routerLink]="['/comments', casa.id, 'new']">
-    <button class="btn" *ngIf="isUser">crear comentario</button> 
+    <button class="btn" *ngIf="isUser">Agregar comentario</button> 
   </a>
 
   <h2>Opiniones</h2>
@@ -117,7 +117,7 @@
   </div>
 
   <div *ngIf="comments.length>0">
-    <div class="dos" *ngFor="let comment of comments">
+    <div class="comentario" *ngFor="let comment of comments">
       <p> <b> Observaciones:</b> {{comment.description}}</p>
       <p>Puntuación: {{comment.rating}}</p>
       

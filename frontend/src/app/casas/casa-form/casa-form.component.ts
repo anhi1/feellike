@@ -25,7 +25,7 @@ export class CasaFormComponent implements OnInit {
      // photo: new FormControl<string>('', []),
 
      description: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
-     available: new FormControl<boolean>(false),
+     //available: new FormControl<boolean>(false),
      country: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
      city: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
     // cp: new FormControl<string>('', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
@@ -86,7 +86,6 @@ export class CasaFormComponent implements OnInit {
        bathrooms: casa.bathrooms,
        squarefeet:  casa.squarefeet,
        description: casa.description,
-       available: casa.available,
        country: casa.country,
         city: casa.city,
       //  cp: casa.cp,
@@ -98,37 +97,53 @@ export class CasaFormComponent implements OnInit {
      });
    }
 
-  save(): void {
+   save(): void {
 
-    let casa: ICasa = {
-      id: this.casaForm.get('id')?.value ?? 0,
-      title: this.casaForm.get('title')?.value ?? '',
-      bedrooms: this.casaForm.get('bedrooms')?.value ?? 1,
-      bathrooms: this.casaForm.get('bathrooms')?.value ?? 1,
-      squarefeet: this.casaForm.get('squarefeet')?.value ?? 0,
-       description: this.casaForm.get('description')?.value ?? '',
-       country: this.casaForm.get('country')?.value ?? '',
-       city: this.casaForm.get('city')?.value ?? '',
-       price: this.casaForm.get('price')?.value ?? 5,
-       available: false,
-      
+     
+      let id = this.casaForm.get('id')?.value ?? 0;
+      let title = this.casaForm.get('title')?.value ?? '';
+      let bedrooms = this.casaForm.get('bedrooms')?.value ?? 1;
+      let bathrooms = this.casaForm.get('bathrooms')?.value ?? 1;
+      let squarefeet = this.casaForm.get('squarefeet')?.value ?? 0;
+      let description = this.casaForm.get('description')?.value ?? '';
+      let country = this.casaForm.get('country')?.value ?? '';
+      let city= this.casaForm.get('city')?.value ?? '';
+      let price=this.casaForm.get('price')?.value ?? 5;
       // // cp: this.casaForm.get('cp')?.value ?? '',
       // // comodidad: this.casaForm.get('comodidad')?.value ?? '',
       // photo: '',
-      categories: this.casaForm.get('categories')?.value ?? [],
-    }
+      let categories = this.casaForm.get('categories')?.value ?? [];
+
+      let casa: ICasa = {
+        id: id,
+        title:title,
+        bedrooms:bedrooms,
+        bathrooms:bathrooms,
+        squarefeet:squarefeet,
+        description:description,
+        available:true,
+        country:country,
+        city:city,
+        price:price,
+        categories:categories
+
+      }
+      
+      
+   
 
     if (casa.id === 0) // crear nueva casa
       this.casaService.create(casa).subscribe(casa => this.router.navigate(['/casas', casa.id]));
     else // editando una casa
       this.casaService.update(casa).subscribe(casa => this.router.navigate(['/casas', casa.id]));
-}
+    }
+  }
 
 
 
 
 
 
-}
+
 
 
