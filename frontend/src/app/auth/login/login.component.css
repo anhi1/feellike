@@ -9,6 +9,12 @@
     padding: 100px 0px;
 }
 
+h2{
+    font-family: poppins;
+    font-weight: bold;
+    color: #7885FC;
+    
+}
 
 form {
     display: flex;

@@ -69,7 +69,7 @@
         Editar
       </button>
 
-      <button (click)="deleteCasa(casa)" *ngIf="isAdmin">
+      <button (click)="deleteCasa(casa)" *ngIf="isOwner">
         <img class="icono" src="assets/icon/borrar.png" alt="" style="max-width: 20px;">
         Eliminar
       </button>

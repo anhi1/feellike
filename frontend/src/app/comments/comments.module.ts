@@ -11,12 +11,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule} from '@angular/material/input';
+import { CommentListComponent } from './comment-list/comment-list.component';
 
 
 
 @NgModule({
   declarations: [
-    CommentFormComponent
+    CommentFormComponent,
+    CommentListComponent
   ],
   imports: [
     CommonModule,

@@ -12,28 +12,28 @@
 
   
 
-  <button mat-button [matMenuTriggerFor]="menuCasas">
+  <button class="btn2" mat-button [matMenuTriggerFor]="menuCasas">
     <img  class="icon" src="assets/icon/casa.png" alt="">
     Casas
   </button>
   <mat-menu #menuCasas="matMenu">
-    <button mat-menu-item routerLink="/casas">Listado de casas</button>
-    <button mat-menu-item routerLink="/casas/new" *ngIf="isOwner">Crear casa</button>
-    <button mat-menu-item routerLink="/reservas" *ngIf="isAdmin" routerLink="/reservas">Reservas</button>
+    <button  mat-menu-item routerLink="/casas">Listado de casas</button>
+    <button  mat-menu-item routerLink="/casas/new" *ngIf="isOwner">Crear casa</button>
+    <button  mat-menu-item routerLink="/reservas" *ngIf="isAdmin" routerLink="/reservas">Reservas</button>
   </mat-menu>  
 
-  <button mat-button *ngIf="!isLoggedIn" routerLink="/auth/login">
+  <button class="btn2" mat-button *ngIf="!isLoggedIn" routerLink="/auth/login">
     <img  class="icon" src="assets/icon/login.png" alt="">
     Iniciar sesión
   </button>
 
 
-  <button mat-button *ngIf="!isLoggedIn" routerLink="/auth/register">
-    <img  src="assets/icon/crear.png" alt="" style="width:20px">
+  <button  class="btn2" mat-button *ngIf="!isLoggedIn" routerLink="/auth/register">
+    <img class="icon" src="assets/icon/crear.png" alt="" style="width:20px">
     Crear cuenta
   </button>
 
-  <button mat-button routerLink="/reservas" *ngIf="isLoggedIn && !isOwner && !isAdmin">
+  <button  class="btn2" mat-button routerLink="/reservas" *ngIf="isLoggedIn && !isOwner && !isAdmin">
     <!-- <mat-icon>confirmation_number</mat-icon> -->
     <img class="icon" src="assets/icon/cita.png" alt="">
     Mis reservas
@@ -43,17 +43,17 @@
     Mi casa
   </button> -->
 
-  <!-- <button mat-button *ngIf="isLoggedIn" routerLink="/users/avatar">
-    <mat-icon>photo_camera</mat-icon>
-    Mi avatar
-  </button> -->
+  <button class="btn2" mat-button *ngIf="isLoggedIn" routerLink="/users/avatar">
+    <img class="icon" src="assets/icon/camara.png" alt="">
+    Mi photo
+  </button> 
 
-  <button mat-button *ngIf="isLoggedIn" routerLink="/users/profile">
+  <button class="btn2" mat-button *ngIf="isLoggedIn" routerLink="/users/profile">
     <img class="icon" src="assets/icon/perfil.png" alt="">
     Mi perfil
   </button>
 
-  <button mat-button *ngIf="isLoggedIn" (click)="authService.logout()">
+  <button class="btn2" mat-button *ngIf="isLoggedIn" (click)="authService.logout()">
     <img class="icon" src="assets/icon/cerrar.png" alt="">
     Cerrar sesión
   </button>

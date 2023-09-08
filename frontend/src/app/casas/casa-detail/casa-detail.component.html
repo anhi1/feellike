@@ -13,11 +13,12 @@
 
 
 <!--Boton de agregar/cambiar imágenes-->
+<div class="boton">
 <button class="btn_add" mat-raised-button color="primary" style="width: 20%;" *ngIf="isOwner"
   [routerLink]="['/casas', casa.id, 'images']"> <!-- /casas/1/images -->
   agregar/cambiar imágenes
 </button>
-
+</div>
 
 <!--Datos de la casa-->
 <div class="grid">
@@ -61,61 +62,65 @@
 
 <hr>
 
-
-
-
-<!--------User detail
-    <div *ngIf="casa">
+    <!-- <div *ngIf="casa">
       <h2>Propietario</h2>
         <img id="anfitrion-img" matListItemAvatar src="{{user.photo}}" alt="{{user.fullName}}">
         <a [routerLink]="['/users', user.id]"> 
           {{user.fullName}}
         </a>
-    </div>
------>
+    </div> -->
 
-<div *ngIf="casa.user" class="grid">
+
+<!--FOTO  PROPIETARIO-->
+<div *ngIf="casa.user && casa.user.photo" class="grid">
   
   <div class="caja">
     <div class="card">
       <h2>Propietario</h2>
-      <img class="circle" src="{{ casa.user.photo }}" />
-      <h2>Anfitrión</h2>
+      <img class="imagen" [src]="'http://localhost:3000/uploads/' + casa.user!.photo"/>
       <p>{{casa.user.fullName }}</p>
     </div>
   </div>
 
+ 
+<!--DATOS DE USER-->
   <div class="caja">
-    <p> Sobre mí: {{ casa.user.bio }}</p>
+    <p> <b>Sobre mí:</b> {{ casa.user.bio }}</p>
   </div>
 
   <div class="caja">
-    <p>Cuidad: {{casa.user.city }}</p>
-    <p>Calle: {{casa.user.street}}</p>
-    <p>Código postal: {{casa.user.code}}</p>
+    <p> <b>Cuidad:</b> {{casa.user.city }}</p>
+    <!-- <p><b>Calle:</b> {{casa.user.street}}</p> -->
+    <p><b> Código postal:</b> {{casa.user.code}}</p>
   </div>
 
   <div class="caja">
-    <p>Email: {{casa.user.email}}</p>
-    <p>Phone: {{casa.user.phone}}</p>
-    <p>Idioma: {{casa.user.idioma}}</p>
+    <p><b>Email:</b> {{casa.user.email}}</p>
+    <p><b>Phone:</b> {{casa.user.phone}}</p>
+    <!-- <p><b>Idioma:</b> {{casa.user.idioma}}</p> -->
   </div>
 </div>
 
 
 <hr>
 <br>
-<!-- Comentarios:-->
-<div>
+
+<!-- COMENTARIOS -->
+<div class="opinion">
+  <a [routerLink]="['/comments', casa.id, 'new']">
+    <button class="btn" *ngIf="isUser">Agregar comentario</button> 
+  </a>
+
   <h2>Opiniones</h2>
   <div *ngIf="comments.length===0">
     No hay comentarios
   </div>
 
   <div *ngIf="comments.length>0">
-    <div *ngFor="let comment of comments">
+    <div class="comentario" *ngFor="let comment of comments">
+      <p> <b> Observaciones:</b> {{comment.description}}</p>
       <p>Puntuación: {{comment.rating}}</p>
-      <p>Observaciones: {{comment.description}}</p>
+      
     </div>
   </div>
 </div>

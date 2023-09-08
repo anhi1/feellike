@@ -1,1 +1,25 @@
-<p>avatar works!</p>
+<span class="titulo">Imagen de perfil de usuario</span>
+
+<div class="contenedor">
+  <!--Titulo avatar / foto -->
+  <div class="caja" *ngIf="user && user.photo">
+    <span>Avatar actual</span>
+    <img [src]="'http://localhost:3000/uploads/' + user!.photo" style="max-width: 200px;" alt="user avatar" />
+  </div>
+
+  <div class="caja" *ngIf="imagePreview">
+    <span>Nuevo avatar</span>
+    <img [src]="imagePreview" style="max-width: 200px;" alt="user avatar" />
+  </div>
+
+  <div class="caja">
+    <input type="file" hidden (change)="onFileSelected($event)" #fileInput />
+    <button mat-raised-button (click)="fileInput.click()">Adjuntar Imagen</button>
+    <button mat-raised-button (click)="save()">Enviar</button>
+  </div>
+
+
+
+
+
+</div>

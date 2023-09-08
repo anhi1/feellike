@@ -10,8 +10,16 @@
      padding: 20px;
      grid-gap: 10px;
      grid-auto-flow: dense;
+ }
 
 
+ .boton {
+    padding-left: 20px;
+ }
+
+ h1{
+    padding-left: 20px;
+    color:#6B79FF
  }
 
  .gallery__img {
@@ -67,13 +75,18 @@
      display: flex;
      flex-direction: column;
      justify-content: space-evenly;
-     align-items: center;
+     
      background-color: #FFFFFF;
      border-radius: 8px;
      width: 300px;
      height: 230px;
      padding: 24px;
      font-family: poppins;
+     
+ }
+
+ p{
+    text-align: left;
  }
 
  .bed{
@@ -108,6 +121,7 @@ h2 {
      background-color: #6B79FF;
      font-family: poppins;
      color: white;
+     height: 45px;
 
 
  }
@@ -135,7 +149,36 @@ h2 {
     border-radius: 50px;
 
 }
+
+.imagen{
+    display:flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .tarjeta{
     width: 200px;
 
 }
+
+
+/*OPINION*/
+
+.opinion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 70px;
+    margin-bottom: 15%;
+    
+}
+.comentario{
+    margin-bottom: 35px;
+    
+}
+
+
+

@@ -37,7 +37,7 @@ export class UsersController {
     @UseInterceptors(FileInterceptor('file'))
     async uploadAvatar(@Request() request, @UploadedFile() file: Express.Multer.File) {
         console.log(file);
-        request.user.avatarImage = file.filename;
+        request.user.photo = file.filename;
         console.log(request.user);
         return await this.userService.updateAvatar(request.user);
     }

@@ -153,10 +153,18 @@ export class CasasService {
 
          try {
             console.log(casa);
-            // casaFromDB.price = casa.price;
-            // casaFromDB.city = casa.city;
+            casaFromDB.title = casa.title;
+            casaFromDB.bedrooms = casa.bedrooms;
+            casaFromDB.bathrooms = casa.bathrooms;
+            casaFromDB.squarefeet = casa.squarefeet;
+            casaFromDB.description = casa.description;
+            casaFromDB.country = casa.country;
+            casaFromDB.city = casa.city;
+            casaFromDB.price = casa.price;
+            casaFromDB.available = casa.available;
             casaFromDB.user = casa.user;
             casaFromDB.images = casa.images;
+            
            
               // Opción 2: cargar las categorías directamente
              casaFromDB.categories = casa.categories;

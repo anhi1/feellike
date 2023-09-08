@@ -10,7 +10,7 @@ export interface IUser {
     bio?: string;
     phone?: number; 
     idioma?: string;
-    code?: string;
+    code?: number;
     city?: string,
     street?: string,
     photo?: string;  //Avatar Imagenes

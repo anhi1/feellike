@@ -1,0 +1,32 @@
+*{
+    font-family: poppins;
+    
+}
+
+.titulo{
+    padding-top: 50px;
+    display:flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    font-family: poppins;
+    font-weight: 400;
+    color: #6B79FF;
+    font-size: 1.5rem;
+    padding-bottom: 40px;
+    
+}
+    
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-content: center;      
+    padding-bottom: 80px;
+}
+
+.caja{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;   
+}
